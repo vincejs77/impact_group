@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 				{ property: "og:url", content: "https://impact-group.vercel.app" },
 				{
 					property: "og:image",
-					content: "https://impact-group.vercel.app/img/brand/impact_group_logo.svg"
+					content: "https://impact-group.vercel.app/img/brand/impact_group_logo.jpg"
 				},
 				{ name: "twitter:title", content: "Impact Group" },
 				{
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
 				},
 				{
 					name: "twitter:image",
-					content: "https://impact-group.vercel.app/img/brand/impact_group_logo.svg"
+					content: "https://impact-group.vercel.app/img/brand/impact_group_logo.jpg"
 				},
 				{ name: "twitter:card", content: "summary_large_image" }
 			],
