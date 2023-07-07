@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    // html,
+    // body {
+    //     @apply font-;
+    // }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3 {
+        @apply font-black;
+    }
+    h1 {
+        @apply font-black;
+    }
+    h2 {
+        @apply text-2xl sm:text-2xl;
+    }
+
+    a {
+        @apply font-medium;
+    }
+}
+
+.i-wrapper {
+    @apply flex justify-center;
+}
+.i-container {
+    @apply w-full max-w-5xl px-4 sm:px-8;
+    &__lg {
+        @apply w-full max-w-7xl;
+    }
+}
+
+.i-btn {
+    display: inline-block;
+    @apply px-6 py-2 rounded-full font-semibold;
+    &__primary {
+        @apply bg-primary text-white;
+    }
+    &__blue_1 {
+        @apply bg-blue_1 text-white;
+    }
+}
