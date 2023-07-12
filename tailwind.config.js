@@ -4,13 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: "#FD7237",
-				blue: "#050564",
-				blue_1: "#05C4FB",
-				yellow: "#FFA83B"
+				primary: "#fd7135",
+				blue: "#000061",
+				blue_1: "#007cff",
+				blue_2: "#02c3fb",
+				yellow: "#ffa739"
 			},
 			fontFamily: {
-				sans: ["Satoshi", "Arial", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif"]
+				sans: ["Creato Display", "Arial", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif"]
 			}
 		}
 	},

@@ -15,10 +15,10 @@
         <div class="hidden sm:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
-              <NuxtLink to="_#">Home</NuxtLink>
+              <NuxtLink to="_#">Accueil</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="_#">About us</NuxtLink>
+              <NuxtLink to="_#">A propos</NuxtLink>
             </li>
             <li>
               <NuxtLink to="_#">Services</NuxtLink>
@@ -29,7 +29,7 @@
           </ul>
           <div>
             <NuxtLink to="_#" class="i-btn i-btn__primary">
-              <span>Contact us</span>
+              <span>Nous contacter</span>
             </NuxtLink>
           </div>
         </div>
