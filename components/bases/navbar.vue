@@ -15,20 +15,20 @@
         <div class="hidden sm:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
-              <NuxtLink to="_#">Accueil</NuxtLink>
+              <NuxtLink to="#">Accueil</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="_#">A propos</NuxtLink>
+              <NuxtLink to="#">A propos</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="_#">Services</NuxtLink>
+              <NuxtLink to="#">Services</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="_#">Blog</NuxtLink>
+              <NuxtLink to="#">Blog</NuxtLink>
             </li>
           </ul>
           <div>
-            <NuxtLink to="_#" class="i-btn i-btn__primary">
+            <NuxtLink to="#" class="i-btn i-btn__primary">
               <span>Nous contacter</span>
             </NuxtLink>
           </div>

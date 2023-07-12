@@ -24,12 +24,12 @@
               class="sm:flex sm:justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4"
             >
               <div>
-                <NuxtLink to="_#" class="w-auto i-btn i-btn__blue_1">
+                <NuxtLink to="#" class="w-auto i-btn i-btn__blue_1">
                   <span>En savoir plus</span>
                 </NuxtLink>
               </div>
               <div>
-                <NuxtLink to="_#" class="i-btn i-btn__primary">
+                <NuxtLink to="#" class="i-btn i-btn__primary">
                   <span>Nous contacter</span>
                 </NuxtLink>
               </div>
@@ -51,7 +51,7 @@
               établie et conduire la transformation
             </p>
             <div class="mt-6">
-              <NuxtLink to="_#" class="i-btn i-btn__blue_1">
+              <NuxtLink to="#" class="i-btn i-btn__blue_1">
                 <span>En savoir plus</span>
               </NuxtLink>
             </div>
@@ -211,7 +211,7 @@
             </div>
 
             <div class="w-full flex justify-center">
-              <NuxtLink to="_#" class="w-auto i-btn i-btn__blue_1">
+              <NuxtLink to="#" class="w-auto i-btn i-btn__blue_1">
                 <span>Envoyer le message</span>
               </NuxtLink>
             </div>
