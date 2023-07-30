@@ -1,8 +1,10 @@
 <template>
   <div class="index-page" id="index-page">
-    <section class="relative i-wrapper bg-center bg-cover bg-[url(/img/bg/2.jpeg)]">
+    <section
+      class="relative i-wrapper bg-cover bg-[center_left_-8rem] sm:bg-[center_left_20rem] bg-no-repeat bg-[url(/img/bg/5.jpg)]"
+    >
       <div
-        class="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent to-[#ffffffd3]"
+        class="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent to-[#ffffff]"
       ></div>
       <div
         class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-[#ffffff]"
@@ -11,14 +13,14 @@
         <div class="i-hero i-hero__v1">
           <div class="i-hero--text max-w-md">
             <h1
-              class="leading-[1.2] font-black text-4xl sm:text-5xl sm:leading-[1.2] text-blue"
+              class="leading-[1.2] font-black text-3xl sm:text-5xl sm:leading-[1.2] text-blue"
             >
-              Aider les petites entreprises
+              Nous aidons les petites entreprises
               <span class="text-blue opacity-80"> à grandir</span>
             </h1>
-            <p class="mt-8 text-gray-700 text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam beatae
-              quaerat impedit, expedita nemo sunt
+            <p class="mt-8 text-gray-700 text-base">
+              La meilleur façon de prédire votre avenir est de le créer. Impact Group vous
+              accompagne dans la création d’entreprise en RDC et ailleurs, pour réussir.
             </p>
             <div
               class="sm:flex sm:justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4"
@@ -39,16 +41,20 @@
       </div>
     </section>
     <section class="i-wrapper">
-      <div class="w-full md:flex justify-between lg:space-x-12">
+      <div class="w-full w-2/2 md:flex justify-between">
         <div
-          class="lg:rounded-tr-full lg:rounded-br-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24 bg-blue text-white"
+          class="w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24 bg-blue text-white"
         >
-          <div class="max-w-[380px] sm:max-w-[390px]">
-            <p class="text-primary font-bold">ABOUT US</p>
+          <div class="max-w-[380px] sm:max-w-[420px]">
+            <p class="text-sm text-primary font-bold uppercase">Notre impact</p>
             <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Nous façonnons l'avenir</h2>
-            <p>
-              Nous réunissons les bonnes personnes pour remettre en question la pensée
-              établie et conduire la transformation
+            <p class="text-lg">
+              Nous sommes déterminés à soutenir les jeunes entrepreneurs et promouvoir la
+              paix et la croissance économique en RDC.
+            </p>
+            <p class="mt-4">
+              Plus de 52 entreprises accompagnées, une communauté de plus de 1000 jeunes
+              entrepreneurs unis.
             </p>
             <div class="mt-6">
               <NuxtLink to="#" class="i-btn i-btn__blue_1">
@@ -58,7 +64,7 @@
           </div>
         </div>
         <div
-          class="lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/6.jpg)]"
+          class="w-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/6.jpg)]"
         ></div>
       </div>
     </section>
@@ -66,8 +72,8 @@
     <section class="i-wrapper">
       <div class="i-container py-16 sm:py-24">
         <div class="text-center max-w-md mx-auto">
-          <p class="text-primary font-bold">ÉVALUATION</p>
-          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Pourquoi notre conseil ?</h2>
+          <p class="text-primary font-bold">Nos Actions</p>
+          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Nos domaines d'action</h2>
           <p class="text-gray-600">
             Nous réunissons les bonnes personnes pour remettre en question la pensée
             établie et conduire la transformation
@@ -163,11 +169,11 @@
     </section>
 
     <section class="i-wrapper">
-      <div class="w-full md:flex justify-between lg:space-x-12">
+      <div class="w-full md:flex justify-between">
         <div
-          class="lg:rounded-tr-full lg:rounded-br-full md:w-1/2 flex lg:justify-end items-center py-16 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24 bg-blue_1 text-white"
+          class="md:w-1/2 flex lg:justify-end items-center py-16 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24 bg-blue_1 text-white"
         >
-          <div class="max-w-[380px] sm:max-w-[390px]">
+          <div class="max-w-[380px] sm:max-w-[420px]">
             <p class="text-gray-300 font-bold uppercase">Nous contacter</p>
             <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Prenez contact avec nous</h2>
             <p>
@@ -177,7 +183,7 @@
           </div>
         </div>
         <div
-          class="lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-16 md:p-16 bg-primary text-white"
+          class="md:w-1/2 z-0 flex justify-start px-4 py-16 md:p-16 bg-primary text-white"
         >
           <form action="" class="w-full max-w-full sm:max-w-[390px] sm:pl-8 space-y-4">
             <div class="form-group w-full">
@@ -186,7 +192,7 @@
                 name="name"
                 id="name"
                 placeholder="Nom & Post-nom"
-                class="py-2 bg-transparent placeholder:text-gray-100 border-b w-full border-b-gray-300"
+                class="py-2 bg-transparent focus:border-b-2 placeholder:text-gray-100 border-b w-full border-b-gray-300"
               />
             </div>
             <div class="form-group w-full">
@@ -195,7 +201,7 @@
                 name="enail"
                 id="email"
                 placeholder="Adresse e-mail"
-                class="py-2 bg-transparent placeholder:text-gray-100 border-b w-full border-b-gray-300"
+                class="py-2 bg-transparent focus:border-b-2 placeholder:text-gray-100 border-b w-full border-b-gray-300"
               />
             </div>
 
@@ -205,7 +211,7 @@
                 id=""
                 cols="20"
                 rows="4"
-                class="bg-transparent placeholder:text-gray-100 border-b w-full border-b-gray-300"
+                class="bg-transparent focus:border-b-2 placeholder:text-gray-100 border-b w-full border-b-gray-300"
                 placeholder="Message"
               ></textarea>
             </div>
@@ -247,9 +253,10 @@ const team = [
 ];
 const strategy = [
   {
-    name: "Strategie 1",
+    name: "Formations et Conseils",
     bg: "bg-blue bg-opacity-10",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "Nous proposons des formations complètes dans divers domaines clés de l'entrepreneuriat",
     svg: `
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -269,28 +276,27 @@ const strategy = [
   },
 
   {
-    name: "Strategie 2",
+    name: "Incubation de Startups",
     bg: "bg-blue_1 bg-opacity-10",
-    description: "Duis non justo vitae justo dignissim maximus a quis ante.",
+    description:
+      "Avec incubateur dynamique pour transformer vos idées novatrices en projets concrets",
     svg: `
-
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_1">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M20.893 13.393l-1.135-1.135a2.252 2.252 0 01-.421-.585l-1.08-2.16a.414.414 0 00-.663-.107.827.827 0 01-.812.21l-1.273-.363a.89.89 0 00-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 01-1.81 1.025 1.055 1.055 0 01-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 01-1.383-2.46l.007-.042a2.25 2.25 0 01.29-.787l.09-.15a2.25 2.25 0 012.37-1.048l1.178.236a1.125 1.125 0 001.302-.795l.208-.73a1.125 1.125 0 00-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 01-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 01-1.458-1.137l1.411-2.353a2.25 2.25 0 00.286-.76m11.928 9.869A9 9 0 008.965 3.525m11.928 9.868A9 9 0 118.965 3.525" />
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_1">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+</svg>
 
     `,
   },
 
   {
-    name: "Strategie 3",
+    name: "Coaching Personnalisé",
     bg: "bg-blue_2 bg-opacity-10",
-    description: "Duis non justo vitae justo dignissim maximus a quis ante.",
+    description: "Avec accompagnement sur mesure grâce à nos mentors expérimentés",
     svg: `
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-</svg>
 
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
     `,
   },
 ];

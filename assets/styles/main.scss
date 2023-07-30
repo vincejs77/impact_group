@@ -49,3 +49,8 @@
         @apply bg-blue_1 text-white;
     }
 }
+
+input:focus,
+textarea:focus {
+    outline: none;
+}

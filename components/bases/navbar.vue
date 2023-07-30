@@ -24,6 +24,9 @@
               <NuxtLink to="#">Services</NuxtLink>
             </li>
             <li>
+              <NuxtLink to="#">Gallerie</NuxtLink>
+            </li>
+            <li>
               <NuxtLink to="#">Blog</NuxtLink>
             </li>
           </ul>
