@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer">
+  <footer id="footer" class="border-t border-t-gray-300">
     <section class="i-wrapper">
       <div class="i-container">
         <div

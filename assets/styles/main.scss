@@ -54,3 +54,10 @@ input:focus,
 textarea:focus {
     outline: none;
 }
+
+footer,
+nav {
+    .router-link-active.router-link-exact-active {
+        @apply text-primary font-bold;
+    }
+}

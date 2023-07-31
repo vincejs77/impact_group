@@ -2,7 +2,9 @@
   <nav class="navbar text-blue" id="navbar">
     <div class="i-wrapper border-b-2 border-b-gray-200">
       <div class="i-container py-4 sm:py-8 flex justify-between items-center">
-        <div
+        <NuxtLink
+          to="/"
+          :active-class="'none-route-active-class'"
           class="i-logo font-bold sm:text-lg text-xl flex justify-start items-center space-x-4"
         >
           <img
@@ -11,28 +13,28 @@
             alt="Impact Group"
           />
           <span class="i-logo--name">Impact Group</span>
-        </div>
+        </NuxtLink>
         <div class="hidden sm:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
-              <NuxtLink to="#">Accueil</NuxtLink>
+              <NuxtLink to="/">Accueil</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#">A propos</NuxtLink>
+              <NuxtLink to="/a-propos">A propos</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#">Services</NuxtLink>
+              <NuxtLink to="/nos-services">Services</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#">Gallerie</NuxtLink>
+              <NuxtLink to="/gallerie">Gallerie</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="#">Blog</NuxtLink>
+              <NuxtLink to="/blog">Blog</NuxtLink>
             </li>
           </ul>
           <div>
-            <NuxtLink to="#" class="i-btn i-btn__primary">
-              <span>Nous contacter</span>
+            <NuxtLink to="/nous-contacter" class="i-btn i-btn__primary">
+              <span class="text-white">Nous contacter</span>
             </NuxtLink>
           </div>
         </div>
