@@ -26,12 +26,12 @@
               class="sm:flex sm:justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4"
             >
               <div>
-                <NuxtLink to="#" class="w-auto i-btn i-btn__blue_1">
+                <NuxtLink to="/a-propos" class="w-auto i-btn i-btn__blue_1">
                   <span>En savoir plus</span>
                 </NuxtLink>
               </div>
               <div>
-                <NuxtLink to="#" class="i-btn i-btn__primary">
+                <NuxtLink to="/nous-contacter" class="i-btn i-btn__primary">
                   <span>Nous contacter</span>
                 </NuxtLink>
               </div>
@@ -57,7 +57,7 @@
               entrepreneurs unis.
             </p>
             <div class="mt-6">
-              <NuxtLink to="#" class="i-btn i-btn__blue_1">
+              <NuxtLink to="/a-propos" class="i-btn i-btn__blue_1">
                 <span>En savoir plus</span>
               </NuxtLink>
             </div>
@@ -91,7 +91,7 @@
               <p class="text-gray-600 my-4">
                 {{ item.description }}
               </p>
-              <NuxtLink class="text-blue_1"> En savoir plus </NuxtLink>
+              <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink>
             </div>
           </div>
         </div>

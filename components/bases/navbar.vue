@@ -1,7 +1,10 @@
 <template>
-  <nav class="navbar text-blue" id="navbar">
+  <nav
+    class="navbar text-blue fixed w-full left-0 right-0 top-0 bg-white z-50 bg-opacity-80 backdrop-blur-sm"
+    id="navbar"
+  >
     <div class="i-wrapper border-b-2 border-b-gray-200">
-      <div class="i-container py-4 sm:py-8 flex justify-between items-center">
+      <div class="i-container py-4 sm:py-4 flex justify-between items-center">
         <NuxtLink
           to="/"
           :active-class="'none-route-active-class'"
@@ -14,7 +17,7 @@
           />
           <span class="i-logo--name">Impact Group</span>
         </NuxtLink>
-        <div class="hidden sm:flex justify-end items-center space-x-8">
+        <div class="hidden md:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
               <NuxtLink to="/">Accueil</NuxtLink>
@@ -23,7 +26,7 @@
               <NuxtLink to="/a-propos">A propos</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/nos-services">Services</NuxtLink>
+              <NuxtLink to="/services">Services</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/gallerie">Gallerie</NuxtLink>
@@ -38,7 +41,7 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="sm:hidden block">
+        <div class="md:hidden block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

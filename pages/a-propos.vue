@@ -38,9 +38,14 @@
                 </div>
 
                 <div>
-                  <NuxtLink class="text-blue_1 text-sm">
-                    email@impact-group.org
-                  </NuxtLink>
+                  <a
+                    class="text-blue_1 text-sm"
+                    :href="item.email"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {{ item.email }}
+                  </a>
                 </div>
               </div>
             </div>
@@ -57,21 +62,25 @@ const team = [
     name: "Nom & Post-nom",
     img: "/img/IMG_3744.JPG",
     titre: "Présitent du conseil d'administration",
+    email: "email@impact-group.org",
   },
   {
     name: "Nom & Post-nom",
     img: "/img/IMG_0134.JPG",
     titre: "Vice-présitente du conseil d'administration",
+    email: "email@impact-group.org",
   },
   {
     name: "Justin Burume",
     img: "/img/images.png",
     titre: "Comptable",
+    email: "email@impact-group.org",
   },
   {
     name: "Nom & Post-nom",
     img: "/img/images.png",
     titre: "Titre ou role",
+    email: "email@impact-group.org",
   },
 ];
 </script>

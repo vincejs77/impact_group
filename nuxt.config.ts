@@ -73,5 +73,23 @@ export default defineNuxtConfig({
 			tailwindcss: {},
 			autoprefixer: {}
 		}
+	},
+	runtimeConfig: {
+		sanity: {
+			token: process.env.NUXT_SANITY_TOKEN
+		}
+	},
+	modules: [
+		"@nuxtjs/sanity",
+		[
+			"@pinia/nuxt",
+			{
+				autoImports: ["defineStore", "acceptHMRUpdate"]
+			}
+		]
+	],
+	sanity: {
+		projectId: "0y216ymg",
+		dataset: "production"
 	}
 });
