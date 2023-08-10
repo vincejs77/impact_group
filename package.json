@@ -1,31 +1,30 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18",
-    "autoprefixer": "^10.4.14",
-    "nuxt": "^3.6.2",
-    "postcss": "^8.4.25",
-    "sass": "^1.63.6",
-    "sass-loader": "^13.3.2",
-    "tailwindcss": "^3.3.2"
-  },
-  "dependencies": {
-    "@nuxtjs/sanity": "^1.8.1",
-    "@pinia/nuxt": "^0.4.11",
-    "@portabletext/to-html": "^2.0.0",
-    "@sanity/client": "^6.4.4",
-    "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-    "htm": "^3.1.1",
-    "pinia": "^2.1.6",
-    "vhtml": "^2.2.0"
-  }
+	"name": "nuxt-app",
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@types/node": "^18",
+		"autoprefixer": "^10.4.14",
+		"nuxt": "^3.6.2",
+		"postcss": "^8.4.25",
+		"sass": "^1.63.6",
+		"sass-loader": "^13.3.2",
+		"tailwindcss": "^3.3.2"
+	},
+	"dependencies": {
+		"@nuxtjs/sanity": "^1.8.1",
+		"@pinia/nuxt": "^0.4.11",
+		"@portabletext/to-html": "^2.0.0",
+		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+		"htm": "^3.1.1",
+		"pinia": "^2.1.6",
+		"vhtml": "^2.2.0"
+	}
 }

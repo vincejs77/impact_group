@@ -77,6 +77,8 @@
 </template>
 
 <script setup>
+const sanity = useSanity();
+
 const query_categories_gallerie = computed(() => {
   return groq`*[_type == "categories_gallerie"] {_id,titre}`;
 });
@@ -84,7 +86,6 @@ const query_categories_gallerie = computed(() => {
 const query = ref(
   groq`*[_type == "galerie"]| order(_createdAt desc){_id,titre,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre}}`
 );
-const sanity = useSanity();
 const [
   { data: data_galerie, refresh: refresh_galerie },
   { data: data_categories_gallerie, refresh: refresh_categories_gallerie },
