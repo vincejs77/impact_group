@@ -43,9 +43,9 @@
     <section class="i-wrapper">
       <div class="w-full w-2/2 md:flex justify-between">
         <div
-          class="w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24 bg-blue text-white"
+          class="w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 bg-blue text-white"
         >
-          <div class="max-w-[380px] sm:max-w-[420px]">
+          <div class="max-w-[380px] sm:max-w-[420px] sm:py-8">
             <p class="text-sm text-primary font-bold uppercase">Notre impact</p>
             <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Nous façonnons l'avenir</h2>
             <p class="text-lg">
@@ -83,7 +83,7 @@
           <div :key="item" v-for="item in strategy" class="text-center bg-gray-100 p-8">
             <div
               :class="item.bg"
-              class="flex justify-center items-center mx-auto w-32 h-32 sm:w-32 sm:h-32 p-8 rounded-full"
+              class="flex justify-center items-center mx-auto w-20 h-20 sm:w-24 sm:h-24 p-4 sm:p-8 rounded-full"
               v-html="item.svg"
             ></div>
             <div class="mt-4">
@@ -98,19 +98,20 @@
       </div>
     </section>
 
-    <section class="i-wrapper bg-yellow">
+    <section class="sr-only i-wrapper bg-yellow">
       <div class="i-container py-16 sm:py-24 sm:flex justify-between items-center">
         <div class="sm:w-1/2 text-white">
-          <h2 class="text-3xl sm:text-4xl text-blue">Que faisons-nous ?</h2>
-          <p class="mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nemo doloribus ad
-            corrupti explicabo dolorem.
+          <h2 class="text-3xl sm:text-4xl text-blue">Notre mission</h2>
+          <p class="mt-6 text-lg font-medium">
+            Chez Impact Group, notre mission est de catalyser la transformation. Nous
+            accompagnons les jeunes entrepreneurs avec des ressources techniques,
+            financières et un encadrement solide.
           </p>
           <p class="mt-4">
-            Cum nostrum expedita similique optio necessitatibus sunt officia? Perspiciatis
-            quas minus facere dol oribus quis dignissimos! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Ut, neque dolor! Officiis officia, illum dolor
-            amet neque nam minima blanditiis,
+            Notre objectif est double : promouvoir une économie florissante tout en
+            favorisant la paix et l'inclusion. Nous croyons au pouvoir de chaque
+            entrepreneur pour contribuer au développement de la RDC et édifier un avenir
+            meilleur.
           </p>
         </div>
         <div class="sm:w-1/2 mt-10 sm:mt-0">
@@ -128,8 +129,8 @@
             <p class="text-gray-300 font-bold uppercase">Nous contacter</p>
             <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Prenez contact avec nous</h2>
             <p>
-              Nous réunissons les bonnes personnes pour remettre en question la pensée
-              établie et conduire la transformation
+              Nous sommes impatients de vous entendre. Que ce soit pour des questions, des
+              collaborations ou simplement pour échanger, nous sommes là pour vous aider.
             </p>
           </div>
         </div>
@@ -193,7 +194,7 @@ const strategy = [
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-8 h-8 sm:w-12 sm:h-12 text-blue"
+                class="w-8 h-8 sm:w-10 sm:h-10 text-blue"
               >
                 <path
                   stroke-linecap="round"
@@ -210,7 +211,7 @@ const strategy = [
     description:
       "Avec incubateur dynamique pour transformer vos idées novatrices en projets concrets",
     svg: `
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_1">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_1">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
 </svg>
 
@@ -223,8 +224,45 @@ const strategy = [
     description: "Avec accompagnement sur mesure grâce à nos mentors expérimentés",
     svg: `
 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12 text-blue_2">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+    `,
+  },
+  {
+    name: "Accompagnement aux entrepreneurs",
+    bg: "bg-yellow bg-opacity-10",
+    description: "Boostez votre entreprise avec notre expertise logistique et financier.",
+    svg: `
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+</svg>
+
+    `,
+  },
+  {
+    name: "Evènements entrepreneuriaux",
+    bg: "bg-blue_2 bg-opacity-10",
+    description: "Catalysez votre succès entrepreneurial avec nos événements uniques.",
+    svg: `
+
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+</svg>
+
+    `,
+  },
+  {
+    name: "Promotion de la femme",
+    bg: "bg-primary bg-opacity-10",
+    description:
+      "Programmes dédiés pour l'autonomisation des femmes entrepreneures, en RDC",
+    svg: `
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-primary">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
 </svg>
     `,
   },
