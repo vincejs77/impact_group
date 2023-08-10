@@ -104,4 +104,5 @@ const refreshGalerie_fx = async (_currentCategorieID) => {
   await refresh_galerie();
   currentCategorieID.value = _currentCategorieID;
 };
+//Comment test
 </script>
