@@ -38,8 +38,6 @@
       <div class="i-container pb-16">
         <div class="columns-1 md:columns-3 lg:columns-3">
           <div
-            v-motion-pop
-            v-motion-pop-visible
             :key="image"
             v-for="image in data_galerie"
             class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-60 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"
@@ -91,8 +89,18 @@ const query = ref(
   groq`*[_type == "galerie"]| order(_createdAt desc){_id,titre,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre}}`
 );
 const [
-  { data: data_galerie, refresh: refresh_galerie },
-  { data: data_categories_gallerie, refresh: refresh_categories_gallerie },
+  {
+    data: data_galerie,
+    refresh: refresh_galerie,
+    pending: pending_galerie,
+    error: error_galerie,
+  },
+  {
+    data: data_categories_gallerie,
+    refresh: refresh_categories_gallerie,
+    pending: pending_categories_gallerie,
+    error: error_categories_gallerie,
+  },
 ] = await Promise.all([
   useAsyncData("data-galerie", () => sanity.fetch(query.value)),
   useAsyncData("data-categories-galerie", () =>

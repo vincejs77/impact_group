@@ -1,6 +1,30 @@
 <template>
   <div>
-    <section class="i-wrapper relative py-16 pb-20 sm:pb-24 sm:py-24 bg-blue">
+    <section class="i-wrapper">
+      <div class="relative i-container py-16 sm:py-20">
+        <h1 class="text-3xl sm:text-5xl">
+          À propos <span class="text-blue opacity-80">de nous</span>
+        </h1>
+        <div class="mt-8 max-w-2xl">
+          <p class="text-lg font-medium">
+            Impact Group, créé en juin 2020 en pleine pandémie de COVID-19, se consacre à
+            l'autonomisation des jeunes congolais.
+          </p>
+          <p class="mt-4 opacity-80">
+            Malgré les défis, notre mission est de soutenir les entrepreneurs face à
+            l'impact économique de la crise. Nous avons initié une vague d'innovation en
+            offrant un soutien financier, technique et des ateliers sur la planification
+            d'entreprise.
+          </p>
+        </div>
+        <div class="mt-8 lg:mt-0 lg:absolute right-4 lg:right-8 bottom-24">
+          <a href="#section-1">
+            <div class="scroll"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="i-wrapper relative py-14 pb-20 sm:py-16 bg-blue">
       <div class="absolute top-0 right-0">
         <svg
           class="mt-10"
@@ -27,10 +51,12 @@
         </svg>
       </div>
       <div class="i-container relative px-4 mx-auto">
+        <div id="section-1" class="-translate-y-40"></div>
+
         <h2
           class="font-extrabold max-w-md mb-10 text-3xl sm:text-4xl text-white font-heading"
         >
-          Créer une nouvelle économie en RDC
+          Nous aspirons à créer une nouvelle économie en RDC
         </h2>
         <div class="bg-blue-900 mb-2">
           <div class="flex flex-wrap md:flex-nowrap -mx-4">
@@ -51,8 +77,8 @@
                   ></path>
                 </svg>
               </div>
-              <div class="max-w-md p-6 px-0 lg:pl-28 lg:pt-20">
-                <h3 class="mb-2 text-xl sm:text-2xl font-bold text-white">
+              <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-20">
+                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
                   Notre vision
                 </h3>
                 <p class="text-base text-g leading-relaxed text-gray-100 mt-4">
@@ -63,7 +89,7 @@
               </div>
             </div>
             <div
-              class="rounded-xl w-full mx-4 sm:mx-4 md:w-1/2 py-8 order-0 lg:order-1 bg-yellow"
+              class="rounded-xl w-full mx-4 sm:mx-4 md:w-1/2 px-4 py-8 order-0 lg:order-1 bg-yellow"
             >
               <img
                 class="h-full w-80 mx-auto clip-path-left object-cover"
@@ -75,12 +101,12 @@
             </div>
           </div>
         </div>
-        <div class="bg-blue-900 mb-2 mt-4 lg:mt-0">
+        <div class="bg-blue-900 mb-2 mt-4 lg:mt-8">
           <div class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4">
-            <div class="w-full md:w-1/2 px-4">
+            <div class="rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4">
               <img
                 class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="https://images.unsplash.com/photo-1536851101967-55988a52f455?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                src="/img/bg/pexels-pixabay-355948-min.jpg"
                 alt=""
               />
             </div>
@@ -101,8 +127,8 @@
                   ></path>
                 </svg>
               </div>
-              <div class="max-w-md p-6 px-0 lg:pl-28 lg:pt-20">
-                <h3 class="mb-2 text-xl sm:text-2xl font-bold text-white">
+              <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-20">
+                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
                   Notre mission
                 </h3>
                 <p class="text-base text-white leading-relaxed">
@@ -113,7 +139,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-blue-900 mb-2 mt-4 lg:mt-0">
+        <div class="bg-blue-900 mb-2 mt-4 lg:mt-8">
           <div class="flex flex-wrap md:flex-nowrap -mx-4">
             <div class="relative w-full md:w-1/2 px-4 lg:order-0">
               <div class="absolute top-0 -right-8 lg:right-auto lg:left-0 lg:ml-20 mt-8">
@@ -132,8 +158,10 @@
                   ></path>
                 </svg>
               </div>
-              <div class="max-w-md p-6 px-0 lg:pl-28 lg:pt-16">
-                <h3 class="mb-2 text-xl sm:text-2xl font-bold text-white">Nos valeurs</h3>
+              <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-16">
+                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
+                  Nos valeurs
+                </h3>
                 <p class="text-base text-white leading-relaxed">
                   Les valeurs suivantes caractérisent l’organisation. <br /><br />
                   La dignité • La promptitude • L’éthique • Le travail bien fait • La
@@ -141,21 +169,23 @@
                 </p>
               </div>
             </div>
-            <div class="w-full md:w-1/2 px-4 order-0 lg:order-1">
+            <div
+              class="rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4 order-0 lg:order-1"
+            >
               <img
                 class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="https://images.unsplash.com/photo-1536851101967-55988a52f455?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                src="/img/bg/pexels-picha-stock-3869651-min.jpg"
                 alt=""
               />
             </div>
           </div>
         </div>
-        <div class="bg-blue-900 mt-4 lg:mt-0">
+        <div class="bg-blue-900 mt-4 lg:mt-8">
           <div class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4">
-            <div class="w-full md:w-1/2 px-4">
+            <div class="max-h-72 rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4">
               <img
                 class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="https://images.unsplash.com/photo-1536851101967-55988a52f455?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"
+                src="/img/bg/microsoft-365-oUbzU87d1Gc-unsplash.jpg"
                 alt=""
               />
             </div>
@@ -176,15 +206,15 @@
                   ></path>
                 </svg>
               </div>
-              <div class="max-w-md p-6 px-0 lg:pl-28 md:pt-8">
-                <h3 class="mb-2 text-xl sm:text-2xl font-bold text-white">
+              <div class="max-w-md p-6 px-0 lg:pl-16 md:pt-8">
+                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
                   Nos objectifs
                 </h3>
                 <p class="text-base text-white leading-relaxed">
                   • Apporter un appui technique et matériel aux initiatives des jeunes
-                  entrepreneurs congolais. <br />
+                  entrepreneurs congolais. <br /><br />
                   • Contribuer à la promotion de la participation des jeunes dans les
-                  instances de prise de décision et processus de paix <br />
+                  instances de prise de décision et processus de paix <br /><br />
                   • Contribuer à la promotion de l’entrepreneuriat féminin.
                 </p>
               </div>
@@ -193,54 +223,80 @@
         </div>
       </div>
     </section>
-    <section class="i-wrapper py-16">
-      <div class="w-full">
-        <div class="w-full md:flex justify-between lg:space-x-12">
-          <div
-            class="lg:rounded-tr-full lg:rounded-br-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 sm:py-24"
-          >
-            <div class="max-w-[380px] sm:max-w-[390px]">
+    <section class="i-wrapper py-16 sm:py-24">
+      <div class="i-container">
+        <div class="mx-auto w-full md:flex justify-between lg:space-x-12">
+          <div class="mx-auto lg:rounded-tr-full lg:justify-end">
+            <div class="text-center max-w-md">
               <p class="text-primary font-bold uppercase">Notre equipe</p>
-              <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Nos experts vous attendent</h2>
+              <h2 class="mb-6 text-3xl sm:text-4xl mt-4">
+                Nos experts <span class="text-blue opacity-80">vous attendent</span>
+              </h2>
               <p>
-                We bring the right people together to challenge established thinking and
-                drive transformation.
+                Notre équipe pationnée et dévouée à soutenir les jeunes entrepreneurs
+                congolais
               </p>
             </div>
           </div>
-          <div
-            class="lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/1.jpeg)]"
-          ></div>
+          <!-- <div
+            class=" lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/pexels-mikhail-nilov-9301258-min.jpg)]"
+          ></div> -->
         </div>
-        <div class="i-container mx-auto">
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div :key="item" v-for="item in team" class="text-center bg-gray-100 p-8">
-              <div class="flex justify-center items-center mx-auto p-4 rounded-full">
-                <img
-                  :src="item.img"
-                  class="rounded-full w-[80px] h-[80px] object-cover"
-                  alt=""
-                />
+        <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div :key="item" v-for="item in team" class="text-center bg-gray-100 p-8">
+            <div class="flex justify-center items-center mx-auto p-4 rounded-full">
+              <img
+                :src="item.img"
+                class="rounded-full w-[80px] h-[80px] object-cover"
+                alt=""
+              />
+            </div>
+            <div class="mt-0 flex flex-col h-[120px] justify-between">
+              <div>
+                <h3 class="text-lg">{{ item.name }}</h3>
+                <p class="text-gray-600 my-4 text-sm">
+                  {{ item.titre }}
+                </p>
               </div>
-              <div class="mt-0 flex flex-col h-[120px] justify-between">
-                <div>
-                  <h3 class="text-lg">{{ item.name }}</h3>
-                  <p class="text-gray-600 my-4 text-sm">
-                    {{ item.titre }}
-                  </p>
-                </div>
 
-                <div>
-                  <a
-                    class="text-blue_1 text-sm"
-                    :href="item.email"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {{ item.email }}
-                  </a>
-                </div>
+              <div>
+                <a
+                  class="text-blue_1 text-sm"
+                  :href="item.email"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ item.email }}
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="i-wrapper">
+      <div class="i-container py-16 sm:py-24">
+        <div class="text-center max-w-md mx-auto">
+          <p class="text-primary font-bold">Nos Actions</p>
+          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Nos domaines d'action</h2>
+          <p class="text-gray-600">
+            Nous réunissons les bonnes personnes pour remettre en question la pensée
+            établie et conduire la transformation
+          </p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div :key="item" v-for="item in strategy" class="text-center bg-gray-100 p-8">
+            <div
+              :class="item.bg"
+              class="flex justify-center items-center mx-auto w-20 h-20 sm:w-24 sm:h-24 p-4 sm:p-8 rounded-full"
+              v-html="item.svg"
+            ></div>
+            <div class="mt-4">
+              <h3 class="text-2xl">{{ item.name }}</h3>
+              <p class="text-gray-600 my-4">
+                {{ item.description }}
+              </p>
+              <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink>
             </div>
           </div>
         </div>
@@ -252,28 +308,115 @@
 <script setup>
 const team = [
   {
-    name: "Nom & Post-nom",
+    name: "MWAMI TONY",
     img: "/img/IMG_3744.JPG",
     titre: "Présitent du conseil d'administration",
-    email: "email@impact-group.org",
+    email: "pca@impactgp.net",
   },
   {
-    name: "Nom & Post-nom",
+    name: "Messah Tarr",
     img: "/img/IMG_0134.JPG",
     titre: "Vice-présitente du conseil d'administration",
-    email: "email@impact-group.org",
+    email: "vpsa@impactgp.net",
   },
   {
     name: "Justin Burume",
     img: "/img/images.png",
     titre: "Comptable",
-    email: "email@impact-group.org",
+    email: "justin@impactgp.net",
   },
   {
     name: "Nom & Post-nom",
     img: "/img/images.png",
     titre: "Titre ou role",
-    email: "email@impact-group.org",
+    email: "email@impactgp.net",
+  },
+];
+
+const strategy = [
+  {
+    name: "Formations et Conseils",
+    bg: "bg-blue bg-opacity-10",
+    description:
+      "Nous proposons des formations complètes dans divers domaines clés de l'entrepreneuriat",
+    svg: `
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 sm:w-10 sm:h-10 text-blue"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9"
+                />
+              </svg>
+    `,
+  },
+
+  {
+    name: "Incubation de Startups",
+    bg: "bg-blue_1 bg-opacity-10",
+    description:
+      "Avec incubateur dynamique pour transformer vos idées novatrices en projets concrets",
+    svg: `
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_1">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+</svg>
+
+    `,
+  },
+
+  {
+    name: "Coaching Personnalisé",
+    bg: "bg-blue_2 bg-opacity-10",
+    description: "Avec accompagnement sur mesure grâce à nos mentors expérimentés",
+    svg: `
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+</svg>
+    `,
+  },
+  {
+    name: "Accompagnement aux entrepreneurs",
+    bg: "bg-yellow bg-opacity-10",
+    description: "Boostez votre entreprise avec notre expertise logistique et financier.",
+    svg: `
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+</svg>
+
+    `,
+  },
+  {
+    name: "Evènements entrepreneuriaux",
+    bg: "bg-blue_2 bg-opacity-10",
+    description: "Catalysez votre succès entrepreneurial avec nos événements uniques.",
+    svg: `
+
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+</svg>
+
+    `,
+  },
+  {
+    name: "Promotion de la femme",
+    bg: "bg-primary bg-opacity-10",
+    description:
+      "Programmes dédiés pour l'autonomisation des femmes entrepreneures, en RDC",
+    svg: `
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-primary">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+</svg>
+    `,
   },
 ];
 </script>

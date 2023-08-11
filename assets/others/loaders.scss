@@ -1,0 +1,19 @@
+.nuxt-loading-indicator {
+    background: #ffb7ae;
+    @apply bg-gradient-to-r from-primary to-primary;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    background-size: 500%;
+    z-index: 999999;
+    position: fixed;
+    display: block;
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    -moz-transition: opacity 0.2s ease-in-out;
+    -ms-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}

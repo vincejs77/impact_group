@@ -13,13 +13,27 @@
             />
           </div>
           <div>
-            <h3>Menu</h3>
+            <h3>Entreprise</h3>
             <ul class="grid grid-cols-2 gap-2 mt-4 text-sm">
-              <li>Accueil</li>
-              <li>À propos</li>
-              <li>Services</li>
-              <li>Blog</li>
-              <li>Contacts</li>
+              <div class="space-y-2">
+                <li>
+                  <NuxtLink to="/"> Accueil </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/a-propos"> À propos </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/nous-contacter"> Contacts </NuxtLink>
+                </li>
+              </div>
+              <div class="space-y-2">
+                <li>
+                  <NuxtLink to="/evenements"> Événements </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/blog"> Blog </NuxtLink>
+                </li>
+              </div>
             </ul>
           </div>
 

@@ -3,6 +3,8 @@ export default defineNuxtConfig({
 	css: ["~/assets/styles/fonts.scss", "~/assets/styles/main.scss"],
 
 	app: {
+		pageTransition: { name: "fade", mode: "out-in" },
+
 		head: {
 			title: "Impact Group",
 			meta: [

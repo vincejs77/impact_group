@@ -17,7 +17,7 @@
           />
           <span class="i-logo--name">Impact Group</span>
         </NuxtLink>
-        <div class="hidden md:flex justify-end items-center space-x-8">
+        <div class="hidden lg:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
               <NuxtLink to="/">Accueil</NuxtLink>
@@ -25,7 +25,7 @@
             <li>
               <NuxtLink to="/a-propos">A propos</NuxtLink>
             </li>
-            <li>
+            <li class="hidden">
               <NuxtLink to="/services">Services</NuxtLink>
             </li>
             <li>
@@ -34,6 +34,9 @@
             <li>
               <NuxtLink to="/blog">Blog</NuxtLink>
             </li>
+            <li>
+              <NuxtLink to="/evenements">Événements</NuxtLink>
+            </li>
           </ul>
           <div>
             <NuxtLink to="/nous-contacter" class="i-btn i-btn__primary">
@@ -41,7 +44,7 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="md:hidden block">
+        <div class="lg:hidden block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
