@@ -38,6 +38,7 @@
       <div class="i-container pb-16">
         <div class="columns-1 md:columns-3 lg:columns-3">
           <div
+            v-motion-pop-visible
             :key="image"
             v-for="image in data_galerie"
             class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-60 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"

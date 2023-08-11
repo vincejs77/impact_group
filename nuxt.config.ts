@@ -86,7 +86,8 @@ export default defineNuxtConfig({
 			{
 				autoImports: ["defineStore", "acceptHMRUpdate"]
 			}
-		]
+		],
+		"@vueuse/motion/nuxt"
 	],
 	sanity: {
 		projectId: "0y216ymg",
