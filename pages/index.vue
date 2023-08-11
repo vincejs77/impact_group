@@ -43,7 +43,7 @@
     <section class="i-wrapper">
       <div class="w-full w-2/2 md:flex justify-between">
         <div
-          class="w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 bg-blue text-white"
+          class="level-counter w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 bg-blue text-white"
         >
           <div class="max-w-[380px] sm:max-w-[420px] sm:py-8">
             <p class="text-sm text-primary font-bold uppercase">Notre impact</p>
@@ -59,7 +59,8 @@
                   <h2
                     class="mb-3 text-3xl md:text-5xl font-bold font-heading tracking-px-n leading-tight"
                   >
-                    52 <span class="text-primary">+</span>
+                    <span class="js-count-up" data-value="52"></span>
+                    <span class="text-primary">+</span>
                   </h2>
                   <p class="text-sm text-gray-300 font-medium leading-normal">
                     entreprises accompagnées
@@ -72,7 +73,8 @@
                   <h2
                     class="font-extrabold font-serif mb-3 text-3xl md:text-5xl font-heading tracking-px-n leading-tight"
                   >
-                    1000 <span class="text-primary">+</span>
+                    <span class="js-count-up" data-value="1000"></span>
+                    <span class="text-primary">+</span>
                   </h2>
                   <p class="w-32 text-sm text-gray-300 font-medium leading-normal">
                     jeunes entrepreneurs unis
@@ -121,4 +123,45 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { CountUp } from "assets/js/countUp";
+
+onMounted(() => {
+  function countStart() {
+    const $counters = document.querySelectorAll(".js-count-up"),
+      options = {
+        useEasing: true,
+        useGrouping: true,
+        separator: ",",
+        decimal: ".",
+        duration: 3,
+      };
+
+    $counters.forEach((item) => {
+      const value = item.dataset.value;
+      const counter = new CountUp(item, value, options);
+      counter.start();
+    });
+  }
+
+  function countStart_obs() {
+    const sections = document.querySelectorAll(".level-counter");
+    const options = {
+      threshold: 0.5,
+    };
+    const observer = new IntersectionObserver(function (entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          countStart();
+        }
+      });
+    }, options);
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  }
+  setTimeout(() => {
+    countStart_obs();
+  }, 1000);
+});
+</script>
