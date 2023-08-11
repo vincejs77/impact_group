@@ -38,36 +38,39 @@
       <div class="i-container pb-16">
         <div class="columns-1 md:columns-3 lg:columns-3">
           <div
+            v-motion-pop
             v-motion-pop-visible
             :key="image"
             v-for="image in data_galerie"
             class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-60 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"
           >
-            <div class="w-full h-full min-[200px] bg-blue">
-              <img
-                class="min-h-[200px] transition duration-500 ease-in-out group-hover:scale-125 w-full"
-                :src="image.imageUrl.url"
-              />
-            </div>
-            <div class="z-10 test__body absolute inset-0 p-4 text-white flex flex-col">
-              <div class="mb-auto">
-                <ul class="flex justify-start items-center flex-wrap -mt-4">
-                  <li
-                    :key="categorie"
-                    v-for="categorie in image.categories_gallerie"
-                    class="mr-4 mt-4 text-xs test__tag bg-white text-blue bg-opacity-80 py-1 px-4 rounded-md"
-                  >
-                    <span class="font-medium">
-                      {{ categorie.titre }}
-                    </span>
-                  </li>
-                </ul>
+            <div class="">
+              <div class="w-full h-full min-[200px] bg-blue">
+                <img
+                  class="min-h-[200px] transition duration-500 ease-in-out group-hover:scale-125 w-full"
+                  :src="image.imageUrl.url"
+                />
               </div>
-              <div class="relative">
-                <a class="test__link absolute inset-0" target="_blank" href="/"></a>
-                <p class="text-lg leading-snug font-medium line-clamp-2">
-                  {{ image.titre }}
-                </p>
+              <div class="z-10 test__body absolute inset-0 p-4 text-white flex flex-col">
+                <div class="mb-auto">
+                  <ul class="flex justify-start items-center flex-wrap -mt-4">
+                    <li
+                      :key="categorie"
+                      v-for="categorie in image.categories_gallerie"
+                      class="mr-4 mt-4 text-xs test__tag bg-white text-blue bg-opacity-80 py-1 px-4 rounded-md"
+                    >
+                      <span class="font-medium">
+                        {{ categorie.titre }}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="relative">
+                  <a class="test__link absolute inset-0" target="_blank" href="/"></a>
+                  <p class="text-lg leading-snug font-medium line-clamp-2">
+                    {{ image.titre }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
