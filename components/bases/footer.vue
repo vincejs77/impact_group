@@ -28,6 +28,9 @@
               </div>
               <div class="space-y-2">
                 <li>
+                  <NuxtLink to="/galerie"> Galerie </NuxtLink>
+                </li>
+                <li>
                   <NuxtLink to="/evenements"> Événements </NuxtLink>
                 </li>
                 <li>
@@ -111,10 +114,11 @@
             </ul>
           </div>
         </div>
-
-        <div
-          class="border-t border-t-gray-300 py-4 text-xs sm:text-sm text-gray-500 text-center"
-        >
+      </div>
+    </section>
+    <section class="i-wrapper border-t border-t-gray-300">
+      <div class="i-container">
+        <div class="py-4 text-xs sm:text-sm text-gray-500 text-center">
           © 2023 Impact Group all rights reserved.
         </div>
       </div>

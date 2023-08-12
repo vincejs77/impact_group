@@ -103,6 +103,11 @@
           >
             <div class="flex flex-col justify-between h-full w-full">
               <div class="mb-8">
+                <p
+                  class="text-xs text-primary font-bold uppercase text-center md:text-left mb-4"
+                >
+                  Blog
+                </p>
                 <h2
                   class="mb-5 text-3xl md:text-5xl font-heading tracking-px-n leading-tight"
                 >
@@ -117,9 +122,9 @@
                   Restez informés sur nos initiatives et opportunités de formation.
                 </p>
               </div>
-              <a
+              <NuxtLink
+                to="/blog"
                 class="inline-flex justify-center md:justify-start items-center text-blue_1 hover:text-primary leading-normal"
-                href="#"
               >
                 <span class="mr-2 font-semibold">Voir tous les articles</span>
                 <svg
@@ -137,7 +142,7 @@
                     stroke-linejoin="round"
                   ></path>
                 </svg>
-              </a>
+              </NuxtLink>
             </div>
           </div>
           <div class="mt-16 lg:mt-0 w-full lg:w-2/3 md:flex-1">
@@ -149,24 +154,59 @@
       </div>
     </section>
 
-    <section class="sr-only i-wrapper bg-yellow">
-      <div class="i-container py-16 sm:py-24 sm:flex justify-between items-center">
-        <div class="sm:w-1/2 text-white">
-          <h2 class="text-3xl sm:text-4xl text-blue">Notre mission</h2>
-          <p class="mt-6 text-lg font-medium">
-            Chez Impact Group, notre mission est de catalyser la transformation. Nous
-            accompagnons les jeunes entrepreneurs avec des ressources techniques,
-            financières et un encadrement solide.
-          </p>
-          <p class="mt-4">
-            Notre objectif est double : promouvoir une économie florissante tout en
-            favorisant la paix et l'inclusion. Nous croyons au pouvoir de chaque
-            entrepreneur pour contribuer au développement de la RDC et édifier un avenir
-            meilleur.
-          </p>
-        </div>
-        <div class="sm:w-1/2 mt-10 sm:mt-0">
-          <img src="/img/contents/1.png" class="w-[300px] mx-auto" alt="" />
+    <section class="i-wrapper bg-blue_1 bg-opacity-5 overflow-hidden">
+      <div class="i-container px-4 mx-auto py-16 sm:py-24">
+        <p class="text-xs text-primary font-bold uppercase text-center mb-4">
+          événements
+        </p>
+
+        <h2
+          class="mb-4 text-3xl md:text-5xl text-center font-heading tracking-px-n leading-tight"
+        >
+          Nos événements
+        </h2>
+        <p
+          class="mb-12 text-gray-600 text-center font-medium leading-relaxed md:max-w-md mx-auto"
+        >
+          Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat tempor to
+          the condimentum vitae.
+        </p>
+        <div class="md:max-w-2xl mx-auto">
+          <div class="flex flex-wrap space-y-8">
+            <CardsEvenement
+              v-bind="evenement"
+              :key="evenement"
+              v-for="evenement in evenements"
+            />
+          </div>
+
+          <div class="flex justify-center mt-8">
+            <NuxtLink
+              to="/evenements"
+              class="inline-flex justify-center md:justify-start items-center text-blue_1 hover:text-primary leading-normal"
+            >
+              <span class="mr-2 font-semibold relative"
+                >Voir tous les événements
+
+                <span class="absolute -bottom-1 h-[3px] w-full left-0 bg-gray-200"></span>
+              </span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5 3.75L15.75 9M15.75 9L10.5 14.25M15.75 9L2.25 9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>
@@ -175,6 +215,15 @@
 
 <script setup>
 import { CountUp } from "assets/js/countUp";
+
+const evenements = [
+  { status: "à venir", titre: "Conception de Business Plan", place: "En ligne" },
+  {
+    status: "passé",
+    titre: "Je suis un titre d'un événement, un tout petit long",
+    place: "En présentiel",
+  },
+];
 
 onMounted(() => {
   function countStart() {

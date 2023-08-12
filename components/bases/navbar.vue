@@ -3,7 +3,7 @@
     class="navbar text-blue fixed w-full left-0 right-0 top-0 bg-white z-50 bg-opacity-80 backdrop-blur-sm"
     id="navbar"
   >
-    <div class="i-wrapper border-b-2 border-b-gray-200">
+    <div class="i-wrapper border-b border-b-gray-300">
       <div class="i-container py-4 sm:py-4 flex justify-between items-center">
         <NuxtLink
           to="/"
@@ -29,7 +29,7 @@
               <NuxtLink to="/services">Services</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/gallerie">Gallerie</NuxtLink>
+              <NuxtLink to="/galerie">Galerie</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/blog">Blog</NuxtLink>
