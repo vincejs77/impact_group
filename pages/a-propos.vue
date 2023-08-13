@@ -227,7 +227,37 @@
         </div>
       </div>
     </section>
-    <section class="i-wrapper py-16 sm:py-24">
+
+    <section class="i-wrapper">
+      <div class="i-container py-16 sm:py-24">
+        <div class="text-center max-w-md mx-auto">
+          <p class="text-primary font-bold">Nos Actions</p>
+          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Nos domaines d'action</h2>
+          <p class="text-gray-600">
+            Nous réunissons les bonnes personnes pour remettre en question la pensée
+            établie et conduire la transformation
+          </p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div :key="item" v-for="item in strategy" class="text-center bg-gray-100 p-8">
+            <div
+              :class="item.bg"
+              class="flex justify-center items-center mx-auto w-20 h-20 sm:w-24 sm:h-24 p-4 sm:p-8 rounded-full"
+              v-html="item.svg"
+            ></div>
+            <div class="mt-4">
+              <h3 class="text-2xl">{{ item.name }}</h3>
+              <p class="text-gray-600 my-4">
+                {{ item.description }}
+              </p>
+              <!-- <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="i-wrapper pb-16 sm:pb-24">
       <div class="i-container">
         <div class="mx-auto w-full md:flex justify-between lg:space-x-12">
           <div class="mx-auto lg:rounded-tr-full lg:justify-end">
@@ -273,34 +303,6 @@
                   {{ item.email }}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="i-wrapper">
-      <div class="i-container py-16 sm:py-24">
-        <div class="text-center max-w-md mx-auto">
-          <p class="text-primary font-bold">Nos Actions</p>
-          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Nos domaines d'action</h2>
-          <p class="text-gray-600">
-            Nous réunissons les bonnes personnes pour remettre en question la pensée
-            établie et conduire la transformation
-          </p>
-        </div>
-        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div :key="item" v-for="item in strategy" class="text-center bg-gray-100 p-8">
-            <div
-              :class="item.bg"
-              class="flex justify-center items-center mx-auto w-20 h-20 sm:w-24 sm:h-24 p-4 sm:p-8 rounded-full"
-              v-html="item.svg"
-            ></div>
-            <div class="mt-4">
-              <h3 class="text-2xl">{{ item.name }}</h3>
-              <p class="text-gray-600 my-4">
-                {{ item.description }}
-              </p>
-              <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink>
             </div>
           </div>
         </div>

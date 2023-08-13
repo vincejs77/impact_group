@@ -27,7 +27,9 @@
                 Formation
               </p>
             </div>
-            <h3 class="mb-2.5 text-xl font-bold font-heading leading-snug">
+            <h3
+              class="group-hover:text-primary group-hover:underline mb-2.5 text-xl font-bold font-heading leading-snug"
+            >
               {{ titre }}
             </h3>
             <p class="text-sm text-gray-600 font-medium">
