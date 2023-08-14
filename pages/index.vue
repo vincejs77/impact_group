@@ -15,12 +15,11 @@
             <h1
               class="leading-[1.2] font-black text-3xl sm:text-5xl sm:leading-[1.2] text-blue"
             >
-              La meilleur façon de prédire l' avenir
-              <span class="text-blue opacity-80"> est de le créer</span>
+              La meilleure façon de prédire l' avenir
+              <span class="text-blue opacity-80"> est de le créer.</span>
             </h1>
             <p class="mt-8 text-gray-700 text-base">
-              Impact Group vous accompagne dans la création d’entreprise en RDC et
-              ailleurs, pour réussir.
+              Impact Group vous accompagne dans la création d’entreprises.
             </p>
             <div
               class="sm:flex sm:justify-start mt-8 space-y-4 sm:space-y-0 sm:space-x-4"
@@ -47,10 +46,10 @@
         >
           <div class="max-w-[380px] sm:max-w-[420px] sm:py-8">
             <p class="text-xs text-primary font-bold uppercase">Notre impact</p>
-            <h2 class="mb-6 text-3xl sm:text-4xl mt-4">Nous façonnons l'avenir</h2>
+            <h2 class="mb-6 text-3xl sm:text-5xl mt-4">Nous façonnons l'avenir</h2>
             <p class="text-lg">
               Nous sommes déterminés à soutenir les jeunes entrepreneurs et promouvoir la
-              paix et la croissance économique en RDC.
+              paix et la croissance économique en République Démocratique du Congo.
             </p>
 
             <div class="flex justify-between sm:justify-start mt-8">
@@ -213,7 +212,11 @@
 
     <section class="i-wrapper">
       <div class="i-container py-16 sm:py-24">
-        <div class="flex justify-center">
+        <h2 class="text-xl text-center mt-0">Ils nous ont approuvés</h2>
+        <div class="mt-8 pt-0">
+          <SectionsLogoCloud />
+        </div>
+        <div class="mt-8 flex justify-center">
           <div class="relative overflow-hidden rounded-md md:rounded-xl">
             <img
               class="transform hover:scale-105 transition ease-in-out duration-1000"
@@ -255,45 +258,6 @@
                 <h4 class="mb-1 font-bold">Jeanne Mukendi</h4>
                 <p class="text-gray-600 font-medium">Fondatrice de TechSol</p>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 items-center lg:-mx-0">
-          <div class="w-full py-4 lg:px-0">
-            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
-              <img
-                class="h-12 mx-auto"
-                src="https://www.sighteddesign.com/images/2021/03/26/swiss.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="w-full py-4 lg:px-0">
-            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
-              <img
-                class="h-12 mx-auto"
-                src="https://www.sighteddesign.com/images/2021/03/26/bkxplr.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="w-full py-4 lg:px-0">
-            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
-              <img
-                class="h-12 mx-auto"
-                src="https://www.sighteddesign.com/images/2021/03/26/elizabeth.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div class="w-full py-4 lg:px-0">
-            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
-              <img
-                class="h-12 mx-auto"
-                src="https://www.sighteddesign.com/images/2021/03/26/3tamis.png"
-                alt=""
-              />
             </div>
           </div>
         </div>

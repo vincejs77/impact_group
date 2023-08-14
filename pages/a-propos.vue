@@ -277,8 +277,12 @@
             class=" lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/pexels-mikhail-nilov-9301258-min.jpg)]"
           ></div> -->
         </div>
-        <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div :key="item" v-for="item in team" class="text-center bg-gray-100 p-8">
+        <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            :key="item"
+            v-for="item in team"
+            class="text-center bg-gray-50 p-8 shadow-sm border border-gray-100 rounded-lg shadow-gray-200"
+          >
             <div class="flex justify-center items-center mx-auto p-4 rounded-full">
               <img
                 :src="item.img"
@@ -288,7 +292,7 @@
             </div>
             <div class="mt-0 flex flex-col h-[120px] justify-between">
               <div>
-                <h3 class="text-lg">{{ item.name }}</h3>
+                <h3 class="text-lg text-primary">{{ item.name }}</h3>
                 <p class="text-gray-600 my-4 text-sm">
                   {{ item.titre }}
                 </p>
@@ -331,12 +335,6 @@ const team = [
     img: "/img/images.png",
     titre: "Comptable",
     email: "justin@impactgp.net",
-  },
-  {
-    name: "Nom & Post-nom",
-    img: "/img/images.png",
-    titre: "Titre ou role",
-    email: "email@impactgp.net",
   },
 ];
 
