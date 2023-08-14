@@ -43,9 +43,13 @@
           <div>
             <h3>Contacts</h3>
             <div class="mt-4 text-sm text-gray-500 space-y-2">
-              <p>00, Avenue PE Lumumba, IbandaSud-Kivu, RD Congo</p>
-              <p class="underline">contact@impactrdc.com</p>
-              <p>+243 81 00 000 00 | +243 990 000 000</p>
+              <p>Adresse : Avenue Saïo 169 Ndendere</p>
+              <p class="underline">
+                <a href="mailto:contact@impactgp.net">contact@impactgp.net</a>
+              </p>
+              <p>
+                <a href="tel:+243999573957">+243 999 573 957 </a>
+              </p>
             </div>
           </div>
           <div>
