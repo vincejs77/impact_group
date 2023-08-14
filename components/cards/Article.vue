@@ -1,7 +1,9 @@
 <template>
   <div class="w-auto">
     <div class="max-w-sm mx-auto">
-      <div class="mb-6 max-w-max overflow-hidden rounded-xl">
+      <div
+        class="min-h-[130px] sm:min-h-[130px] xl:min-h-[200px] bg-blue mb-6 max-w-max overflow-hidden rounded-xl"
+      >
         <img
           class="transform hover:scale-105 transition ease-in-out duration-1000"
           src="/img/bg/4.jpg"
