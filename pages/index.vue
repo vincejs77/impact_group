@@ -258,6 +258,45 @@
             </div>
           </div>
         </div>
+
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 items-center lg:-mx-0">
+          <div class="w-full py-4 lg:px-0">
+            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
+              <img
+                class="h-12 mx-auto"
+                src="https://www.sighteddesign.com/images/2021/03/26/swiss.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full py-4 lg:px-0">
+            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
+              <img
+                class="h-12 mx-auto"
+                src="https://www.sighteddesign.com/images/2021/03/26/bkxplr.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full py-4 lg:px-0">
+            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
+              <img
+                class="h-12 mx-auto"
+                src="https://www.sighteddesign.com/images/2021/03/26/elizabeth.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full py-4 lg:px-0">
+            <div class="w-auto py-0 mx-auto bg-blue-50 clip-path-both">
+              <img
+                class="h-12 mx-auto"
+                src="https://www.sighteddesign.com/images/2021/03/26/3tamis.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
