@@ -250,6 +250,7 @@
               <p class="text-gray-600 my-4">
                 {{ item.description }}
               </p>
+              <!-- hu -->
               <!-- <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink> -->
             </div>
           </div>

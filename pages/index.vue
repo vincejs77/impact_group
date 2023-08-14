@@ -210,6 +210,56 @@
         </div>
       </div>
     </section>
+
+    <section class="i-wrapper">
+      <div class="i-container py-16 sm:py-24">
+        <div class="flex justify-center">
+          <div class="relative overflow-hidden rounded-md md:rounded-xl">
+            <img
+              class="transform hover:scale-105 transition ease-in-out duration-1000"
+              src="/img/bg/pexels-mikhail-nilov-9301258-min.jpg"
+              alt=""
+            />
+            <div
+              class="lg:absolute left-0 top-0 lg:px-14 pt-10 lg:pt-12 lg:py-12 lg:w-1/2 flex justify-center lg:items-center bg-white bg-opacity-80 overflow-y-auto h-full"
+              style="backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px)"
+            >
+              <div>
+                <div class="relative">
+                  <svg
+                    class="mb-8 lg:mb-20 w-8 md:w-16"
+                    width="47"
+                    height="36"
+                    viewBox="0 0 47 36"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 36V25.6999C0 22.7377 0.554721 19.6578 1.66416 16.46C2.80722 13.2286 4.35372 10.1823 6.30365 7.32118C8.2872 4.42637 10.5061 1.98598 12.9603 0L21.4324 5.5035C19.4489 8.4993 17.7847 11.6297 16.4399 14.8948C15.1288 18.1262 14.49 21.6943 14.5236 25.5989V36H0ZM25.5676 36V25.6999C25.5676 22.7377 26.1223 19.6578 27.2318 16.46C28.3748 13.2286 29.9213 10.1823 31.8712 7.32118C33.8548 4.42637 36.0737 1.98598 38.5279 0L47 5.5035C45.0165 8.4993 43.3523 11.6297 42.0075 14.8948C40.6964 18.1262 40.0576 21.6943 40.0912 25.5989V36H25.5676Z"
+                      fill="#fd7135"
+                    ></path>
+                  </svg>
+
+                  <div
+                    class="absolute top-1.5 lg:top-3 text-lg lg:text-xl font-bold left-12 sm:left-16 text-blue_1"
+                  >
+                    Témoignage
+                  </div>
+                </div>
+                <h3 class="mb-8 text-xl sm:text-2xl font-semibold leading-snug">
+                  Grâce à Impact Group, j'ai transformé une idée en une entreprise
+                  prospère. Leur soutien financier et leurs ateliers de planification ont
+                  été essentiels. Je suis fière de diriger une entreprise prospère
+                  aujourd'hui."
+                </h3>
+                <h4 class="mb-1 font-bold">Jeanne Mukendi</h4>
+                <p class="text-gray-600 font-medium">Fondatrice de TechSol</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
