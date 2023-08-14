@@ -166,8 +166,24 @@
                 </h3>
                 <p class="text-base text-white leading-relaxed">
                   Les valeurs suivantes caractérisent l’organisation. <br /><br />
-                  La dignité • La promptitude • L’éthique • Le travail bien fait • La
-                  redevabilité
+                  <ul class="text-white  grid grid-cols-1 sm:grid-cols-2 gap-2 text-lg font-medium">
+                    <li class="flex justify-start space-x-2">
+                      <span>•</span> <span>La dignité</span> 
+                    </li>
+                    <li class="flex justify-start space-x-2">
+                      <span>•</span> <span>La promptitude</span> 
+                    </li>
+                    <li class="flex justify-start space-x-2">
+                      <span>•</span> <span>L’éthique</span>
+                    </li>
+
+                    <li class="flex justify-start space-x-2">
+                      <span>•</span> <span>Le travail bien fait</span> 
+                    </li>
+                    <li class="flex justify-start space-x-2">
+                      <span>•</span> <span>La redevabilité</span>
+                    </li>
+                  </ul>
                 </p>
               </div>
             </div>
@@ -214,13 +230,33 @@
                 <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
                   Nos objectifs
                 </h3>
-                <p class="text-base text-white leading-relaxed">
-                  • Apporter un appui technique et matériel aux initiatives des jeunes
-                  entrepreneurs congolais. <br /><br />
-                  • Contribuer à la promotion de la participation des jeunes dans les
-                  instances de prise de décision et processus de paix <br /><br />
-                  • Contribuer à la promotion de l’entrepreneuriat féminin.
-                </p>
+                <div class="text-base text-white leading-relaxed">
+                  <ul class="text-white space-y-3">
+                    <li class="flex justify-start space-x-2">
+                      <span>
+                        •</span>
+                      <span>
+                          Apporter un appui technique et matériel aux initiatives des jeunes entrepreneurs congolais. 
+                      </span>
+                    </li>
+                    <li class="flex justify-start space-x-2">
+                       <span>
+                        •</span> <span>
+                          Contribuer à la promotion de la participation des jeunes dans les
+                  instances de prise de décision et processus de paix.
+                        </span>
+                    </li>
+
+                    <li class="flex justify-start space-x-2">
+                      <span>
+                        •
+                        </span> <span>
+                          Contribuer à la promotion de l’entrepreneuriat féminin.
+                        </span>
+                    </li>
+                  </ul>
+                  
+                </div>
               </div>
             </div>
           </div>
