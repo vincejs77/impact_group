@@ -6,16 +6,28 @@
           À propos <span class="text-blue opacity-80">de nous</span>
         </h1>
         <div class="mt-8 max-w-2xl">
-          <p class="text-lg font-medium">
-            Impact Group, créé en juin 2020 en pleine pandémie de COVID-19, se consacre à
-            l'autonomisation des jeunes congolais.
-          </p>
-          <p class="mt-4 opacity-80">
-            Malgré les défis, notre mission est de soutenir les entrepreneurs face à
-            l'impact économique de la crise. Nous avons initié une vague d'innovation en
-            offrant un soutien financier, technique et des ateliers sur la planification
-            d'entreprise.
-          </p>
+          <div>
+              <p class="text-lg font-medium">
+              Impact Group est une idée innovante permettant aux jeunes entrepreneurs congolais d’accéder non seulement à de ressources techniques leur permettant de créer et mieux gérer leurs entreprises mais aussi à un accompagnement financier par l’ouverture aux jeunes aux IMF et à d’autre partenaires financiers.
+              </p>
+              <p class="mt-4 opacity-80">
+                Malgré les défis, notre mission est de soutenir les entrepreneurs face à
+                l'impact économique de la crise. Nous avons initié une vague d'innovation en
+                offrant un soutien financier, technique et des ateliers sur la planification
+                d'entreprise.
+              </p>
+          </div>
+          <div class=" space-y-8 mt-8">
+              <p>
+                Créée depuis Juin 2020, inspiré d’une prise de conscience sur la situation générale des jeunes congolais, dans une période particulièrement difficile quand le monde entier était confronté à la pandémie de COVID-19 qui a eu des retombés significatifs sur l'entrepreneuriat dans tous les pays et particulièrement en RDC. 
+              </p>
+              <p>
+                Aujourd’hui, Impact Group accompagne plus de 52 entreprises qui regroupent des jeunes filles et garçon éparpillés dans toute la RDC et ailleurs qui ont démontré leur capacité à mettre en œuvre des nouvelles initiatives, soucieux de contribuer à la relance économique du pays et luttant pour la participation effective des jeunes et des femmes dans la vie socio-politico-économique ainsi que le processus de paix en RDC.
+              </p>
+              <p>
+                Impact Group tient un réseau des entrepreneurs regroupant plus de 1000 Jeunes congolais. Un Forum annuel est organisé chaque année permettant de consolider le réseau et ouvrir des nouvelles opportunités aux jeunes entrepreneurs.
+              </p>
+          </div>
         </div>
         <div class="mt-8 lg:mt-0 lg:absolute right-4 lg:right-8 bottom-24">
           <a href="#section-1">
@@ -54,7 +66,7 @@
         <div id="section-1" class="-translate-y-24 md:-translate-y-32"></div>
 
         <h2
-          class="font-extrabold max-w-md mb-10 text-3xl sm:text-4xl text-white font-heading"
+          class="font-bold max-w-md mb-10 text-2xl sm:text-4xl text-white font-heading"
         >
           Nous aspirons à créer une nouvelle économie en RDC
         </h2>
@@ -84,7 +96,7 @@
                 <p class="text-base text-g leading-relaxed text-gray-100 mt-4">
                   Participer à la naissance d'une nouvelle classe sociale créée par une
                   masse d'entrepreneurs conscients, formés et capables de relever les
-                  défis économiques en RDC.
+                  défis économiques en République Démocratique du Congo.
                 </p>
               </div>
             </div>
@@ -358,20 +370,20 @@ const team = [
     name: "MWAMI TONY",
     img: "/img/IMG_3744.JPG",
     titre: "Présitent du conseil d'administration",
-    email: "pca@impactgp.net",
+    email: "t.mwami@impactgp.net",
   },
   {
     name: "Messah Tarr",
     img: "/img/IMG_0134.JPG",
     titre: "Vice-présitente du conseil d'administration",
-    email: "vpsa@impactgp.net",
+    email: "m.tarr@impactgp.net",
   },
   {
-    name: "Justin Burume",
+    name: "Justin Bigabwa",
     img: "/img/images.png",
-    titre: "Comptable",
-    email: "justin@impactgp.net",
-  },
+    titre: "Financier",
+    email: "j.bigabwa@impactgp.net",
+  }
 ];
 
 const strategy = [

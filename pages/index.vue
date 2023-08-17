@@ -13,7 +13,7 @@
         <div class="i-hero i-hero__v1">
           <div class="i-hero--text max-w-md">
             <h1
-              class="leading-[1.2] font-black text-3xl sm:text-5xl sm:leading-[1.2] text-blue"
+              class="leading-[1.2] font-sans text-3xl sm:text-5xl sm:leading-[1.2] text-blue"
             >
               La meilleure façon de prédire l' avenir
               <span class="text-blue opacity-80"> est de le créer.</span>

@@ -17,7 +17,7 @@
       </p>
       <a class="mb-2 inline-block hover:text-primary hover:underline" href="#">
         <h3 class="text-xl font-bold font-heading leading-normal line-clamp-2">
-          Comment gérer votre bon employé pour l'entreprise.
+          Comment bien gérer votre entreprise
         </h3>
       </a>
       <p class="text-gray-600 font-medium leading-relaxed line-clamp-2">
