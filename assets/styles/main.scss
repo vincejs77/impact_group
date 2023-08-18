@@ -25,6 +25,11 @@
     h2 {
         @apply text-2xl sm:text-2xl;
         line-height: 1.2 !important;
+        letter-spacing: -1.5px;
+    }
+    h3 {
+        line-height: 1.2 !important;
+        letter-spacing: -0.7px;
     }
 
     a {

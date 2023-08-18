@@ -117,10 +117,10 @@
           <div
             class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4 pr-8"
           >
-            <div class="rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4">
+            <div class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
               <img
-                class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="/img/bg/pexels-pixabay-355948-min.jpg"
+                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                src="/img/contents/follow the leader-rafiki.svg"
                 alt=""
               />
             </div>
@@ -200,11 +200,11 @@
               </div>
             </div>
             <div
-              class="rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4 order-0 lg:order-1"
+              class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4 order-0 lg:order-1"
             >
               <img
-                class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="/img/bg/pexels-picha-stock-3869651-min.jpg"
+                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                src="/img/contents/Office work-rafiki.svg"
                 alt=""
               />
             </div>
@@ -214,10 +214,10 @@
           <div
             class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4 pr-8"
           >
-            <div class="max-h-72 rounded-md bg-white bg-opacity-20 w-full md:w-1/2 mx-4">
+            <div class="flex justify-center max-h-72 rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
               <img
-                class="rounded-md h-72 w-full clip-path-right object-cover"
-                src="/img/bg/microsoft-365-oUbzU87d1Gc-unsplash.jpg"
+                 class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                src="/img/contents/Team goals-rafiki.svg"
                 alt=""
               />
             </div>
@@ -280,7 +280,7 @@
       <div class="i-container py-16 sm:py-24">
         <div class="text-center max-w-md mx-auto">
           <p class="text-primary font-bold">Nos Actions</p>
-          <h2 class="text-3xl sm:text-4xl mt-4 mb-6">Nos domaines d'action</h2>
+          <h2 class="text-3xl sm:text-4xl mt-4 mb-6 font-extrabold">Nos domaines d'action</h2>
           <p class="text-gray-600">
             Nous réunissons les bonnes personnes pour remettre en question la pensée
             établie et conduire la transformation
@@ -294,7 +294,7 @@
               v-html="item.svg"
             ></div>
             <div class="mt-4">
-              <h3 class="text-2xl">{{ item.name }}</h3>
+              <h3 class="text-xl sm:text-xl">{{ item.name }}</h3>
               <p class="text-gray-600 my-4">
                 {{ item.description }}
               </p>
@@ -312,7 +312,7 @@
           <div class="mx-auto lg:rounded-tr-full lg:justify-end">
             <div class="mx-auto text-center max-w-md">
               <p class="text-primary font-bold uppercase">Notre equipe</p>
-              <h2 class="mb-6 text-3xl sm:text-4xl mt-4">
+              <h2 class="mb-6 text-3xl sm:text-4xl mt-4 font-extrabold">
                 Nos experts <span class="text-blue opacity-80">vous attendent</span>
               </h2>
               <p>
