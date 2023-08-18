@@ -120,7 +120,7 @@
             <div class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
               <img
                 class="rounded-md h-72 w-[300px] clip-path-right object-cover"
-                src="/img/contents/follow the leader-rafiki.svg"
+                src="/img/contents/1.svg"
                 alt=""
               />
             </div>
@@ -204,7 +204,7 @@
             >
               <img
                 class="rounded-md h-72 w-[300px] clip-path-right object-cover"
-                src="/img/contents/Office work-rafiki.svg"
+                src="/img/contents/2.svg"
                 alt=""
               />
             </div>
@@ -217,7 +217,7 @@
             <div class="flex justify-center max-h-72 rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
               <img
                  class="rounded-md h-72 w-[300px] clip-path-right object-cover"
-                src="/img/contents/Team goals-rafiki.svg"
+                src="/img/contents/3.svg"
                 alt=""
               />
             </div>
