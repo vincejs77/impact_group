@@ -214,7 +214,7 @@
         <div class="mt-8 pt-0">
           <SectionsLogoCloud />
         </div>
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 lg:flex lg:justify-center">
           <div class="relative rounded-md md:rounded-xl lg:overflow-hidden">
             <img
               class="transform hover:scale-105 transition ease-in-out duration-1000"
@@ -222,11 +222,11 @@
               alt=""
             />
             <div
-              class="lg:absolute left-0 top-0 lg:px-14 pt-10 lg:pt-12 lg:py-12 lg:w-1/2 flex justify-center lg:items-center bg-white bg-opacity-80 overflow-y-auto h-full"
+              class="lg:absolute lg:left-0 lg:top-0 px-0 lg:px-14 pt-10 lg:pt-12 lg:py-12 w-full lg:w-1/2 bg-white bg-opacity-80 h-full"
               style="backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px)"
             >
-              <div>
-                <div class="relative">
+              <div class="relative mt-8">
+                <div>
                   <svg
                     class="mb-8 lg:mb-20 w-8 md:w-16"
                     width="47"
@@ -247,7 +247,9 @@
                     Témoignages
                   </div>
                 </div>
-                <SectionsTestimonials :data_testimonials="data_testimonials" />
+                <div class="relative">
+                  <SectionsTestimonials :data_testimonials="data_testimonials" />
+                </div>
               </div>
             </div>
           </div>

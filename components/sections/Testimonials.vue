@@ -1,15 +1,16 @@
 <template>
   <div class="cursor-grab">
     <carousel
-      class="flex flex-wrap -my-3"
+      class="-my-3"
       ref="carousel_testimonials"
       :key="slider"
+      :autoplay="2000"
       :breakpoints="breakpoints_carousel"
       :pauseAutoplayOnHover="true"
       :wrap-around="true"
       v-model="slider"
     >
-      <slide class="w-full" :key="item" v-for="item in data_testimonials">
+      <slide class="w-full h-full" :key="item" v-for="item in data_testimonials">
         <div class="text-left">
           <h3 class="mb-8 text-lg sm:text-lg font-semibold">
             {{ item.bio[0].children[0].text }}
