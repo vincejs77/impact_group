@@ -211,13 +211,13 @@
     </section>
 
     <section class="i-wrapper">
-      <div class="i-container py-16 sm:py-24">
+      <div class="i-container py-16 sm:py-24 overflow-hidden">
         <h2 class="text-xl text-center mt-0">Ils nous ont approuvés</h2>
         <div class="mt-8 pt-0">
           <SectionsLogoCloud />
         </div>
         <div class="mt-8 flex justify-center">
-          <div class="relative overflow-hidden rounded-md md:rounded-xl">
+          <div class="relative rounded-md md:rounded-xl lg:overflow-hidden">
             <img
               class="transform hover:scale-105 transition ease-in-out duration-1000"
               src="/img/bg/pexels-mikhail-nilov-9301258-min.jpg"
@@ -246,17 +246,10 @@
                   <div
                     class="absolute top-1.5 lg:top-3 text-lg lg:text-xl font-bold left-12 sm:left-16 text-blue_1"
                   >
-                    Témoignage
+                    Témoignages
                   </div>
                 </div>
-                <h3 class="mb-8 text-xl sm:text-2xl font-semibold leading-snug">
-                  Grâce à Impact Group, j'ai transformé une idée en une entreprise
-                  prospère. Leur soutien financier et leurs ateliers de planification ont
-                  été essentiels. Je suis fière de diriger une entreprise prospère
-                  aujourd'hui."
-                </h3>
-                <h4 class="mb-1 font-bold">Jeanne Mukendi</h4>
-                <p class="text-gray-600 font-medium">Fondatrice de TechSol</p>
+                <SectionsTestimonials :data_testimonials="data_testimonials" />
               </div>
             </div>
           </div>
@@ -277,6 +270,16 @@ const evenements = [
     place: "En présentiel",
   },
 ];
+
+const sanity = useSanity();
+
+const query_testimonials = computed(() => {
+  return groq`*[_type == "temoignages"] {_id,nom,entreprise,bio,"imageUrl":image.asset->}`;
+});
+
+const [{ data: data_testimonials }] = await Promise.all([
+  useAsyncData("data-testimonials", () => sanity.fetch(query_testimonials.value)),
+]);
 
 onMounted(() => {
   function countStart() {

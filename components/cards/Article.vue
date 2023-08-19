@@ -16,7 +16,7 @@
         Business
       </p>
       <a class="mb-2 inline-block hover:text-primary hover:underline" href="#">
-        <h3 class="text-xl font-bold font-heading leading-normal line-clamp-2">
+        <h3 class="text-lg font-bold font-heading leading-normal line-clamp-2">
           Comment bien gérer votre entreprise
         </h3>
       </a>
