@@ -7,7 +7,6 @@
       :breakpoints="breakpoints_carousel"
       :pauseAutoplayOnHover="true"
       :wrap-around="true"
-      :transition="fade"
       v-model="slider"
     >
       <slide class="w-full" :key="item" v-for="item in data_testimonials">
