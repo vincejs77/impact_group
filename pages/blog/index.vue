@@ -7,11 +7,27 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
-          <CardsArticle :key="i" v-for="i in 2" />
+          <CardsArticle
+            :key="article"
+            v-for="article in data_articles"
+            v-bind="article"
+          />
         </div>
       </div>
     </section>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const sanity = useSanity();
+
+const query = ref(
+  groq`*[_type == "articles"] | order(_createdAt desc){_id,slug,titre,description,publishedAt,_updatedAt,
+  "imageUrl":image.asset->,categories_articles[]->{titre},
+  auteur->{"imageUrl":image.asset->{url},nom,bio}}`
+);
+
+const [{ data: data_articles }] = await Promise.all([
+  useAsyncData("data-articles", () => sanity.fetch(query.value)),
+]);
+</script>

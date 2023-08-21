@@ -144,7 +144,11 @@
           </div>
           <div class="mt-16 lg:mt-0 w-full lg:w-2/3 md:flex-1">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6">
-              <CardsArticle :key="i" v-for="i in 2" />
+              <CardsArticle
+                :key="article"
+                v-for="article in data_articles"
+                v-bind="article"
+              />
             </div>
           </div>
         </div>
@@ -277,8 +281,15 @@ const query_testimonials = computed(() => {
   return groq`*[_type == "temoignages"] {_id,nom,entreprise,bio,"imageUrl":image.asset->}`;
 });
 
-const [{ data: data_testimonials }] = await Promise.all([
+const query_articles = ref(
+  groq`*[_type == "articles"] | order(_createdAt desc){_id,slug,titre,description,publishedAt,_updatedAt,
+  "imageUrl":image.asset->,categories_articles[]->{titre},
+  auteur->{"imageUrl":image.asset->{url},nom,bio}}`
+);
+
+const [{ data: data_testimonials }, { data: data_articles }] = await Promise.all([
   useAsyncData("data-testimonials", () => sanity.fetch(query_testimonials.value)),
+  useAsyncData("data-articles-home", () => sanity.fetch(query_articles.value)),
 ]);
 
 onMounted(() => {
