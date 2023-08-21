@@ -39,7 +39,11 @@
         <div class="columns-1 md:columns-3 lg:columns-3">
           <div
             :key="image"
-            v-for="image in data_galerie"
+            v-for="(image, index) in data_galerie"
+            @click="
+              _openModal_galerie();
+              _showDetails(index);
+            "
             class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-60 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"
           >
             <div class="">
@@ -64,8 +68,7 @@
                   </ul>
                 </div>
                 <div class="relative">
-                  <a class="test__link absolute inset-0" target="_blank" href="/"></a>
-                  <p class="text-lg leading-snug font-medium line-clamp-2">
+                  <p class="text-lg font-medium line-clamp-2">
                     {{ image.titre }}
                   </p>
                 </div>
@@ -75,10 +78,25 @@
         </div>
       </div>
     </section>
+
+    <ModalsGalerieViewer
+      :isOpenModal_galerie="useGlobalStore().$state.isOpenModal_galerie"
+      :closeModal_galerie="_closeModal_galerie"
+      :titre="data_galerie[useGlobalStore().$state.currentIndex_galerie]?.titre"
+      :description="
+        data_galerie[useGlobalStore().$state.currentIndex_galerie]?.description
+      "
+      :imageUrl="data_galerie[useGlobalStore().$state.currentIndex_galerie]?.imageUrl"
+      :categories_gallerie="
+        data_galerie[useGlobalStore().$state.currentIndex_galerie]?.categories_gallerie
+      "
+    />
   </div>
 </template>
 
 <script setup>
+import { useGlobalStore } from "~~/store/global";
+
 const sanity = useSanity();
 
 const query_categories_gallerie = computed(() => {
@@ -86,7 +104,7 @@ const query_categories_gallerie = computed(() => {
 });
 
 const query = ref(
-  groq`*[_type == "galerie"]| order(_createdAt desc){_id,titre,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre}}`
+  groq`*[_type == "galerie"]| order(_createdAt desc){_id,titre,description,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre}}`
 );
 const [
   {
@@ -110,12 +128,28 @@ const [
 
 watch(data_galerie.value, (newDataGalerie) => {});
 
+useGlobalStore().$state.lengthData_galerie = data_galerie.value.length;
+
 const currentCategorieID = ref("");
 
 const refreshGalerie_fx = async (_currentCategorieID) => {
-  query.value = groq`*[_type == "galerie" && categories_gallerie[]._ref == "${_currentCategorieID}" ]| order(_createdAt desc){_id,titre,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre,_id}}`;
+  query.value = groq`*[_type == "galerie" && categories_gallerie[]._ref == "${_currentCategorieID}" ]| order(_createdAt desc){_id,titre,description,_updatedAt,_createdAt,"imageUrl":image.asset->,categories_gallerie[]->{titre,_id}}`;
   await refresh_galerie();
   currentCategorieID.value = _currentCategorieID;
+  useGlobalStore().$state.lengthData_galerie = data_galerie.value.length;
 };
+
+const _openModal_galerie = async () => {
+  useGlobalStore().$state.isOpenModal_galerie = true;
+};
+
+const _closeModal_galerie = async () => {
+  useGlobalStore().$state.isOpenModal_galerie = false;
+};
+
+const _showDetails = async (index) => {
+  useGlobalStore().$state.currentIndex_galerie = index;
+};
+
 //Comment test
 </script>

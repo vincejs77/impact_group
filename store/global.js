@@ -4,7 +4,10 @@ export const useGlobalStore = defineStore({
 	id: "wxr-global-store",
 	state: () => {
 		return {
-			isLoadingPage: true
+			isLoadingPage: true,
+			isOpenModal_galerie: false,
+			currentIndex_galerie: 0,
+			lengthData_galerie: 1
 		};
 	}
 });
