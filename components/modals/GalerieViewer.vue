@@ -15,7 +15,7 @@
         </TransitionChild>
 
         <div class="fixed inset-0 overflow-y-auto">
-          <div class="flex min-h-full items-end justify-end sm:justify-center pt-4">
+          <div class="flex min-h-full items-end justify-center lg:justify-center pt-4">
             <TransitionChild
               as="template"
               enter="duration-300 ease-out"
@@ -52,7 +52,7 @@
                   <div class="i-wrapper">
                     <div class="i-container">
                       <div
-                        class="-mx-4 bg-white sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden"
+                        class="min-w-full -mx-4 bg-white sm:rounded-tr-lg sm:rounded-tl-lg overflow-hidden"
                       >
                         <div class="px-4 sm:px-8 py-4 sm:py-6">
                           <div>
@@ -75,9 +75,13 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="relative">
-                          <div>
-                            <img :src="imageUrl.url" :alt="titre" />
+                        <div class="min-w-full relative">
+                          <div class="bg-blue bg-opacity-10">
+                            <img
+                              class="min-w-full lg:min-w-[900px] min-h-[220px] sm:min-h-[300px] object-cover"
+                              :src="imageUrl.url"
+                              :alt="titre"
+                            />
                           </div>
                           <div
                             v-if="useGlobalStore().$state.lengthData_galerie - 1 > 0"
