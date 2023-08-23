@@ -24,7 +24,7 @@
               <p
                 class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
               >
-                Formation
+                Forum
               </p>
             </div>
             <h3
@@ -35,7 +35,7 @@
             <p class="text-sm text-gray-600 font-medium">
               <span class="text-gray-800">{{ place }}</span>
               <span class="px-2">—</span>
-              <span>Du 2 sept. 2023 au 8 sept. 2023</span>
+              <span>Du 20 sept. 2023 au 21 sept. 2023</span>
             </p>
           </div>
           <div class="w-auto p-2">

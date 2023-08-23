@@ -23,11 +23,6 @@
 
 <script setup>
 const evenements = [
-  { status: "à venir", titre: "Conception de Business Plan", place: "En ligne" },
-  {
-    status: "passé",
-    titre: "Je suis un titre d'un événement, un tout petit long",
-    place: "En présentiel",
-  },
+  { status: "à venir", titre: "Forum Entrepreneurial 2023", place: "En ligne" },
 ];
 </script>

@@ -43,8 +43,8 @@
           class="level-counter w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 bg-blue text-white"
         >
           <div class="max-w-[380px] sm:max-w-[420px] sm:py-8">
-            <p class="text-xs text-primary font-bold uppercase">Notre impact</p>
-            <h2 class="mb-6 text-3xl sm:text-5xl mt-4">Nous façonnons l'avenir</h2>
+            <p class="text-xs text-primary font-bold uppercase sr-only">Notre impact</p>
+            <h2 class="mb-6 text-3xl sm:text-5xl mt-0">Nous façonnons l'avenir</h2>
             <p class="text-lg">
               Nous sommes déterminés à soutenir les jeunes entrepreneurs et promouvoir la
               paix et la croissance économique en République Démocratique du Congo.
@@ -267,12 +267,7 @@
 import { CountUp } from "assets/js/countUp";
 
 const evenements = [
-  { status: "à venir", titre: "Conception de Business Plan", place: "En ligne" },
-  {
-    status: "passé",
-    titre: "Je suis un titre d'un événement, un tout petit long",
-    place: "En présentiel",
-  },
+  { status: "à venir", titre: "Forum Entrepreneurial 2023", place: "En ligne" },
 ];
 
 const sanity = useSanity();

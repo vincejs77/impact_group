@@ -4,7 +4,7 @@
       class="-my-3"
       ref="carousel_testimonials"
       :key="slider"
-      :autoplay="2000"
+      :autoplay="5000"
       :breakpoints="breakpoints_carousel"
       :pauseAutoplayOnHover="true"
       :wrap-around="true"
