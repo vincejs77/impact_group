@@ -7,7 +7,8 @@ export const useGlobalStore = defineStore({
 			isLoadingPage: true,
 			isOpenModal_galerie: false,
 			currentIndex_galerie: 0,
-			lengthData_galerie: 1
+			lengthData_galerie: 1,
+			isOpenModal_rm: false
 		};
 	}
 });

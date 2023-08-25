@@ -100,12 +100,13 @@
                 </p>
               </div>
             </div>
-            <div
-              class="rounded-xl w-full mx-4 sm:mx-4 md:w-1/2 px-4 py-8 order-0 lg:order-1 bg-yellow"
-            >
+            
+            <div class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
+
               <img
-                class="h-full w-80 mx-auto clip-path-left object-cover"
-                src="/img/contents/1.png"
+                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+
+                src="/img/contents/4.svg"
                 alt=""
               />
 

@@ -38,7 +38,6 @@
         <NuxtLink
           :to="'/blog/' + slug.current"
           class="mb-2 inline-block hover:text-primary hover:underline"
-          href="#"
         >
           <h3 class="text-lg font-bold font-heading leading-normal line-clamp-2">
             {{ titre }}

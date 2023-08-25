@@ -36,6 +36,11 @@
     a {
         @apply font-medium;
     }
+
+    a,
+    button {
+        @apply outline-none focus:outline-none;
+    }
 }
 
 .i-wrapper {
@@ -68,7 +73,8 @@ textarea:focus {
 }
 
 footer,
-nav {
+nav,
+.i-menu-responsive {
     .router-link-active.router-link-exact-active {
         @apply text-primary font-bold;
     }
