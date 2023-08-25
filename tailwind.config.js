@@ -11,8 +11,8 @@ module.exports = {
 				yellow: "#ffa739"
 			},
 			fontFamily: {
-				sans: ["Satoshi", "Arial", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif"],
-				serif: ["Cabinet Grotesk", "serif"]
+				sans: ["Open Sans", "Arial", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", "sans-serif"],
+				serif: ["Open Sans", "serif"]
 			}
 		}
 	},
