@@ -151,4 +151,53 @@ nav,
     }
 }
 
+.i-article-description::before {
+    content: "Br\e8ve intro \21ac";
+    font-weight: 500;
+    padding-right: 0.5em;
+    @apply text-primary font-semibold;
+}
+
+.wxr-content-formater {
+    @apply mt-6;
+    img {
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        border-radius: 8px;
+
+        @apply max-h-[300px] w-full object-cover mb-6;
+    }
+
+    p {
+        @apply pb-6 last:pb-0;
+    }
+
+    blockquote {
+        @apply mb-6 dark:text-gray-600 bg-blue bg-opacity-10 border-l-2  border-l-indigo-200  p-4  border-2 border-gray-50 rounded-md;
+    }
+
+    a {
+        @apply text-primary font-semibold hover:underline;
+    }
+
+    ul {
+        li {
+            @apply pl-6 mb-4 relative;
+            &::after {
+                content: "";
+                @apply w-3 h-1.5 bg-primary rounded-md absolute left-0 top-2;
+            }
+        }
+    }
+
+    h2 {
+        @apply text-2xl sm:text-3xl font-extrabold mb-4;
+    }
+    h3 {
+        @apply text-lg sm:text-xl mb-4 font-bold;
+    }
+}
+
 @import url(/assets/others/loaders.scss);
