@@ -44,8 +44,9 @@
             <h3>Contacts</h3>
             <div class="mt-4 text-sm text-gray-500 space-y-2">
               <p>Adresse : Avenue Saïo 169 Ndendere</p>
+              P1
               <p class="underline">
-                <a href="mailto:contact@impactgp.net">contact@impactgp.net</a>
+                <a href="mailto:info@impactgp.net">info@impactgp.net</a>
               </p>
               <p>
                 <a href="tel:+243999573957">+243 999 573 957 </a>

@@ -369,13 +369,13 @@ const team = [
   {
     name: "MWAMI TONY",
     img: "/img/IMG_3744.JPG",
-    titre: "Présitent du conseil d'administration",
+    titre: "président du conseil d'administration",
     email: "t.mwami@impactgp.net",
   },
   {
     name: "Messah Tarr",
     img: "/img/IMG_0134.JPG",
-    titre: "Vice-présitente du conseil d'administration",
+    titre: "Vice-présidente du conseil d'administration",
     email: "m.tarr@impactgp.net",
   },
   {

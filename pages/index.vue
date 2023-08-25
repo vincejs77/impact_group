@@ -12,11 +12,13 @@
       <div class="relative z-10 i-container py-16 sm:py-24">
         <div class="i-hero i-hero__v1">
           <div class="i-hero--text max-w-md">
-            <h1 class="leading-[1.2] text-3xl sm:text-5xl sm:leading-[1.2] text-blue">
+            <h1
+              class="leading-[1.2] text-3xl sm:text-5xl sm:leading-[1.2] text-blue font-black"
+            >
               La meilleure façon de prédire l' avenir
               <span class="text-blue opacity-80"> est de le créer.</span>
             </h1>
-            <p class="mt-8 text-gray-700 text-base">
+            <p class="mt-4 text-gray-700 text-lg">
               Impact Group vous accompagne dans la création d’entreprises.
             </p>
             <div
@@ -164,13 +166,12 @@
         <h2
           class="mb-4 text-3xl md:text-5xl text-center font-heading tracking-px-n leading-tight"
         >
-          Nos événements
+          Événements
         </h2>
         <p
-          class="mb-12 text-gray-600 text-center font-medium leading-relaxed md:max-w-md mx-auto"
+          class="mb-12 text-gray-600 text-center font-medium leading-relaxed md:max-w-sm mx-auto"
         >
-          Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat tempor to
-          the condimentum vitae.
+          Découvrez nos événements uniques et impactants, passés et à venir.
         </p>
         <div class="md:max-w-2xl mx-auto">
           <div class="flex flex-wrap space-y-8">
