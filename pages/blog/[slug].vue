@@ -177,13 +177,15 @@
             <div class="pb-2 flex justify-start items-center">
               <span class="text-sm font-medium text-gray-500"> Publication : </span>
               <span class="text-sm ml-1 font-medium text-gray-600">
-                {{ $convertDate__index(data_single_article[0].publishedAt, "dmy", "fr") }}
+                {{
+                  $convertDate__index(data_single_article[0]?.publishedAt, "dmy", "fr")
+                }}
               </span>
             </div>
             <div class="pb-0 flex justify-start items-center">
               <span class="text-sm font-medium text-gray-500"> Mis à jour : </span>
               <span class="text-sm ml-1 font-medium text-gray-600">
-                {{ $convertDate__index(data_single_article[0]._updatedAt, "dmy", "fr") }}
+                {{ $convertDate__index(data_single_article[0]?._updatedAt, "dmy", "fr") }}
               </span>
             </div>
           </div>
@@ -223,7 +225,7 @@
             <ul class="flex justify-start flex-wrap -mt-4">
               <li
                 :key="tag"
-                v-for="tag in data_single_article[0].tags"
+                v-for="tag in data_single_article[0]?.tags"
                 class="rounded-md px-3 py-1 mr-4 mt-4 bg-blue_1 bg-opacity-20 text-blue_1 text-sm font-semibold"
               >
                 <span> #{{ tag.label }} </span>
@@ -366,7 +368,7 @@ const myPortableTextComponents = {
     },
   },
 };
-const content = toHTML(data_single_article.value[0].body, {
+const content = toHTML(data_single_article.value[0]?.body, {
   components: myPortableTextComponents,
 });
 
@@ -386,41 +388,41 @@ onBeforeMount(() => {
   navUrl_fb.value =
     "https://www.facebook.com/sharer/sharer.php?u=" +
     "https://www.impactgp.net/blog/" +
-    data_single_article.value[0].slug.current +
+    data_single_article.value[0]?.slug.current +
     "&quote=" +
     "Article" +
     " par Impact Group : « " +
-    data_single_article.value[0].titre +
+    data_single_article.value[0]?.titre +
     " » ";
   navUrl_tw.value =
     "https://twitter.com/intent/tweet?text=" +
     "Article" +
     " par Impact Group : « " +
-    data_single_article.value[0].titre +
+    data_single_article.value[0]?.titre +
     " »" +
     " " +
     "https://www.impactgp.net/blog/" +
-    data_single_article.value[0].slug.current;
+    data_single_article.value[0]?.slug.current;
   navUrl_wp.value =
     "whatsapp://send?text=" +
     "Article" +
     " par Impact Group : « " +
-    data_single_article.value[0].titre +
+    data_single_article.value[0]?.titre +
     " »" +
     " " +
     "https://www.impactgp.net/blog/" +
-    data_single_article.value[0].slug.current;
+    data_single_article.value[0]?.slug.current;
 
   navUrl_em.value =
     "mailto:?subject=" +
-    data_single_article.value[0].titre +
+    data_single_article.value[0]?.titre +
     ";body=" +
     "Article" +
     "par Impact Group « " +
     " »" +
     " " +
     "https://www.impactgp.net/blog/" +
-    data_single_article.value[0].slug.current;
+    data_single_article.value[0]?.slug.current;
 });
 
 const shareFB = () => {
@@ -439,7 +441,7 @@ const shareEm = () => {
   window.open(navUrl_em, "_blank", "left=100,top=100,width=520,height=500");
 };
 
-const title = `${data_single_article.value[0].titre} - Un article par Impact Group`;
+const title = `${data_single_article.value[0]?.titre} - Un article par Impact Group`;
 useHead({
   title,
   meta: [
@@ -450,7 +452,7 @@ useHead({
     { property: "og:image:alt", content: title },
     {
       property: "og:description",
-      content: data_single_article.value[0].description,
+      content: data_single_article.value[0]?.description,
     },
     {
       property: "og:url",
@@ -458,7 +460,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: data_single_article.value[0].imageUrl.url,
+      content: data_single_article.value[0]?.imageUrl.url,
     },
     { name: "twitter:title", content: title },
     { name: "twitter:site", content: "@wito_xr_studio" },
@@ -466,11 +468,11 @@ useHead({
     { name: "twitter:creator", content: "@wito_xr_studio" },
     {
       name: "twitter:description",
-      content: data_single_article.value[0].description,
+      content: data_single_article.value[0]?.description,
     },
     {
       name: "twitter:image",
-      content: data_single_article.value[0].imageUrl.url,
+      content: data_single_article.value[0]?.imageUrl.url,
     },
     { name: "twitter:card", content: "summary_large_image" },
   ],
