@@ -1,8 +1,8 @@
 <template>
   <div>
-    <section class="i-wrapper py-16 bg-blue bg-opacity-10">
+    <section class="i-wrapper pb-56 sm:pb-16 py-16 bg-blue bg-opacity-[0.08]">
       <div class="i-container relative mx-auto">
-        <div class="mb-0">
+        <div class="mb-0 text-center sm:text-left">
           <h1 class="text-3xl sm:text-4xl">Notre Blog</h1>
           <div class="max-w-md">
             <p class="text-gray-700 mt-4">
@@ -10,8 +10,12 @@
               congolais
             </p>
           </div>
-          <div class="absolute -top-8 right-8">
-            <img class="w-[200px]" src="/img/contents/filters_format.webp" alt="" />
+          <div
+            class="absolute right-0 flex justify-center items-center sm:justify-end w-full sm:-top-9 sm:right-8"
+          >
+            <div class="mt-4 sm:mt-0">
+              <img class="w-[200px]" src="/img/contents/filters_format.webp" alt="" />
+            </div>
           </div>
         </div>
       </div>
