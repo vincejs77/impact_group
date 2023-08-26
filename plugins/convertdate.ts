@@ -11,6 +11,10 @@ export default defineNuxtPlugin({
 					hour: "numeric",
 					minute: "numeric"
 				});
+			} else if (type == "d") {
+				return new Date(date).toLocaleDateString(lang, {
+					day: "numeric"
+				});
 			} else {
 				return new Date(date).toLocaleDateString(lang, {
 					month: "long",

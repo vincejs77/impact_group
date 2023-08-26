@@ -12,7 +12,7 @@
             <CardsEvenement
               v-bind="evenement"
               :key="evenement"
-              v-for="evenement in evenements"
+              v-for="evenement in data_evenements"
             />
           </div>
         </div>
@@ -22,7 +22,14 @@
 </template>
 
 <script setup>
-const evenements = [
-  { status: "à venir", titre: "Forum Entrepreneurial 2023", place: "En ligne" },
-];
+const sanity = useSanity();
+
+const query_evenements = ref(
+  groq`*[_type == "evenements" && visibility == 'visible'] | order(_createdAt desc){_id,status,mode,slug,titre,description,publishedAt,_updatedAt,startedAt,endedAt,lieu,
+  "imageUrl":image.asset->,categories_evenements[]->{titre}}`
+);
+
+const [{ data: data_evenements }] = await Promise.all([
+  useAsyncData("data-evenement-index", () => sanity.fetch(query_evenements.value)),
+]);
 </script>

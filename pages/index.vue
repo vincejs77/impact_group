@@ -178,7 +178,7 @@
             <CardsEvenement
               v-bind="evenement"
               :key="evenement"
-              v-for="evenement in evenements"
+              v-for="evenement in data_evenements"
             />
           </div>
 
@@ -283,9 +283,19 @@ const query_articles = ref(
   auteur->{"imageUrl":image.asset->{url},nom,bio}}`
 );
 
-const [{ data: data_testimonials }, { data: data_articles }] = await Promise.all([
+const query_evenements = ref(
+  groq`*[_type == "evenements" && visibility == 'visible'] | order(_createdAt desc){_id,status,mode,slug,titre,description,publishedAt,_updatedAt,startedAt,endedAt,lieu,
+  "imageUrl":image.asset->,categories_evenements[]->{titre}}`
+);
+
+const [
+  { data: data_testimonials },
+  { data: data_articles },
+  { data: data_evenements },
+] = await Promise.all([
   useAsyncData("data-testimonials", () => sanity.fetch(query_testimonials.value)),
   useAsyncData("data-articles-home", () => sanity.fetch(query_articles.value)),
+  useAsyncData("data-evenement-home", () => sanity.fetch(query_evenements.value)),
 ]);
 
 onMounted(() => {

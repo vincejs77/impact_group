@@ -2,30 +2,43 @@
   <div class="w-full">
     <NuxtLink class="group" to="#">
       <div
-        class="p-4 sm:p-6 h-full bg-white border group-hover:border-gray-300 rounded-xl"
+        class="geoup flex justify-start items-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4 sm:p-6 h-full bg-white border group-hover:border-gray-300 rounded-xl"
       >
+        <div class="rounded-lg overflow-hidden w-full sm:w-[200px] h-full">
+          <NuxtLink :to="'/blog/' + slug.current + '#' + _id">
+            <img
+              class="w-full h-full object-cover transform group-hover:scale-125 scale-105 transition ease-in-out duration-1000"
+              :src="imageUrl.url"
+              :alt="titre"
+            />
+          </NuxtLink>
+        </div>
         <div class="flex flex-wrap justify-between items-center -m-2">
           <div class="w-auto p-2">
             <div class="flex justify-start space-x-3">
               <p
-                v-if="status == 'passé'"
-                class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
-              >
-                Passé
-              </p>
-
-              <p
-                v-else
+                v-if="status == 'a_venir'"
                 class="bg-green-500 text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
               >
                 À venir
               </p>
 
               <p
-                class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+                v-else
+                class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
               >
-                Forum
+                Passé
               </p>
+
+              <ul>
+                <li
+                  :key="categorie"
+                  v-for="categorie in categories_evenements"
+                  class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+                >
+                  {{ categorie.titre }}
+                </li>
+              </ul>
             </div>
             <h3
               class="group-hover:text-primary group-hover:underline mb-2.5 text-xl font-bold font-heading leading-snug"
@@ -33,9 +46,12 @@
               {{ titre }}
             </h3>
             <p class="text-sm text-gray-600 font-medium">
-              <span class="text-gray-800">{{ place }}</span>
+              <span class="text-gray-800">{{ lieu }}</span>
               <span class="px-2">—</span>
-              <span>Du 20 sept. 2023 au 21 sept. 2023</span>
+              <span
+                >Du {{ $convertDate__index(startedAt, "d", "fr") }} au
+                {{ $convertDate__index(endedAt, "", "fr") }}</span
+              >
             </p>
           </div>
           <div class="w-auto p-2">
@@ -66,9 +82,41 @@
 </template>
 
 <script setup>
+const { $convertDate__index } = useNuxtApp();
+
 defineProps({
+  _id: String,
   titre: String,
   status: String,
-  place: String,
+  mode: String,
+  slug: {
+    type: Object,
+    default: function () {
+      return {
+        current: String,
+      };
+    },
+  },
+
+  lieu: String,
+  imageUrl: {
+    type: Object,
+    default: function () {
+      return {
+        url: String,
+      };
+    },
+  },
+  categories_evenements: {
+    type: Object,
+    default: function () {
+      return {
+        title: String,
+      };
+    },
+  },
+  publishedAt: String,
+  startedAt: String,
+  endedAt: String,
 });
 </script>

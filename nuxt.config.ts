@@ -93,6 +93,7 @@ export default defineNuxtConfig({
 	],
 	sanity: {
 		projectId: "0y216ymg",
-		dataset: "production"
+		dataset: "production",
+		perspective: "published"
 	}
 });
