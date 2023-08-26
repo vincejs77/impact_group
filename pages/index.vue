@@ -227,13 +227,13 @@
               alt=""
             />
             <div
-              class="lg:absolute lg:left-0 lg:top-0 px-0 lg:px-14 pt-10 lg:pt-12 lg:py-12 w-full lg:w-1/2 bg-white bg-opacity-80 h-full"
+              class="lg:absolute lg:left-0 lg:top-0 px-0 lg:px-14 pt-4 lg:pt-4 lg:py-6 w-full lg:w-1/2 bg-white bg-opacity-80 h-full"
               style="backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px)"
             >
               <div class="relative mt-8">
                 <div>
                   <svg
-                    class="mb-8 lg:mb-20 w-8 md:w-16"
+                    class="mb-8 lg:mb-12 w-8 md:w-16"
                     width="47"
                     height="36"
                     viewBox="0 0 47 36"

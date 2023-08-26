@@ -1,11 +1,32 @@
 <template>
   <div>
-    <section class="i-wrapper py-16">
-      <div class="i-container mx-auto">
-        <div class="mb-8">
+    <section class="i-wrapper py-16 bg-blue bg-opacity-10">
+      <div class="i-container relative mx-auto">
+        <div class="mb-0">
           <h1 class="text-3xl sm:text-4xl">Notre Blog</h1>
+          <div class="max-w-md">
+            <p class="text-gray-700 mt-4">
+              Notre blog dédié à l'accompagnement novateur des jeunes entrepreneurs
+              congolais
+            </p>
+          </div>
+          <div class="absolute -top-8 right-8">
+            <img class="w-[200px]" src="/img/contents/filters_format.webp" alt="" />
+          </div>
         </div>
+      </div>
+    </section>
 
+    <section class="i-wrapper">
+      <div class="i-container">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="i-wrapper">
+      <div class="i-container py-16 mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
           <CardsArticle
             :key="article"

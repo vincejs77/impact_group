@@ -1,5 +1,68 @@
 <template>
   <div id="id">
+    <section class="i-wrapper sm:py-4 bg-blue bg-opacity-5 border-b border-b-gray-300">
+      <div class="i-container relative mx-auto">
+        <div class="mb-0">
+          <div class="flex items-center py-4 overflow-x-auto whitespace-nowrap">
+            <NuxtLink to="/" class="">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+                />
+              </svg>
+            </NuxtLink>
+
+            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+
+            <NuxtLink to="/blog" class="hover:underline"> Blog </NuxtLink>
+
+            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+
+            <NuxtLink
+              :to="
+                data_single_article[0]?.slug.current + '#' + data_single_article[0]?._id
+              "
+              class="hover:underline"
+            >
+              <p class="max-w-[120px] sm:max-w-[300px] truncate">
+                {{ data_single_article[0]?.titre }}
+              </p>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="i-wrapper">
       <div class="i-container py-16 sm:py-24">
         <div class="w-full max-w-3xl">
@@ -127,13 +190,47 @@
         </div>
 
         <div
-          class="wxr-content-formater relative max-w-3xl mx-auto pt-12 border-t border-t-gray-300"
+          class="relative max-w-3xl mx-auto py-12 border-y-2 border-dashed border-t-gray-300"
         >
-          <div v-html="content"></div>
+          <div class="wxr-content-formater">
+            <div v-html="content"></div>
+          </div>
+
+          <div class="mt-8 flex justify-start items-center space-x-2">
+            <img
+              :src="data_single_article[0]?.auteur.imageUrl.url"
+              class="w-12 h-12 rounded-full object-cover"
+              alt=""
+            />
+            <div>
+              <p class="text-md font-medium text-gray-500">
+                Par
+                <span class="text-gray-700">{{
+                  data_single_article[0]?.auteur.nom
+                }}</span>
+              </p>
+              <p class="mt-1 text-sm font-medium text-gray-500">
+                <span>
+                  {{ data_single_article[0]?.auteur.bio[0].children[0].text }}
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="max-w-3xl mx-auto">
-          <div class="mt-12">
+        <div class="max-w-3xl mx-auto mt-16">
+          <div>
+            <ul class="flex justify-start flex-wrap -mt-4">
+              <li
+                :key="tag"
+                v-for="tag in data_single_article[0].tags"
+                class="rounded-md px-3 py-1 mr-4 mt-4 bg-blue_1 bg-opacity-20 text-blue_1 text-sm font-semibold"
+              >
+                <span> #{{ tag.label }} </span>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
             <ul
               class="mt-4 flex justify-start flex-row space-x-3 lg:space-x-4 text-gray-400"
             >
@@ -233,7 +330,8 @@ const query = ref(
       ...,
       "imageUrl":asset->
     }
-  }
+  },
+  tags[]{value,label}
   }
   `
 );

@@ -77,7 +77,7 @@
               _openModal_galerie();
               _showDetails(index);
             "
-            class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-60 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"
+            class="rounded-lg overflow-hidden group cursor-pointer relative mb-4 before:z-10 before:content-[''] before:rounded-md before:absolute before:inset-0 before:opacity-80 before:bg-gradient-to-t via-transparent before:from-blue before:to-transparent"
           >
             <div class="">
               <div class="w-full h-full min-[200px] bg-blue">
@@ -101,7 +101,7 @@
                   </ul>
                 </div>
                 <div class="relative">
-                  <p class="text-lg font-medium line-clamp-2">
+                  <p class="text-md font-semibold line-clamp-2 leading-[1.3]">
                     {{ image.titre }}
                   </p>
                 </div>

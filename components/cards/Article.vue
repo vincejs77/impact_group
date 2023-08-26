@@ -14,7 +14,7 @@
       <div
         class="min-h-[130px] sm:min-h-[130px] xl:min-h-[180px] bg-blue mb-6 max-w-max overflow-hidden rounded-xl"
       >
-        <NuxtLink :to="'/blog/' + slug.current">
+        <NuxtLink :to="'/blog/' + slug.current + '#' + _id">
           <img
             class="w-full h-full object-cover transform hover:scale-125 scale-105 transition ease-in-out duration-1000"
             :src="imageUrl.url"
@@ -36,7 +36,7 @@
 
       <div>
         <NuxtLink
-          :to="'/blog/' + slug.current"
+          :to="'/blog/' + slug.current + '#' + _id"
           class="mb-2 inline-block hover:text-primary hover:underline"
         >
           <h3 class="text-lg font-bold font-heading leading-normal line-clamp-2">
@@ -50,7 +50,7 @@
       <div class="mt-4 flex justify-between items-center">
         <div>
           <NuxtLink
-            :to="'/blog/' + slug.current"
+            :to="'/blog/' + slug.current + '#' + _id"
             class="flex justify-start items-center text-semibold text-primary"
           >
             <span>Lire plus</span>
@@ -79,6 +79,7 @@
 
 <script setup>
 defineProps({
+  _id: String,
   titre: String,
   description: String,
   slug: {
