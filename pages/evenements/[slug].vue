@@ -1,13 +1,13 @@
 <template>
   <div class="overflow-hidden">
-    <section class="i-wrapper sm:py-4 bg-blue bg-opacity-5 border-b border-b-gray-100">
-      <div class="i-container relative mx-auto">
+    <section class="i-wrapper sm:py-2 bg-blue bg-opacity-5 border-b border-b-gray-100">
+      <div class="i-container relative mx-auto text-sm">
         <div class="mb-0">
           <div class="flex items-center py-4 overflow-x-auto whitespace-nowrap">
             <NuxtLink to="/" class="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5"
+                class="w-4 h-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -17,7 +17,7 @@
               </svg>
             </NuxtLink>
 
-            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+            <span class="mx-2 text-gray-400 rtl:-scale-x-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5"
@@ -34,7 +34,7 @@
 
             <NuxtLink to="/evenements" class="hover:underline"> Événements </NuxtLink>
 
-            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+            <span class="mx-2 text-gray-400 rtl:-scale-x-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5"
@@ -103,9 +103,9 @@
             </div>
           </div>
           <div class="bg-blue bg-opacity-[0.05] rounded-xl px-4 w-full mt-8">
-            <ul class="w-full divide-y">
-              <li class="w-full py-4 flex justify-start">
-                <div class="w-[40px]">
+            <ul class="w-full divide-y text-sm">
+              <li class="w-full py-4 flex justify-start items-center">
+                <div class="w-[30px]">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="2"
                       stroke="currentColor"
-                      class="w-5 h-5"
+                      class="w-4 h-4"
                     >
                       <path
                         stroke-linecap="round"
@@ -136,8 +136,8 @@
                   >
                 </div>
               </li>
-              <li class="py-4 flex justify-start">
-                <div class="w-[40px]">
+              <li class="py-4 flex justify-start items-center">
+                <div class="w-[30px]">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@
                       viewBox="0 0 24 24"
                       stroke-width="2"
                       stroke="currentColor"
-                      class="w-5 h-5"
+                      class="w-4 h-4"
                     >
                       <path
                         stroke-linecap="round"
@@ -167,8 +167,11 @@
                 </div>
               </li>
 
-              <li class="py-4 flex justify-start">
-                <div class="w-[40px]">
+              <li
+                v-if="data_single_evenement[0]?.status == 'a_venir'"
+                class="py-4 flex justify-start items-center"
+              >
+                <div class="w-[30px]">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
