@@ -17,7 +17,7 @@
             </p>
           </div>
           <div
-            class="z-20 absolute left-0 -bottom-6 lg:-bottom-12 lg:relative flex w-full justify-center items-center"
+            class="z-20 absolute -left-[19px] -bottom-6 lg:-bottom-12 lg:relative flex w-full justify-center items-center"
           >
             <div class="flex mx-auto">
               <div class="chevron"></div>
