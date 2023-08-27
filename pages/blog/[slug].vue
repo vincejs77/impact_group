@@ -1,13 +1,13 @@
 <template>
   <div id="id">
-    <section class="i-wrapper sm:py-4 bg-blue bg-opacity-5 border-b border-b-gray-300">
-      <div class="i-container relative mx-auto">
+    <section class="i-wrapper sm:py-2 bg-blue bg-opacity-5 border-b border-b-gray-300">
+      <div class="i-container relative mx-auto text-sm">
         <div class="mb-0">
           <div class="flex items-center py-4 overflow-x-auto whitespace-nowrap">
             <NuxtLink to="/" class="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5"
+                class="w-4 h-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -17,7 +17,7 @@
               </svg>
             </NuxtLink>
 
-            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+            <span class="mx-2 text-gray-400 rtl:-scale-x-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5"
@@ -34,7 +34,7 @@
 
             <NuxtLink to="/blog" class="hover:underline"> Blog </NuxtLink>
 
-            <span class="mx-3 text-gray-400 rtl:-scale-x-100">
+            <span class="mx-2 text-gray-400 rtl:-scale-x-100">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-5 h-5"
