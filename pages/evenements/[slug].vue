@@ -298,20 +298,24 @@
             </ul>
           </div>
 
-          <div class="mt-12">
-            <div class="space-x-4">
-              <a
-                v-if="data_single_evenement[0]?.status == 'a_venir'"
-                class="i-btn i-btn__primary"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>S'inscrire</span>
-              </a>
-              <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
-                <span>Plus d'évènements</span>
-              </NuxtLink>
+          <div class="mt-12 text-sm">
+            <div class="-mt-4 flex justify-start flex-wrap">
+              <div class="mr-4 mt-4">
+                <a
+                  v-if="data_single_evenement[0]?.status == 'a_venir'"
+                  class="i-btn i-btn__primary"
+                  :href="data_single_evenement[0]?.lien"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>S'inscrire</span>
+                </a>
+              </div>
+              <div class="mt-4">
+                <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
+                  <span>Plus d'évènements</span>
+                </NuxtLink>
+              </div>
             </div>
           </div>
         </div>
