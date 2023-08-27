@@ -39,7 +39,7 @@
         </div>
       </div>
     </section>
-    <section class="i-wrapper">
+    <section class="i-wrapper bg-blue">
       <div class="w-full md:w-2/2 md:flex justify-between">
         <div
           class="level-counter w-full md:w-1/2 flex lg:justify-end py-10 px-4 sm:px-8 md:px-8 lg:p-16 bg-blue text-white"
@@ -266,10 +266,6 @@
 
 <script setup>
 import { CountUp } from "assets/js/countUp";
-
-const evenements = [
-  { status: "à venir", titre: "Forum Entrepreneurial 2023", place: "En ligne" },
-];
 
 const sanity = useSanity();
 

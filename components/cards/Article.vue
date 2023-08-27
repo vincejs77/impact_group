@@ -4,7 +4,7 @@
       <div class="mb-4 flex justify-start items-center space-x-2">
         <img
           :src="auteur.imageUrl.url"
-          class="w-6 h-6 rounded-full object-cover"
+          class="w-6 h-6 rounded-full object-cover bg-blue"
           alt=""
         />
         <p class="text-sm font-medium text-gray-500">

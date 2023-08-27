@@ -299,7 +299,16 @@
           </div>
 
           <div class="mt-12">
-            <div>
+            <div class="space-x-4">
+              <a
+                v-if="data_single_evenement[0]?.status == 'a_venir'"
+                class="i-btn i-btn__primary"
+                href="http://"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>S'inscrire</span>
+              </a>
               <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
                 <span>Plus d'évènements</span>
               </NuxtLink>
