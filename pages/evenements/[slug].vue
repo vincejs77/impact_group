@@ -403,14 +403,14 @@ const shareEm = () => {
   window.open(navUrl_em, "_blank", "left=100,top=100,width=520,height=500");
 };
 
-const title = `${data_single_evenement.value[0]?.titre} - Un article par Impact Group`;
+const title = `${data_single_evenement.value[0]?.titre} - Un évènement par Impact Group`;
 useHead({
   title,
   meta: [
     { property: "og:title", content: title },
     { property: "og:type", content: "Évènement" },
     { property: "og:locale", content: "en" },
-    { property: "og:site_name", content: "Wito XR Studio" },
+    { property: "og:site_name", content: "Impact Group" },
     { property: "og:image:alt", content: title },
     {
       property: "og:description",
@@ -425,9 +425,9 @@ useHead({
       content: data_single_evenement.value[0]?.imageUrl.url,
     },
     { name: "twitter:title", content: title },
-    { name: "twitter:site", content: "@wito_xr_studio" },
+    { name: "twitter:site", content: "@rdc_impact" },
     { name: "twitter:image:alt", content: title },
-    { name: "twitter:creator", content: "@wito_xr_studio" },
+    { name: "twitter:creator", content: "@rdc_impact" },
     {
       name: "twitter:description",
       content: data_single_evenement.value[0]?.description,
