@@ -297,7 +297,7 @@
 
           <div class="mt-12">
             <div>
-              <NuxtLink to="/blog" class="w-auto i-btn i-btn__blue_1">
+              <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
                 <span>Plus d'article</span>
               </NuxtLink>
             </div>
@@ -349,7 +349,7 @@ const copyFx = () => {
 onBeforeMount(() => {
   navUrl_fb.value =
     "https://www.facebook.com/sharer/sharer.php?u=" +
-    "https://www.impactgp.net/blog/" +
+    "https://www.impactgp.net/evenements/" +
     data_single_evenement.value[0]?.slug.current +
     "&quote=" +
     "Évènement" +
@@ -363,7 +363,7 @@ onBeforeMount(() => {
     data_single_evenement.value[0]?.titre +
     " »" +
     " " +
-    "https://www.impactgp.net/blog/" +
+    "https://www.impactgp.net/evenements/" +
     data_single_evenement.value[0]?.slug.current;
   navUrl_wp.value =
     "whatsapp://send?text=" +
@@ -372,7 +372,7 @@ onBeforeMount(() => {
     data_single_evenement.value[0]?.titre +
     " »" +
     " " +
-    "https://www.impactgp.net/blog/" +
+    "https://www.impactgp.net/evenements/" +
     data_single_evenement.value[0]?.slug.current;
 
   navUrl_em.value =
@@ -383,7 +383,7 @@ onBeforeMount(() => {
     "par Impact Group « " +
     " »" +
     " " +
-    "https://www.impactgp.net/blog/" +
+    "https://www.impactgp.net/evenements/" +
     data_single_evenement.value[0]?.slug.current;
 });
 
