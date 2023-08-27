@@ -223,7 +223,7 @@
               <li
                 :key="tag"
                 v-for="tag in data_single_evenement[0]?.tags"
-                class="rounded-md px-3 py-1 mr-4 mt-4 bg-blue_1 bg-opacity-20 text-blue_1 text-sm font-semibold"
+                class="rounded-md px-3 py-1 mr-4 mt-4 bg-blue_1 bg-opacity-10 text-blue_1 text-sm font-semibold"
               >
                 <span> #{{ tag.label }} </span>
               </li>
@@ -298,7 +298,7 @@
           <div class="mt-12">
             <div>
               <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
-                <span>Plus d'article</span>
+                <span>Plus d'évènements</span>
               </NuxtLink>
             </div>
           </div>

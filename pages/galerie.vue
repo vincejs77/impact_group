@@ -1,8 +1,10 @@
 <template>
   <div>
-    <section class="i-wrapper py-16">
+    <section class="i-wrapper py-16 bg-blue bg-opacity-[0.07]">
       <div class="i-container mx-auto">
         <div class="max-w-xl mx-auto text-center">
+          <p class="mb-3 text-xs text-primary font-bold uppercase">Galerie</p>
+
           <h1 class="text-3xl sm:text-4xl">
             Notre impact <span class="text-blue opacity-80">en images</span>
           </h1>
@@ -14,14 +16,19 @@
             </p>
           </div>
         </div>
-        <div class="w-full mt-8 max-w-2xl mx-auto">
+      </div>
+    </section>
+
+    <section class="i-wrapper">
+      <div class="i-container">
+        <div class="w-full py-10 max-w-2xl mx-auto">
           <ul class="flex justify-center flex-wrap gap-4">
             <li
               :class="[
                 currentCategorieID == null
                   ? 'bg-blue text-white'
                   : 'bg-gray-200 text-blue',
-                'cursor-pointer  rounded-md px-4 font-medium py-1 text-sm',
+                ' transition-colors duration-300 cursor-pointer  rounded-md px-4 font-medium py-1 text-sm hover:bg-primary hover:text-white',
               ]"
             >
               <button @click="resetGalerie_fx(null)" type="button">Toutes</button>
@@ -33,7 +40,7 @@
                   currentCategorieID == categorie._id
                     ? 'bg-blue text-white'
                     : 'bg-gray-200 text-blue',
-                  'cursor-pointer  rounded-md px-4 font-medium py-1 text-sm',
+                  ' transition-colors duration-300 cursor-pointer  rounded-md px-4 font-medium py-1 text-sm hover:bg-primary hover:text-white',
                 ]"
                 @click="refreshGalerie_fx(categorie._id)"
               >

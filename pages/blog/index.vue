@@ -17,6 +17,16 @@
               <img class="w-[200px]" src="/img/contents/filters_format.webp" alt="" />
             </div>
           </div>
+
+          <div
+            class="z-20 absolute -left-[19px] -bottom-[180px] sm:-bottom-4 lg:relative flex w-full justify-start"
+          >
+            <div class="flex mx-auto">
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+              <div class="chevron"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
