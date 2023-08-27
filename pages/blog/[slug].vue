@@ -194,7 +194,7 @@
         <div
           class="relative max-w-3xl mx-auto py-12 border-y-2 border-dashed border-t-gray-300"
         >
-          <div class="wxr-content-formater">
+          <div class="i-content-formater">
             <div v-html="content"></div>
           </div>
 

@@ -20,22 +20,30 @@
         <div class="hidden lg:flex justify-end items-center space-x-8">
           <ul class="i-menu i-menu__ul flex justify-end items-center space-x-4">
             <li>
-              <NuxtLink to="/">Accueil</NuxtLink>
+              <NuxtLink to="/" class="i-underline-animation--txt">Accueil</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/a-propos">A propos</NuxtLink>
+              <NuxtLink to="/a-propos" class="i-underline-animation--txt"
+                >A propos</NuxtLink
+              >
             </li>
             <li class="hidden">
-              <NuxtLink to="/services">Services</NuxtLink>
+              <NuxtLink to="/services" class="i-underline-animation--txt"
+                >Services</NuxtLink
+              >
             </li>
             <li>
-              <NuxtLink to="/galerie">Galerie</NuxtLink>
+              <NuxtLink to="/galerie" class="i-underline-animation--txt"
+                >Galerie</NuxtLink
+              >
             </li>
             <li>
-              <NuxtLink to="/blog">Blog</NuxtLink>
+              <NuxtLink to="/blog" class="i-underline-animation--txt">Blog</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/evenements">Événements</NuxtLink>
+              <NuxtLink to="/evenements" class="i-underline-animation--txt"
+                >Événements</NuxtLink
+              >
             </li>
           </ul>
           <div>

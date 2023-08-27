@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <article class="w-full i-card">
     <NuxtLink :to="'/evenements/' + slug.current + '#' + _id" class="group">
       <div
         class="geoup flex justify-start items-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4 sm:p-6 h-full bg-white border group-hover:border-gray-300 rounded-xl"
@@ -39,9 +39,11 @@
               </ul>
             </div>
             <h3
-              class="group-hover:text-primary group-hover:underline mb-2.5 text-xl font-bold font-heading leading-snug"
+              class="group-hover:text-primary mb-2.5 text-xl font-bold font-heading leading-snug"
             >
-              {{ titre }}
+              <span class="i-underline-animation--txt">
+                {{ titre }}
+              </span>
             </h3>
             <p class="text-sm text-gray-600 font-medium">
               <span class="text-gray-800">{{ lieu }}</span>
@@ -76,7 +78,7 @@
         </div>
       </div>
     </NuxtLink>
-  </div>
+  </article>
 </template>
 
 <script setup>

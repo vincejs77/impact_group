@@ -1,5 +1,5 @@
 <template>
-  <article class="w-auto">
+  <article class="i-card w-auto group">
     <div class="max-w-sm mx-auto">
       <div class="mb-4 flex justify-start items-center space-x-2">
         <img
@@ -16,7 +16,7 @@
       >
         <NuxtLink :to="'/blog/' + slug.current + '#' + _id">
           <img
-            class="w-full h-full object-cover transform hover:scale-125 scale-105 transition ease-in-out duration-1000"
+            class="w-full h-full object-cover transform group-hover:scale-125 scale-105 transition ease-in-out duration-1000"
             :src="imageUrl.url"
             :alt="titre"
           />
@@ -37,10 +37,12 @@
       <div>
         <NuxtLink
           :to="'/blog/' + slug.current + '#' + _id"
-          class="mb-2 inline-block hover:text-primary hover:underline"
+          class="mb-2 inline-block group-hover:text-primary"
         >
           <h3 class="text-lg font-bold font-heading leading-normal line-clamp-2">
-            {{ titre }}
+            <span class="i-underline-animation--txt">
+              {{ titre }}
+            </span>
           </h3>
         </NuxtLink>
       </div>

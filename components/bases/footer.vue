@@ -17,24 +17,34 @@
             <ul class="grid grid-cols-2 gap-2 mt-4 text-sm">
               <div class="space-y-2">
                 <li>
-                  <NuxtLink to="/"> Accueil </NuxtLink>
+                  <NuxtLink to="/" class="i-underline-animation--txt"> Accueil </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/a-propos"> À propos </NuxtLink>
+                  <NuxtLink to="/a-propos" class="i-underline-animation--txt">
+                    À propos
+                  </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/nous-contacter"> Contacts </NuxtLink>
+                  <NuxtLink to="/nous-contacter" class="i-underline-animation--txt">
+                    Contacts
+                  </NuxtLink>
                 </li>
               </div>
               <div class="space-y-2">
                 <li>
-                  <NuxtLink to="/galerie"> Galerie </NuxtLink>
+                  <NuxtLink to="/galerie" class="i-underline-animation--txt">
+                    Galerie
+                  </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/evenements"> Événements </NuxtLink>
+                  <NuxtLink to="/evenements" class="i-underline-animation--txt">
+                    Événements
+                  </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/blog"> Blog </NuxtLink>
+                  <NuxtLink to="/blog" class="i-underline-animation--txt">
+                    Blog
+                  </NuxtLink>
                 </li>
               </div>
             </ul>
