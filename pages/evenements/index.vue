@@ -65,4 +65,9 @@ const query_evenements = ref(
 const [{ data: data_evenements }] = await Promise.all([
   useAsyncData("data-evenement-index", () => sanity.fetch(query_evenements.value)),
 ]);
+
+const title = "Évènement - Impact Group";
+useHead({
+  title,
+});
 </script>

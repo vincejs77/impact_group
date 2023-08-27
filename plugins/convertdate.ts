@@ -5,7 +5,7 @@ export default defineNuxtPlugin({
 		const convertDate__index = (date: any, type: string, lang: string) => {
 			if (type == "dmy") {
 				return new Date(date).toLocaleDateString(lang, {
-					month: "long",
+					month: "short",
 					day: "numeric",
 					year: "numeric",
 					hour: "numeric",
@@ -13,11 +13,12 @@ export default defineNuxtPlugin({
 				});
 			} else if (type == "d") {
 				return new Date(date).toLocaleDateString(lang, {
-					day: "numeric"
+					day: "numeric",
+					month: "short"
 				});
 			} else {
 				return new Date(date).toLocaleDateString(lang, {
-					month: "long",
+					month: "short",
 					day: "numeric",
 					year: "numeric"
 				});

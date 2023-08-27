@@ -195,7 +195,7 @@
           class="relative max-w-3xl mx-auto py-12 border-y-2 border-dashed border-t-gray-300"
         >
           <div class="i-content-formater">
-            <div v-html="content"></div>
+            <div v-html="$portable_txt_to_html(data_single_article[0]?.body)"></div>
           </div>
 
           <div class="mt-8 flex justify-start items-center space-x-2">
@@ -313,13 +313,8 @@
 
 <script setup>
 const { $convertDate__index } = useNuxtApp();
-
-import htm from "htm";
-import vhtml from "vhtml";
-import { toHTML, uriLooksSafe } from "@portabletext/to-html";
-
+const { $portable_txt_to_html } = useNuxtApp();
 const route = useRoute();
-
 const sanity = useSanity();
 
 const query = ref(
@@ -341,36 +336,6 @@ const query = ref(
 const [{ data: data_single_article }] = await Promise.all([
   useAsyncData("data-single-articles", () => sanity.fetch(query.value)),
 ]);
-
-const html = htm.bind(vhtml);
-
-const myPortableTextComponents = {
-  types: {
-    image: ({ value }) => html`<img src="${value.imageUrl.url}" />`,
-    callToAction: ({ value, isInline }) =>
-      isInline
-        ? html`<a href="${value.url}" target="_blank" rel="noopener noreferer"
-            >${value.text}</a
-          >`
-        : html`<div class="callToAction">${value.text}</div>`,
-  },
-
-  marks: {
-    link: ({ children, value }) => {
-      const href = value.href || "";
-
-      if (uriLooksSafe(href)) {
-        const rel = href.startsWith("/") ? undefined : "noreferrer noopener";
-        return html`<a href="${href}" target="_blank" rel="${rel}">${children}</a>`;
-      }
-
-      return children;
-    },
-  },
-};
-const content = toHTML(data_single_article.value[0]?.body, {
-  components: myPortableTextComponents,
-});
 
 const navUrl_fb = ref("");
 const navUrl_tw = ref("");

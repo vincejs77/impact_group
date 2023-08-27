@@ -1,3 +1,20 @@
+.i-underline-animation--txt {
+    width: calc(100%);
+    background-image: linear-gradient(transparent calc(100% - 2px), #fd7135 10px);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    -webkit-transition: background-size 1s;
+    -moz-transition: background-size 1s;
+    -ms-transition: background-size 1s;
+    -o-transition: background-size 1s;
+    transition: background-size 1s;
+}
+
+.i-card:hover .i-underline-animation--txt,
+.i-underline-animation--txt:hover {
+    background-size: 100% 100%;
+}
+
 .chevron {
     position: absolute;
     width: 1.5rem;
