@@ -69,6 +69,10 @@
     }
 }
 
+.i-btn-2:hover {
+    @apply scale-105 transition-all duration-500 ease-in-out;
+}
+
 input:focus,
 textarea:focus {
     outline: none;
