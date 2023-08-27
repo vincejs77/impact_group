@@ -67,150 +67,154 @@
       </div>
     </section>
     <section class="i-wrapper">
-      <div class="i-container flex justify-between flex-col lg:flex-row py-16 border-b">
-        <div class="text-left lg:max-w-md lg:min-h-full flex flex-col justify-between">
-          <div>
-            <div class="flex justify-start space-x-3">
-              <p
-                v-if="data_single_evenement[0]?.status == 'a_venir'"
-                class="bg-green-500 text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
-              >
-                À venir
-              </p>
-
-              <p
-                v-else
-                class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
-              >
-                Passé
-              </p>
-
-              <ul>
-                <li
-                  :key="categorie"
-                  v-for="categorie in data_single_evenement[0]?.categories_evenements"
-                  class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+      <div class="i-container">
+        <div class="flex justify-between flex-col lg:flex-row py-16">
+          <div class="text-left lg:max-w-md lg:min-h-full flex flex-col justify-between">
+            <div>
+              <div class="flex justify-start space-x-3">
+                <p
+                  v-if="data_single_evenement[0]?.status == 'a_venir'"
+                  class="bg-green-500 text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
                 >
-                  {{ categorie.titre }}
+                  À venir
+                </p>
+
+                <p
+                  v-else
+                  class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
+                >
+                  Passé
+                </p>
+
+                <ul>
+                  <li
+                    :key="categorie"
+                    v-for="categorie in data_single_evenement[0]?.categories_evenements"
+                    class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+                  >
+                    {{ categorie.titre }}
+                  </li>
+                </ul>
+              </div>
+              <h1 class="text-3xl sm:text-4xl">{{ data_single_evenement[0]?.titre }}</h1>
+              <div class="mt-8">
+                <p>
+                  {{ data_single_evenement[0].description }}
+                </p>
+              </div>
+            </div>
+            <div class="bg-blue bg-opacity-[0.05] rounded-xl px-4 w-full mt-8">
+              <ul class="w-full divide-y divide-gray-300 text-sm">
+                <li class="w-full py-4 flex justify-start items-center">
+                  <div class="w-[30px]">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="w-full">
+                    <span class="text-gray-600"
+                      >Du
+                      {{
+                        $convertDate__index(data_single_evenement[0].startedAt, "d", "fr")
+                      }}
+                      au
+                      {{
+                        $convertDate__index(data_single_evenement[0].endedAt, "", "fr")
+                      }}</span
+                    >
+                  </div>
+                </li>
+                <li class="py-4 flex justify-start items-center">
+                  <div class="w-[30px]">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="w-full">
+                    <span class="text-gray-600">
+                      {{ data_single_evenement[0].lieu }}
+                    </span>
+                  </div>
+                </li>
+
+                <li
+                  v-if="data_single_evenement[0]?.status == 'a_venir'"
+                  class="py-4 flex justify-start items-center"
+                >
+                  <div class="w-[30px]">
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-5 h-5"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="w-full">
+                    <a
+                      :href="data_single_evenement[0].lien"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span class="i-underline-animation--txt font-semibold text-primary">
+                        S'inscrire en ligne
+                      </span>
+                    </a>
+                  </div>
                 </li>
               </ul>
             </div>
-            <h1 class="text-3xl sm:text-4xl">{{ data_single_evenement[0]?.titre }}</h1>
-            <div class="mt-8">
-              <p>
-                {{ data_single_evenement[0].description }}
-              </p>
-            </div>
           </div>
-          <div class="bg-blue bg-opacity-[0.05] rounded-xl px-4 w-full mt-8">
-            <ul class="w-full divide-y text-sm">
-              <li class="w-full py-4 flex justify-start items-center">
-                <div class="w-[30px]">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="w-4 h-4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div class="w-full">
-                  <span class="text-gray-600"
-                    >Du
-                    {{
-                      $convertDate__index(data_single_evenement[0].startedAt, "d", "fr")
-                    }}
-                    au
-                    {{
-                      $convertDate__index(data_single_evenement[0].endedAt, "", "fr")
-                    }}</span
-                  >
-                </div>
-              </li>
-              <li class="py-4 flex justify-start items-center">
-                <div class="w-[30px]">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="w-4 h-4"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div class="w-full">
-                  <span class="text-gray-600">
-                    {{ data_single_evenement[0].lieu }}
-                  </span>
-                </div>
-              </li>
+          <div class="mt-8 lg:mt-0 w-full lg:w-[400px] rounded-xl overflow-hidden">
+            <img
+              class="w-full h-full"
+              :src="data_single_evenement[0].imageUrl.url"
+              alt=""
+            />
+          </div>
+        </div>
 
-              <li
-                v-if="data_single_evenement[0]?.status == 'a_venir'"
-                class="py-4 flex justify-start items-center"
-              >
-                <div class="w-[30px]">
-                  <span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      class="w-5 h-5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                <div class="w-full">
-                  <a
-                    :href="data_single_evenement[0].lien"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span class="i-underline-animation--txt font-semibold text-primary">
-                      S'inscrire en ligne
-                    </span>
-                  </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-8 lg:mt-0 w-full lg:w-[400px] rounded-xl overflow-hidden">
-          <img
-            class="w-full h-full"
-            :src="data_single_evenement[0].imageUrl.url"
-            alt=""
-          />
-        </div>
+        <div class="w-full h-[1px] bg-gray-300"></div>
       </div>
     </section>
 
