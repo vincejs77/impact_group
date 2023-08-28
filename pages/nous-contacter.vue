@@ -93,39 +93,80 @@
               <h2 class="text-xl">Fromulaire de contact</h2>
             </div>
             <div class="form-group w-full">
+              <label for="nom" class="text-sm text-gray-500" v-if="_nom !== ''"
+                >Nom & Post-nom
+              </label>
+
               <input
+                v-model="_nom"
                 type="text"
-                name="name"
-                id="name"
+                name="nom"
+                id="nom"
                 placeholder="Nom & Post-nom"
-                class="py-2 bg-transparent focus:border-b-2 placeholder:text-gray-400 border-b w-full border-b-gray-300"
+                class="py-2 bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
               />
             </div>
             <div class="form-group w-full">
+              <label
+                for="telephone"
+                class="text-sm text-gray-500"
+                v-if="_telephone !== ''"
+              >
+                Téléphone
+              </label>
+
               <input
+                required
+                v-model="_telephone"
+                type="tel"
+                name="telephone"
+                id="telephone"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                placeholder="Numéro de téléphone"
+                class="py-2 bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
+              />
+            </div>
+
+            <div class="form-group w-full relative">
+              <label
+                for="email"
+                class="text-sm text-gray-500"
+                v-if="_adresse_email !== ''"
+                >E-mail
+              </label>
+
+              <input
+                required
+                v-model="_adresse_email"
                 type="email"
-                name="enail"
+                name="email"
                 id="email"
                 placeholder="Adresse e-mail"
-                class="py-2 bg-transparent focus:border-b-2 placeholder:text-gray-400 border-b w-full border-b-gray-300"
+                class="py-2 bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
               />
             </div>
 
             <div class="form-group w-full">
+              <label for="message" class="text-sm text-gray-500" v-if="_message !== ''"
+                >Message
+              </label>
+
               <textarea
-                name=""
-                id=""
+                required
+                v-model="_message"
+                name="message"
+                id="message"
                 cols="20"
                 rows="4"
-                class="bg-transparent focus:border-b-2 placeholder:text-gray-400 border-b w-full border-b-gray-300"
+                class="bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
                 placeholder="Message"
               ></textarea>
             </div>
 
             <div class="w-full flex justify-center pb-2">
-              <NuxtLink to="#" class="w-auto i-btn i-btn__blue_1">
+              <button type="submit" class="w-auto i-btn i-btn__blue_1">
                 <span>Envoyer le message</span>
-              </NuxtLink>
+              </button>
             </div>
           </form>
         </div>
@@ -134,4 +175,18 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const _telephone = ref("");
+const _nom = ref("");
+const _message = ref("");
+const _adresse_email = ref("");
+</script>
+
+<style scoped>
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #eff2fa inset !important;
+}
+</style>
