@@ -3,7 +3,7 @@
     <section class="i-wrapper py-16 sm:py-24 bg-blue bg-opacity-[0.07]">
       <div class="i-container mx-auto relative pb-[135px] lg:pb-0">
         <div class="text-center lg:text-left">
-          <p class="mb-3 text-xs text-primary font-bold uppercase">Événements</p>
+          <p class="mb-3 text-xs text-primary font-bold uppercase">Évènements</p>
 
           <h1 class="text-3xl sm:text-4xl max-w-xl mx-auto lg:mx-0">
             Vers un avenir entrepreneurial

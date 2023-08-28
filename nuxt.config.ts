@@ -76,11 +76,6 @@ export default defineNuxtConfig({
 			autoprefixer: {}
 		}
 	},
-	runtimeConfig: {
-		sanity: {
-			token: process.env.NUXT_SANITY_TOKEN
-		}
-	},
 	modules: [
 		"@nuxtjs/sanity",
 		[
@@ -89,11 +84,40 @@ export default defineNuxtConfig({
 				autoImports: ["defineStore", "acceptHMRUpdate"]
 			}
 		],
-		"@vueuse/motion/nuxt"
+		"@vueuse/motion/nuxt",
+		[
+			"nuxt-mail",
+			{
+				message: {
+					to: process.env.MAILUSER
+				},
+				smtp: {
+					// pool: true,
+					host: process.env.SMTPSENDER,
+					port: process.env.PORTSENDER,
+					// secure: true,
+					auth: {
+						user: process.env.MAILUSER,
+						pass: process.env.MAILPASS
+					}
+				}
+			}
+		]
 	],
+
 	sanity: {
 		projectId: "0y216ymg",
 		dataset: "production",
 		perspective: "published"
+	},
+
+	runtimeConfig: {
+		sanity: {
+			token: process.env.NUXT_SANITY_TOKEN
+		},
+		public: {
+			email_sender: process.env.MAILUSER,
+			pass_sender: process.env.MAILPASS
+		}
 	}
 });

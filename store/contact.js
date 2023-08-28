@@ -4,7 +4,8 @@ export const useConstactStore = defineStore({
 	id: "i-contact-store",
 	state: () => {
 		return {
-			_objet: 0
+			isError: false,
+			isSuccess: false
 		};
 	}
 });

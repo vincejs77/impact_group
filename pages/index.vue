@@ -160,18 +160,18 @@
     <section class="i-wrapper bg-blue_1 bg-opacity-5 overflow-hidden">
       <div class="i-container px-4 mx-auto py-16 sm:py-24">
         <p class="text-xs text-primary font-bold uppercase text-center mb-4">
-          événements
+          évènements
         </p>
 
         <h2
           class="mb-4 text-3xl md:text-5xl text-center font-heading tracking-px-n leading-tight"
         >
-          Événements
+          Évènements
         </h2>
         <p
           class="mb-12 text-gray-600 text-center font-medium leading-relaxed md:max-w-sm mx-auto"
         >
-          Découvrez nos événements uniques et impactants, passés et à venir.
+          Découvrez nos évènements uniques et impactants, passés et à venir.
         </p>
         <div class="md:max-w-2xl mx-auto">
           <div class="flex flex-wrap space-y-8">
@@ -188,7 +188,7 @@
               class="inline-flex justify-center md:justify-start items-center text-blue_1 hover:text-primary leading-normal"
             >
               <span class="mr-2 font-semibold relative"
-                >Voir tous les événements
+                >Voir tous les évènements
 
                 <span class="absolute -bottom-1 h-[3px] w-full left-0 bg-gray-200"></span>
               </span>

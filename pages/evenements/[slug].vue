@@ -32,7 +32,7 @@
               </svg>
             </span>
 
-            <NuxtLink to="/evenements" class="hover:underline"> Événements </NuxtLink>
+            <NuxtLink to="/evenements" class="hover:underline"> Évènements </NuxtLink>
 
             <span class="mx-2 text-gray-400 rtl:-scale-x-100">
               <svg

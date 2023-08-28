@@ -42,7 +42,7 @@
             </li>
             <li>
               <NuxtLink to="/evenements" class="i-underline-animation--txt"
-                >Événements</NuxtLink
+                >Évènements</NuxtLink
               >
             </li>
           </ul>

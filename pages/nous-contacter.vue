@@ -86,18 +86,42 @@
         </div>
         <div class="lg:w-1/2 z-0 flex lg:justify-end items-center lg:py-16 pb-16">
           <form
+            v-if="!sentState"
             action=""
-            class="bg-white border border-gray-200 rounded-md w-full max-w-full lg:max-w-[500px] p-4 py-8 sm:p-8 space-y-4"
+            class="relative overflow-hidden bg-white border border-gray-200 rounded-md w-full max-w-full lg:max-w-[500px] p-4 py-8 sm:p-8 space-y-4"
           >
+            <div v-if="isPending">
+              <div
+                class="z-20 absolute bg-white opacity-50 left-0 right-0 w-full h-full"
+              ></div>
+
+              <span>
+                <svg class="spinner z-20" viewBox="0 0 50 50">
+                  <circle
+                    class="path"
+                    cx="25"
+                    cy="25"
+                    r="20"
+                    fill="none"
+                    stroke-width="5"
+                  ></circle>
+                </svg>
+              </span>
+            </div>
+
             <div>
               <h2 class="text-xl">Fromulaire de contact</h2>
             </div>
             <div class="form-group w-full">
-              <label for="nom" class="text-sm text-gray-500" v-if="_nom !== ''"
+              <label
+                for="nom"
+                class="transition-all duration-500 ease-in-out text-sm text-gray-500"
+                v-if="_nom !== ''"
                 >Nom & Post-nom
               </label>
 
               <input
+                required
                 v-model="_nom"
                 type="text"
                 name="nom"
@@ -121,7 +145,6 @@
                 type="tel"
                 name="telephone"
                 id="telephone"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                 placeholder="Numéro de téléphone"
                 class="py-2 bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
               />
@@ -142,11 +165,16 @@
                 name="email"
                 id="email"
                 placeholder="Adresse e-mail"
+                :class="
+                  !isvalidEmail
+                    ? 'border-red-500 focus:border-red-500'
+                    : 'border-gray-400 focus:border-blue'
+                "
                 class="py-2 bg-transparent focus:border-b-2 focus:border-b-gray-400 placeholder:text-gray-400 border-b w-full border-b-gray-300"
               />
             </div>
 
-            <div class="form-group w-full">
+            <div class="transition-all duration-500 ease-in-out form-group w-full">
               <label for="message" class="text-sm text-gray-500" v-if="_message !== ''"
                 >Message
               </label>
@@ -163,12 +191,108 @@
               ></textarea>
             </div>
 
+            <div
+              v-if="requiredState"
+              class="bg-red-100 text-red-500 py-2 px-4 text-sm font-medium border-l-2 border-l-red-500"
+            >
+              <p>* Veuillez remplir tous les champs.</p>
+            </div>
+
+            <div
+              v-if="!isvalidEmail"
+              class="bg-red-100 text-red-500 py-2 px-4 text-sm font-medium border-l-2 border-l-red-500"
+            >
+              <p>* Veuillez entrer une adresse e-mail valide</p>
+            </div>
+
+            <div
+              v-if="useConstactStore().$state.isError"
+              class="bg-red-100 text-red-500 py-2 px-4 text-sm font-medium border-l-2 border-l-red-500"
+            >
+              <p>
+                😥 Impossible d'envoyer le message pour le moment. Appellez-nous au
+                <a href="tel:+243999573957" class="underline font-semibold"
+                  >+243 999 573 957</a
+                >
+              </p>
+            </div>
+
             <div class="w-full flex justify-center pb-2">
-              <button type="submit" class="w-auto i-btn i-btn__blue_1">
-                <span>Envoyer le message</span>
+              <button
+                @click="sendMessage_fx()"
+                type="button"
+                class="w-auto i-btn i-btn__blue_1"
+              >
+                <span v-if="!isPending">Envoyer le message</span>
+                <div v-else>Envoie encours ...</div>
               </button>
             </div>
           </form>
+
+          <div
+            v-else
+            class="flex justify-center px-8 sm:px-12 items-center min-h-full relative overflow-hidden bg-white border border-gray-200 rounded-md w-full max-w-full lg:max-w-[500px] p-4 py-8 sm:p-8 space-y-4"
+          >
+            <div class="text-center">
+              <h2>👋 Bonjour {{ _nom }}</h2>
+              <p class="mt-4 text-gray-600">
+                Votre message a été envoyé ! Nous vous écrirons à votre adresse e-mail "
+                <span class="text-primary font-medium">{{ _adresse_email }}</span> " sous
+                peu.
+              </p>
+              <div class="border-t border-t-gray-200 mt-8 pt-4">
+                <h3 class="mt-4 text-xl">En attendant, découvrez :</h3>
+                <div class="flex justify-center flex-wrap mt-6">
+                  <NuxtLink
+                    to="/evenements"
+                    class="text-primary p-2 font-semibold flex justify-center items-center"
+                  >
+                    <span class="i-underline-animation--txt"> Nos évènements </span>
+
+                    <span class="ml-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                    </span>
+                  </NuxtLink>
+                  <NuxtLink
+                    to="/blog"
+                    class="p-2 font-semibold flex justify-center items-center text-blue_1"
+                  >
+                    <span class="i-underline-animation--txt"> Notre blog </span>
+
+                    <span class="ml-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-4 h-4"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                    </span>
+                  </NuxtLink>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -176,10 +300,84 @@
 </template>
 
 <script setup>
+import { useConstactStore } from "~/store/contact";
+useConstactStore().$state.isError = false;
+
+const config = useRuntimeConfig();
+
 const _telephone = ref("");
 const _nom = ref("");
 const _message = ref("");
 const _adresse_email = ref("");
+
+const requiredState = ref(false);
+const sentState = ref(false);
+const isvalidEmail = ref(true);
+const checkingForm = ref(false);
+const isPending = ref(false);
+
+const validateEmail = (email) => {
+  return email.match(
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const mail = useMail();
+
+const sendMessage_fx = async () => {
+  try {
+    isPending.value = true;
+    checkingForm.value = true;
+    useConstactStore().$state.isError = false;
+    useConstactStore().$state.isSuccess = false;
+
+    if (
+      _nom.value !== "" &&
+      _telephone.value !== "" &&
+      _adresse_email.value !== "" &&
+      _message.value !== "" &&
+      _adresse_email.value !== ""
+    ) {
+      requiredState.value = false;
+
+      if (validateEmail(_adresse_email.value)) {
+        isvalidEmail.value = true;
+        await mail.send({
+          from: config.public.email_sender,
+          subject: `Formulaire de contact - ${_nom.value}`,
+          text: `Envoyé par ${_nom.value} \n\n${_message.value} \n\nAdresse e-mail : ${_adresse_email.value} \n\nNuméro de téléphone : ${_telephone.value}`,
+          html: `
+              <h4>Envoyé par ${_nom.value}</h4>
+              <br>
+              <p>${_message.value}</p>
+              <br>
+              <p>Adresse e-mail : ${_adresse_email.value}</p>
+              <p>Numéro de téléphone : ${_telephone.value}</p>
+
+          `,
+          replyTo: _adresse_email.value,
+        });
+        checkingForm.value = false;
+        sentState.value = true;
+        isPending.value = false;
+        useConstactStore().$state.isSuccess = true;
+      } else {
+        isvalidEmail.value = false;
+      }
+      checkingForm.value = true;
+      isvalidEmail.value = false;
+    } else {
+      requiredState.value = true;
+    }
+    isPending.value = false;
+  } catch (e) {
+    console.log(e);
+    isPending.value = false;
+    useConstactStore().$state.isError = true;
+    isvalidEmail.value = true;
+    requiredState.value = false;
+  }
+};
 </script>
 
 <style scoped>
@@ -187,6 +385,6 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #eff2fa inset !important;
+  -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
 }
 </style>
