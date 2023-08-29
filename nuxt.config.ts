@@ -89,16 +89,16 @@ export default defineNuxtConfig({
 			"nuxt-mail",
 			{
 				message: {
-					to: process.env.MAILUSER
+					to: "info@impactgp.net"
 				},
 				smtp: {
 					pool: true,
-					host: process.env.SMTPSENDER,
-					port: process.env.PORTSENDER,
+					host: "mail.impactgp.net",
+					port: 465,
 					secure: true,
 					auth: {
-						user: process.env.MAILUSER,
-						pass: process.env.MAILPASS
+						user: "info@impactgp.net",
+						pass: "impactgroup@23"
 					}
 				}
 			}
