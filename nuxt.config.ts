@@ -92,10 +92,10 @@ export default defineNuxtConfig({
 					to: process.env.MAILUSER
 				},
 				smtp: {
-					// pool: true,
+					pool: true,
 					host: process.env.SMTPSENDER,
 					port: process.env.PORTSENDER,
-					// secure: true,
+					secure: true,
 					auth: {
 						user: process.env.MAILUSER,
 						pass: process.env.MAILPASS
