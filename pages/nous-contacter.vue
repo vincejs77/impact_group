@@ -344,6 +344,7 @@ const sendMessage_fx = async () => {
         isvalidEmail.value = true;
         await mail.send({
           from: config.public.email_sender,
+          to: config.public.email_sender,
           subject: `Formulaire de contact - ${_nom.value}`,
           text: `Envoyé par ${_nom.value} \n\n${_message.value} \n\nAdresse e-mail : ${_adresse_email.value} \n\nNuméro de téléphone : ${_telephone.value}`,
           html: `
