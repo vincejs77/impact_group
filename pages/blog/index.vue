@@ -65,4 +65,10 @@ const query = ref(
 const [{ data: data_articles }] = await Promise.all([
   useAsyncData("data-articles", () => sanity.fetch(query.value)),
 ]);
+
+const title = "Blog - Impact Group";
+
+useHead({
+  title,
+});
 </script>

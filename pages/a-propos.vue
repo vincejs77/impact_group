@@ -472,4 +472,10 @@ const strategy = [
     `,
   },
 ];
+
+const title = 'À propos - Impact Group'
+
+useHead({
+  title
+})
 </script>

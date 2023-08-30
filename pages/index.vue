@@ -332,4 +332,10 @@ onMounted(() => {
     countStart_obs();
   }, 1000);
 });
+
+const title = "Accueil - Impact Group";
+
+useHead({
+  title,
+});
 </script>

@@ -378,6 +378,12 @@ const sendMessage_fx = async () => {
     requiredState.value = false;
   }
 };
+
+const title = "Contacts - Impact Group";
+
+useHead({
+  title,
+});
 </script>
 
 <style scoped>

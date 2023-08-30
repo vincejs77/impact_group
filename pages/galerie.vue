@@ -212,5 +212,9 @@ const _showDetails = async (index) => {
   useGlobalStore().$state.currentIndex_galerie = index;
 };
 
-//Comment test
+const title = "Galerie - Impact Group";
+
+useHead({
+  title,
+});
 </script>
