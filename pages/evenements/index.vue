@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="i-wrapper py-16 sm:py-24 bg-blue bg-opacity-[0.07]">
+    <section class="i-wrapper py-16 sm:py-24 bg-blue bg-opacity-[0.06]">
       <div class="i-container mx-auto relative pb-[135px] lg:pb-0">
         <div class="text-center lg:text-left">
           <p class="mb-3 text-xs text-primary font-bold uppercase">Évènements</p>

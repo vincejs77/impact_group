@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="i-wrapper py-16 bg-blue bg-opacity-[0.07]">
+    <section class="i-wrapper py-16 bg-blue bg-opacity-[0.06]">
       <div class="i-container mx-auto">
         <div class="max-w-xl mx-auto text-center">
           <p class="mb-3 text-xs text-primary font-bold uppercase">Galerie</p>

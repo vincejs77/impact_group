@@ -15,7 +15,7 @@
             <h1
               class="leading-[1.2] text-3xl sm:text-5xl sm:leading-[1.2] text-blue font-black"
             >
-              La meilleure façon de prédire l' avenir
+              La meilleure façon de prédire l'avenir.
               <span class="text-blue opacity-80"> est de le créer.</span>
             </h1>
             <p class="mt-4 text-gray-700 text-lg">
@@ -46,7 +46,7 @@
         >
           <div class="max-w-[380px] sm:max-w-[420px] sm:py-8">
             <p class="text-xs text-primary font-bold uppercase sr-only">Notre impact</p>
-            <h2 class="mb-6 text-3xl sm:text-5xl mt-0">Nous façonnons l'avenir</h2>
+            <h2 class="mb-6 text-3xl sm:text-5xl mt-0">Nous façonnons l’avenir !</h2>
             <p class="text-lg">
               Nous sommes déterminés à soutenir les jeunes entrepreneurs et promouvoir la
               paix et la croissance économique en République Démocratique du Congo.
@@ -55,29 +55,30 @@
             <div class="flex justify-between sm:justify-start mt-8">
               <div>
                 <div class="sm:w-32">
-                  <h2
-                    class="mb-3 text-3xl md:text-4xl font-bold font-heading tracking-px-n leading-tight"
-                  >
-                    <span class="js-count-up" data-value="52"></span>
-                    <span class="text-primary">+</span>
-                  </h2>
                   <p class="text-sm text-gray-300 font-medium leading-normal">
-                    entreprises accompagnées
+                    Entreprises accompagnées
                   </p>
+                  <h2
+                    class="mt-3 text-3xl md:text-4xl font-bold font-heading tracking-px-n leading-tight"
+                  >
+                    <span class="text-primary">+</span>
+                    <span class="js-count-up" data-value="52"></span>
+                  </h2>
                 </div>
               </div>
               <div class="min-h-full w-[1px] bg-gray-300 bg-opacity-30 mr-4"></div>
               <div>
                 <div class="sm:w-44">
-                  <h2
-                    class="font-extrabold font-serif mb-3 text-3xl md:text-4xl font-heading tracking-px-n leading-tight"
-                  >
-                    <span class="js-count-up" data-value="1000"></span>
-                    <span class="text-primary">+</span>
-                  </h2>
                   <p class="w-32 text-sm text-gray-300 font-medium leading-normal">
-                    jeunes entrepreneurs unis
+                    Réseau de jeunes entrepreneurs
                   </p>
+                  <h2
+                    class="mt-3 font-extrabold font-serif text-3xl md:text-4xl font-heading tracking-px-n leading-tight"
+                  >
+                    <span class="text-primary">+</span>
+
+                    <span class="js-count-up" data-value="1000"></span>
+                  </h2>
                 </div>
               </div>
             </div>
@@ -171,7 +172,7 @@
         <p
           class="mb-12 text-gray-600 text-center font-medium leading-relaxed md:max-w-sm mx-auto"
         >
-          Découvrez nos évènements uniques et impactants, passés et à venir.
+          Découvrez nos évènements passés et à venir.
         </p>
         <div class="md:max-w-2xl mx-auto">
           <div class="flex flex-wrap space-y-8">

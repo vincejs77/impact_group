@@ -8,21 +8,18 @@
         <div class="mt-8 max-w-2xl">
           <div>
               <p class="text-lg font-medium">
-              Impact Group est une idée innovante permettant aux jeunes entrepreneurs congolais d’accéder non seulement à de ressources techniques leur permettant de créer et mieux gérer leurs entreprises mais aussi à un accompagnement financier par l’ouverture aux jeunes aux IMF et à d’autre partenaires financiers.
+                Impact Group est une idée innovante permettant aux jeunes entrepreneurs congolais d’accéder non seulement à de ressources techniques permettant de créer et mieux gérer leurs entreprises mais aussi à un accompagnement financier par l’ouverture aux jeunes aux IMF et à d’autre partenaires financiers.  
               </p>
               <p class="mt-4 opacity-80">
-                Malgré les défis, notre mission est de soutenir les entrepreneurs face à
-                l'impact économique de la crise. Nous avons initié une vague d'innovation en
-                offrant un soutien financier, technique et des ateliers sur la planification
-                d'entreprise.
+               Notre objectif est de soutenir les entrepreneurs face à l'impact économique de la crise. Nous avons initié une vague d'innovation en offrant un soutien financier, technique et des ateliers sur la planification d'entreprise.
               </p>
           </div>
           <div class=" space-y-8 mt-8">
               <p>
-                Créée depuis Juin 2020, inspiré d’une prise de conscience sur la situation générale des jeunes congolais, dans une période particulièrement difficile quand le monde entier était confronté à la pandémie de COVID-19 qui a eu des retombés significatifs sur l'entrepreneuriat dans tous les pays et particulièrement en RDC. 
+                Créée depuis Juin 2020, inspiré d’une prise de conscience sur la situation générale des jeunes congolais, dans une période particulièrement difficile quand le monde entier était confronté à la pandémie de COVID-19 qui a eu des retombés significatifs sur l'entrepreneuriat dans tous les pays et particulièrement en RDC.
               </p>
               <p>
-                Aujourd’hui, Impact Group accompagne plus de 52 entreprises qui regroupent des jeunes filles et garçon éparpillés dans toute la RDC et ailleurs qui ont démontré leur capacité à mettre en œuvre des nouvelles initiatives, soucieux de contribuer à la relance économique du pays et luttant pour la participation effective des jeunes et des femmes dans la vie socio-politico-économique ainsi que le processus de paix en RDC.
+                Aujourd’hui, Impact Group accompagne plus de 52 entreprises qui regroupent des jeunes filles et garçon éparpillés dans toute la RDC et ailleurs qui ont démontré leur capacité à mettre en œuvre des nouvelles initiatives, soucieux de contribuer à la relance économique du pays et luttant pour la participation effective des jeunes et des femmes dans la vie socio-politico-économique ainsi que le processus de paix en RDC. 
               </p>
               <p>
                 Impact Group tient un réseau des entrepreneurs regroupant plus de 1000 Jeunes congolais. Un Forum annuel est organisé chaque année permettant de consolider le réseau et ouvrir des nouvelles opportunités aux jeunes entrepreneurs.
@@ -277,42 +274,58 @@
       </div>
     </section>
 
+    
+
     <section class="i-wrapper">
-      <div class="i-container py-16 sm:py-24">
+         <div class="i-container py-16 sm:py-24">
         <div class="text-center max-w-md mx-auto">
           <p class="text-primary font-bold">Nos Actions</p>
           <h2 class="text-3xl sm:text-4xl mt-4 mb-6 font-extrabold">Nos domaines d'action</h2>
-          <p class="text-gray-600">
+          <p class="text-gray-600 hidden">
             Nous réunissons les bonnes personnes pour remettre en question la pensée
             établie et conduire la transformation
           </p>
         </div>
-        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div :key="item" v-for="item in strategy" class="text-center bg-gray-100 p-8">
-            <div
-              :class="item.bg"
-              class="flex justify-center items-center mx-auto w-20 h-20 sm:w-24 sm:h-24 p-4 sm:p-8 rounded-full"
-              v-html="item.svg"
-            ></div>
-            <div class="mt-4">
-              <h3 class="text-xl sm:text-xl">{{ item.name }}</h3>
-              <p class="text-gray-600 my-4">
-                {{ item.description }}
-              </p>
-              <!-- hu -->
-              <!-- <NuxtLink to="/services" class="text-blue_1"> En savoir plus </NuxtLink> -->
+          <div class="max-w-2xl border-b border-t-gray-300 mx-auto  rounded-md mt-8 sm:mt-16">
+            <div :key="item" v-for="(item, index ) in data_domaines" class="border-t border-t-gray-300 py-6">
+            <Disclosure v-slot="{ open }">
+              <DisclosureButton class="py-2 flex justify-between items-center w-full">
+               <div class="w-full">
+                <h3 class="text-xl text-left">
+                 <span class="text-gray-600">{{ index + 1}} .</span> {{ item?.titre }}
+               </h3>
+               </div>
+               <div class="w-6 sm:w-8">
+                <ChevronRightIcon  :class="open ? 'rotate-90 transform opacity-1 text-primary' : 'opacity-50'"
+               class="w-6 sm:w-8 transition-all duration-500 ease-in-out" />
+               </div>
+              </DisclosureButton>
+              <transition
+                enter-active-class="transition duration-100 ease-out"
+                enter-from-class="transform scale-95 opacity-0"
+                enter-to-class="transform scale-100 opacity-100"
+                leave-active-class="transition duration-75 ease-out"
+                leave-from-class="transform scale-100 opacity-100"
+                leave-to-class="transform scale-95 opacity-0"
+              >
+                    <DisclosurePanel class="text-gray-600 py-4">
+                      <div class="i-content-formater p-4 sm:p-8 rounded-md  bg-blue bg-opacity-[0.06] text-gray-600">
+                            <div v-html="$portable_txt_to_html(item.body)"></div>
+                      </div>
+                    </DisclosurePanel>
+              </transition>    
+            </Disclosure>
             </div>
           </div>
-        </div>
       </div>
     </section>
 
-    <section class="i-wrapper pb-16 sm:pb-24">
+    <section class="i-wrapper py-16 sm:py-24 bg-blue bg-opacity-[0.06]">
       <div class="i-container">
         <div class="mx-auto w-full md:flex justify-between lg:space-x-12">
           <div class="mx-auto lg:rounded-tr-full lg:justify-end">
             <div class="mx-auto text-center max-w-md">
-              <p class="text-primary font-bold uppercase">Notre equipe</p>
+              <p class="text-primary font-bold uppercase text-sm">Notre equipe</p>
               <h2 class="mb-6 text-3xl sm:text-4xl mt-4 font-extrabold">
                 Nos experts <span class="text-blue opacity-80">vous attendent</span>
               </h2>
@@ -335,7 +348,7 @@
             <div class="flex justify-center items-center mx-auto p-4 rounded-full">
               <img
                 :src="item.img"
-                class="rounded-full w-[80px] h-[80px] object-cover"
+                class="rounded-full w-[100px] h-[100px] object-cover"
                 alt=""
               />
             </div>
@@ -366,17 +379,28 @@
 </template>
 
 <script setup>
+
+import {
+    Disclosure,
+    DisclosureButton,
+    DisclosurePanel,
+} from '@headlessui/vue'
+
+import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+
+const { $portable_txt_to_html } = useNuxtApp();
+
 const team = [
   {
     name: "MWAMI TONY",
     img: "/img/IMG_3744.JPG",
-    titre: "président du conseil d'administration",
+    titre: "Président du Conseil d'Administration",
     email: "t.mwami@impactgp.net",
   },
   {
     name: "Messah Tarr",
     img: "/img/IMG_0134.JPG",
-    titre: "Vice-présidente du conseil d'administration",
+    titre: "Vice-Présidente du Conseil d'Administration",
     email: "m.tarr@impactgp.net",
   },
   {
@@ -387,91 +411,27 @@ const team = [
   }
 ];
 
-const strategy = [
-  {
-    name: "Formations et Conseils",
-    bg: "bg-blue bg-opacity-10",
-    description:
-      "Nous proposons des formations complètes dans divers domaines clés de l'entrepreneuriat",
-    svg: `
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-8 h-8 sm:w-10 sm:h-10 text-blue"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9"
-                />
-              </svg>
-    `,
-  },
 
-  {
-    name: "Incubation de Startups",
-    bg: "bg-blue_1 bg-opacity-10",
-    description: "Nurturer les idées novatrices et les guider vers la réalité",
-    svg: `
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_1">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
-</svg>
+const sanity = useSanity();
 
-    `,
-  },
+const query = ref(
+  groq`*[_type == "domaines"] | order(_createdAt asc){_id,titre,
+  body[]{
+    ...,
+    _type == "image" => {
+      ...,
+      "imageUrl":asset->
+    }
+  }
+  }`
+);
 
-  {
-    name: "Coaching Personnalisé",
-    bg: "bg-blue_2 bg-opacity-10",
-    description: "Accompagnement individualisé pour chaque type d'entreprise.",
-    svg: `
+const [{ data: data_domaines }] = await Promise.all([
+  useAsyncData("data-domaines", () => sanity.fetch(query.value)),
+]);
 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-</svg>
-    `,
-  },
-  {
-    name: "Accompagnement aux entrepreneurs",
-    bg: "bg-yellow bg-opacity-10",
-    description:
-      "Liaisons avec des institutions financières, coopératives agricoles, et soutien logistique.",
-    svg: `
+console.log(data_domaines.value)
 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-yellow">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-</svg>
-
-    `,
-  },
-  {
-    name: "Evènements entrepreneuriaux",
-    bg: "bg-blue_2 bg-opacity-10",
-    description: "Forum annuel Impact, Impact Awards, Conférences avec universités.",
-    svg: `
-
-    
-
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-blue_2">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-</svg>
-
-    `,
-  },
-  {
-    name: "Promotion de la femme",
-    bg: "bg-primary bg-opacity-10",
-    description: " Soutien spécifique pour les femmes entrepreneures en RDC.",
-    svg: `
-   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-10 sm:h-10 text-primary">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-</svg>
-    `,
-  },
-];
 
 const title = 'À propos - Impact Group'
 
