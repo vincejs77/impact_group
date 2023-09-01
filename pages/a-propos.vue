@@ -8,10 +8,10 @@
         <div class="mt-8 max-w-2xl">
           <div>
               <p class="text-lg font-medium">
-                Impact Group est une idée innovante permettant aux jeunes entrepreneurs congolais d’accéder non seulement à de ressources techniques permettant de créer et mieux gérer leurs entreprises mais aussi à un accompagnement financier par l’ouverture aux jeunes aux IMF et à d’autre partenaires financiers.  
+              Impact Group est une idée innovante permettant aux jeunes entrepreneurs congolais d’accéder non seulement à de ressources techniques permettant de créer et mieux gérer leurs entreprises mais aussi à un accompagnement financier par l’ouverture aux jeunes aux IMF et à d’autre partenaires financiers.  
               </p>
               <p class="mt-4 opacity-80">
-               Notre objectif est de soutenir les entrepreneurs face à l'impact économique de la crise. Nous avons initié une vague d'innovation en offrant un soutien financier, technique et des ateliers sur la planification d'entreprise.
+              Notre objectif est de soutenir les entrepreneurs face à l'impact économique de la crise. Nous avons initié une vague d'innovation en offrant un soutien financier, technique et des ateliers sur la planification d'entreprise.
               </p>
           </div>
           <div class=" space-y-8 mt-8">
@@ -329,10 +329,16 @@
               <h2 class="mb-6 text-3xl sm:text-4xl mt-4 font-extrabold">
                 Nos experts <span class="text-blue opacity-80">vous attendent</span>
               </h2>
-              <p>
-                Notre équipe pationnée et dévouée à soutenir les jeunes entrepreneurs
-                congolais
-              </p>
+            </div>
+            <div class="max-w-2xl mx-auto text-center">
+              <div>
+                <p>
+                Chez Impact Group, notre équipe dévouée est unie par un objectif commun : autonomiser les jeunes entrepreneurs congolais, promouvoir la paix et favoriser le développement économique.
+                </p>
+                <p class="mt-4">
+                  Engagés à défendre des valeurs telles que la dignité, la rapidité, l'excellence éthique et la responsabilité, nous visons à faire une différence durable et significative pour les jeunes entrepreneurs congolais et les communautés dans leur ensemble.
+                </p>
+              </div>
             </div>
           </div>
           <!-- <div
