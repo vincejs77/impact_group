@@ -304,7 +304,7 @@
 
           <div class="mt-12 text-sm">
             <div class="-mt-4 flex justify-start flex-wrap">
-              <div class="mr-4 mt-4">
+              <div class="mr-4 mt-4" v-if="data_single_evenement[0]?.status == 'a_venir'">
                 <a
                   v-if="data_single_evenement[0]?.status == 'a_venir'"
                   class="i-btn i-btn__primary"

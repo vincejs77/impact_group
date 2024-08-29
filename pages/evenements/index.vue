@@ -40,8 +40,8 @@
 
     <section class="i-wrapper">
       <div class="i-container py-16">
-        <div class="md:max-w-2xl mx-auto">
-          <div class="flex flex-wrap space-y-8">
+        <div class="md:max-w-5xl mx-auto">
+          <div class="grid grid-cols-2 gap-6">
             <CardsEvenement
               v-bind="evenement"
               :key="evenement"

@@ -2,16 +2,16 @@
   <article class="w-full i-card">
     <NuxtLink :to="'/evenements/' + slug.current + '#' + _id" class="group">
       <div
-        class="geoup flex justify-start items-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 p-4 sm:p-6 h-full bg-white border group-hover:border-gray-300 rounded-xl"
+        class="group items-center flex-col sm:flex-row p-4 sm:p-6 h-full bg-white border group-hover:border-gray-300 rounded-xl"
       >
-        <div class="bg-blue rounded-lg overflow-hidden w-full sm:w-[200px] h-full">
+        <div class="bg-blue rounded-lg overflow-hidden w-full sm:w-full h-[250px]">
           <img
             class="w-full h-full object-cover transform group-hover:scale-125 scale-105 transition ease-in-out duration-1000"
             :src="imageUrl.url"
             :alt="titre"
           />
         </div>
-        <div class="flex flex-wrap justify-between items-center -m-2">
+        <div class="flex flex-wrap justify-between items-center -m-2 mt-4">
           <div class="w-auto p-2">
             <div class="flex justify-start space-x-3">
               <p
