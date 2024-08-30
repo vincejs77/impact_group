@@ -174,8 +174,8 @@
         >
           Découvrez nos évènements passés et à venir.
         </p>
-        <div class="md:max-w-2xl mx-auto">
-          <div class="flex flex-wrap space-y-8">
+        <div class="md:max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CardsEvenement
               v-bind="evenement"
               :key="evenement"

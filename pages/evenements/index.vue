@@ -41,7 +41,7 @@
     <section class="i-wrapper">
       <div class="i-container py-16">
         <div class="md:max-w-5xl mx-auto">
-          <div class="grid grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CardsEvenement
               v-bind="evenement"
               :key="evenement"
