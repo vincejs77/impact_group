@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="i-wrapper">
-      <div class="relative i-container py-16 sm:py-20">
+      <div class="i-container relative py-16 sm:py-20">
         <h1 class="text-3xl sm:text-5xl">
           À propos <span class="text-blue opacity-80">de nous</span>
         </h1>
@@ -14,7 +14,7 @@
               Notre objectif est de soutenir les entrepreneurs face à l'impact économique de la crise. Nous avons initié une vague d'innovation en offrant un soutien financier, technique et des ateliers sur la planification d'entreprise.
               </p>
           </div>
-          <div class=" space-y-8 mt-8">
+          <div class="mt-8 space-y-8">
               <p>
                 Créée depuis Juin 2020, inspiré d’une prise de conscience sur la situation générale des jeunes congolais, dans une période particulièrement difficile quand le monde entier était confronté à la pandémie de COVID-19 qui a eu des retombés significatifs sur l'entrepreneuriat dans tous les pays et particulièrement en RDC.
               </p>
@@ -26,15 +26,15 @@
               </p>
           </div>
         </div>
-        <div class="mt-8 lg:mt-0 lg:absolute right-4 lg:right-8 bottom-24">
+        <div class="bottom-24 right-4 mt-8 lg:absolute lg:right-8 lg:mt-0">
           <a href="#section-1">
             <div class="scroll"></div>
           </a>
         </div>
       </div>
     </section>
-    <section class="i-wrapper relative py-14 pb-20 sm:py-16 bg-blue">
-      <div class="absolute top-0 right-0">
+    <section class="i-wrapper relative bg-blue py-14 pb-20 sm:py-16">
+      <div class="absolute right-0 top-0">
         <svg
           class="mt-10"
           width="798"
@@ -59,18 +59,18 @@
           </g>
         </svg>
       </div>
-      <div class="i-container relative px-4 mx-auto">
+      <div class="i-container relative mx-auto px-4">
         <div id="section-1" class="-translate-y-24 md:-translate-y-32"></div>
 
         <h2
-          class="font-bold max-w-md mb-10 text-2xl sm:text-4xl text-white font-heading"
+          class="font-heading mb-10 max-w-md text-2xl font-bold text-white sm:text-4xl"
         >
           Nous aspirons à créer une nouvelle économie en RDC
         </h2>
         <div class="bg-blue-900 mb-2">
-          <div class="flex flex-wrap md:flex-nowrap -mx-4">
-            <div class="relative w-full md:w-1/2 px-4">
-              <div class="absolute top-0 right-0 lg:right-auto lg:left-0 lg:ml-20 mt-8">
+          <div class="-mx-4 flex flex-wrap md:flex-nowrap">
+            <div class="relative w-full px-4 md:w-1/2">
+              <div class="absolute right-0 top-0 mt-8 lg:left-0 lg:right-auto lg:ml-20">
                 <svg
                   class="h-20 lg:h-auto"
                   width="83"
@@ -87,10 +87,10 @@
                 </svg>
               </div>
               <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-20">
-                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
+                <h3 class="mb-2 text-2xl font-bold text-white sm:text-3xl">
                   Notre vision
                 </h3>
-                <p class="text-base text-g leading-relaxed text-gray-100 mt-4">
+                <p class="text-g mt-4 text-base leading-relaxed text-gray-100">
                   Participer à la naissance d'une nouvelle classe sociale créée par une
                   masse d'entrepreneurs conscients, formés et capables de relever les
                   défis économiques en République Démocratique du Congo.
@@ -98,32 +98,32 @@
               </div>
             </div>
             
-            <div class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
+            <div class="mx-4 flex w-full justify-center rounded-md bg-white bg-opacity-100 md:w-1/2">
 
               <img
-                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                class="clip-path-right h-72 w-[300px] rounded-md object-cover"
 
                 src="/img/contents/4.svg"
                 alt=""
               />
 
-              <!-- <img  class="w-[300px] mx-auto" alt="" /> -->
+              <!-- <img  class="mx-auto w-[300px]" alt="" /> -->
             </div>
           </div>
         </div>
         <div class="bg-blue-900 mb-2 mt-4 lg:mt-8">
           <div
-            class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4 pr-8"
+            class="-mx-4 flex flex-col-reverse flex-wrap pr-8 md:flex-row md:flex-nowrap"
           >
-            <div class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
+            <div class="mx-4 flex w-full justify-center rounded-md bg-white bg-opacity-100 md:w-1/2">
               <img
-                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                class="clip-path-right h-72 w-[300px] rounded-md object-cover"
                 src="/img/contents/1.svg"
                 alt=""
               />
             </div>
-            <div class="relative w-full md:w-1/2 px-4 order-0 md:order-1">
-              <div class="absolute top-0 -right-8 lg:right-auto lg:mr-20 mt-8">
+            <div class="order-0 relative w-full px-4 md:order-1 md:w-1/2">
+              <div class="absolute -right-8 top-0 mt-8 lg:right-auto lg:mr-20">
                 <svg
                   class="h-20 lg:h-auto"
                   width="148"
@@ -140,10 +140,10 @@
                 </svg>
               </div>
               <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-20">
-                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
+                <h3 class="mb-2 text-2xl font-bold text-white sm:text-3xl">
                   Notre mission
                 </h3>
-                <p class="text-base text-white leading-relaxed">
+                <p class="text-base leading-relaxed text-white">
                   Assurer un accompagnement aux jeunes ainsi que la promotion de la paix
                   et des facteurs de croissance économique.
                 </p>
@@ -152,9 +152,9 @@
           </div>
         </div>
         <div class="bg-blue-900 mb-2 mt-4 lg:mt-8">
-          <div class="flex flex-wrap md:flex-nowrap -mx-4">
-            <div class="relative w-full md:w-1/2 px-4 lg:order-0">
-              <div class="absolute top-0 -right-8 lg:right-auto lg:left-0 lg:ml-20 mt-8">
+          <div class="-mx-4 flex flex-wrap md:flex-nowrap">
+            <div class="lg:order-0 relative w-full px-4 md:w-1/2">
+              <div class="absolute -right-8 top-0 mt-8 lg:left-0 lg:right-auto lg:ml-20">
                 <svg
                   class="h-20 lg:h-auto"
                   width="149"
@@ -171,12 +171,12 @@
                 </svg>
               </div>
               <div class="max-w-md p-6 px-0 lg:pl-16 lg:pt-16">
-                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
+                <h3 class="mb-2 text-2xl font-bold text-white sm:text-3xl">
                   Nos valeurs
                 </h3>
-                <p class="text-base text-white leading-relaxed">
+                <p class="text-base leading-relaxed text-white">
                   Les valeurs suivantes caractérisent l’organisation. <br /><br />
-                  <ul class="text-white  grid grid-cols-1 sm:grid-cols-2 gap-2 text-lg font-medium">
+                  <ul class="grid grid-cols-1 gap-2 text-lg font-medium text-white sm:grid-cols-2">
                     <li class="flex justify-start space-x-2">
                       <span>•</span> <span>La dignité</span> 
                     </li>
@@ -198,10 +198,10 @@
               </div>
             </div>
             <div
-              class="flex justify-center rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4 order-0 lg:order-1"
+              class="order-0 mx-4 flex w-full justify-center rounded-md bg-white bg-opacity-100 md:w-1/2 lg:order-1"
             >
               <img
-                class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                class="clip-path-right h-72 w-[300px] rounded-md object-cover"
                 src="/img/contents/2.svg"
                 alt=""
               />
@@ -210,17 +210,17 @@
         </div>
         <div class="bg-blue-900 mt-4 lg:mt-8">
           <div
-            class="flex flex-wrap flex-col-reverse md:flex-row md:flex-nowrap -mx-4 pr-8"
+            class="-mx-4 flex flex-col-reverse flex-wrap pr-8 md:flex-row md:flex-nowrap"
           >
-            <div class="flex justify-center max-h-72 rounded-md bg-white bg-opacity-100 w-full md:w-1/2 mx-4">
+            <div class="mx-4 flex max-h-72 w-full justify-center rounded-md bg-white bg-opacity-100 md:w-1/2">
               <img
-                 class="rounded-md h-72 w-[300px] clip-path-right object-cover"
+                 class="clip-path-right h-72 w-[300px] rounded-md object-cover"
                 src="/img/contents/3.svg"
                 alt=""
               />
             </div>
-            <div class="relative w-full md:w-1/2 px-4">
-              <div class="absolute top-0 -right-8 lg:right-auto lg:mr-20 mt-8">
+            <div class="relative w-full px-4 md:w-1/2">
+              <div class="absolute -right-8 top-0 mt-8 lg:right-auto lg:mr-20">
                 <svg
                   class="h-20 lg:h-auto"
                   width="172"
@@ -236,12 +236,12 @@
                   ></path>
                 </svg>
               </div>
-              <div class="max-w-md p-6 px-0 lg:pl-16 md:pt-8">
-                <h3 class="mb-2 text-2xl sm:text-3xl font-bold text-white">
+              <div class="max-w-md p-6 px-0 md:pt-8 lg:pl-16">
+                <h3 class="mb-2 text-2xl font-bold text-white sm:text-3xl">
                   Nos objectifs
                 </h3>
-                <div class="text-base text-white leading-relaxed">
-                  <ul class="text-white space-y-3">
+                <div class="text-base leading-relaxed text-white">
+                  <ul class="space-y-3 text-white">
                     <li class="flex justify-start space-x-2">
                       <span>
                         •</span>
@@ -278,26 +278,26 @@
 
     <section class="i-wrapper">
          <div class="i-container py-16 sm:py-24">
-        <div class="text-center max-w-md mx-auto">
-          <p class="text-primary font-bold">Nos Actions</p>
-          <h2 class="text-3xl sm:text-4xl mt-4 mb-6 font-extrabold">Nos domaines d'action</h2>
-          <p class="text-gray-600 hidden">
+        <div class="mx-auto max-w-md text-center">
+          <p class="font-bold text-primary">Nos Actions</p>
+          <h2 class="mb-6 mt-4 text-3xl font-extrabold sm:text-4xl">Nos domaines d'action</h2>
+          <p class="hidden text-gray-600">
             Nous réunissons les bonnes personnes pour remettre en question la pensée
             établie et conduire la transformation
           </p>
         </div>
-          <div class="max-w-2xl border-b border-t-gray-300 mx-auto  rounded-md mt-8 sm:mt-16">
+          <div class="mx-auto mt-8 max-w-2xl rounded-md border-b border-t-gray-300 sm:mt-16">
             <div :key="item" v-for="(item, index ) in data_domaines" class="border-t border-t-gray-300 py-6">
             <Disclosure v-slot="{ open }">
-              <DisclosureButton class="py-2 flex justify-between items-center w-full">
+              <DisclosureButton class="flex w-full items-center justify-between py-2">
                <div class="w-full">
-                <h3 class="text-xl text-left">
+                <h3 class="text-left text-xl">
                  <span class="text-gray-600">{{ index + 1}} .</span> {{ item?.titre }}
                </h3>
                </div>
                <div class="w-6 sm:w-8">
                 <ChevronRightIcon  :class="open ? 'rotate-90 transform opacity-1 text-primary' : 'opacity-50'"
-               class="w-6 sm:w-8 transition-all duration-500 ease-in-out" />
+               class="w-6 transition-all duration-500 ease-in-out sm:w-8" />
                </div>
               </DisclosureButton>
               <transition
@@ -308,8 +308,8 @@
                 leave-from-class="transform scale-100 opacity-100"
                 leave-to-class="transform scale-95 opacity-0"
               >
-                    <DisclosurePanel class="text-gray-600 py-4">
-                      <div class="i-content-formater p-4 sm:p-8 rounded-md  bg-blue bg-opacity-[0.06] text-gray-600">
+                    <DisclosurePanel class="py-4 text-gray-600">
+                      <div class="i-content-formater rounded-md bg-blue bg-opacity-[0.06] p-4 text-gray-600 sm:p-8">
                             <div v-html="$portable_txt_to_html(item.body)"></div>
                       </div>
                     </DisclosurePanel>
@@ -320,17 +320,17 @@
       </div>
     </section>
 
-    <section class="i-wrapper py-16 sm:py-24 bg-blue bg-opacity-[0.06]">
+    <section class="i-wrapper bg-blue bg-opacity-[0.06] py-16 sm:py-24">
       <div class="i-container">
-        <div class="mx-auto w-full md:flex justify-between lg:space-x-12">
-          <div class="mx-auto lg:rounded-tr-full lg:justify-end">
-            <div class="mx-auto text-center max-w-md">
-              <p class="text-primary font-bold uppercase text-sm">Notre equipe</p>
-              <h2 class="mb-6 text-3xl sm:text-4xl mt-4 font-extrabold">
+        <div class="mx-auto w-full justify-between md:flex lg:space-x-12">
+          <div class="mx-auto lg:justify-end lg:rounded-tr-full">
+            <div class="mx-auto max-w-md text-center">
+              <p class="text-sm font-bold uppercase text-primary">Notre equipe</p>
+              <h2 class="mb-6 mt-4 text-3xl font-extrabold sm:text-4xl">
                 Nos experts <span class="text-blue opacity-80">vous attendent</span>
               </h2>
             </div>
-            <div class="max-w-2xl mx-auto text-center">
+            <div class="mx-auto max-w-2xl text-center">
               <div>
                 <p>
                 Chez Impact Group, notre équipe dévouée est unie par un objectif commun : autonomiser les jeunes entrepreneurs congolais, promouvoir la paix et favoriser le développement économique.
@@ -342,33 +342,33 @@
             </div>
           </div>
           <!-- <div
-            class=" lg:rounded-tl-full lg:rounded-bl-full md:w-1/2 z-0 flex justify-start px-4 py-32 md:p-16 bg-center bg-cover bg-[url(/img/bg/pexels-mikhail-nilov-9301258-min.jpg)]"
+            class="z-0 flex justify-start bg-[url(/img/bg/pexels-mikhail-nilov-9301258-min.jpg)] bg-cover bg-center px-4 py-32 md:w-1/2 md:p-16 lg:rounded-bl-full lg:rounded-tl-full"
           ></div> -->
         </div>
-        <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mx-auto mt-8 grid max-w-xl grid-cols-1 gap-6 sm:mt-16 sm:grid-cols-2 lg:grid-cols-2">
           <div
             :key="item"
             v-for="item in team"
-            class="text-center bg-gray-50 p-8 shadow-sm border border-gray-100 rounded-lg shadow-gray-200"
+            class="rounded-lg border border-gray-100 bg-gray-50 p-8 text-center shadow-sm shadow-gray-200"
           >
-            <div class="flex justify-center items-center mx-auto p-4 rounded-full">
+            <div class="mx-auto flex items-center justify-center rounded-full p-4">
               <img
                 :src="item.img"
-                class="rounded-full w-[100px] h-[100px] object-cover"
+                class="h-[100px] w-[100px] rounded-full object-cover"
                 alt=""
               />
             </div>
-            <div class="mt-0 flex flex-col h-[120px] justify-between">
+            <div class="mt-0 flex h-[120px] flex-col justify-between">
               <div>
                 <h3 class="text-lg text-primary">{{ item.name }}</h3>
-                <p class="text-gray-600 my-4 text-sm">
+                <p class="my-4 text-sm text-gray-600">
                   {{ item.titre }}
                 </p>
               </div>
 
               <div>
                 <a
-                  class="text-blue_1 text-sm"
+                  class="text-sm text-blue_1"
                   :href="item.email"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -408,12 +408,6 @@ const team = [
     img: "/img/IMG_0134.JPG",
     titre: "Vice-Présidente du Conseil d'Administration",
     email: "m.tarr@impactgp.net",
-  },
-  {
-    name: "Justin Bigabwa",
-    img: "/img/images.png",
-    titre: "Financier",
-    email: "j.bigabwa@impactgp.net",
   }
 ];
 

@@ -3,7 +3,7 @@
     <div class="max-w-sm mx-auto">
       <div class="mb-4 flex justify-start items-center space-x-2">
         <img
-          :src="auteur.imageUrl.url"
+          :src="auteur.imageUrl?.url"
           class="w-6 h-6 rounded-full object-cover bg-blue"
           alt=""
         />
@@ -17,7 +17,7 @@
         <NuxtLink :to="'/blog/' + slug.current + '#' + _id">
           <img
             class="w-full h-full object-cover transform group-hover:scale-125 scale-105 transition ease-in-out duration-1000"
-            :src="imageUrl.url"
+            :src="imageUrl?.url"
             :alt="titre"
           />
         </NuxtLink>
@@ -29,14 +29,14 @@
             v-for="categorie in categories_articles"
             class="mb-4 font-sans max-w-max px-3 py-1.5 text-xs text-blue_1 bg-blue_1 bg-opacity-10 font-semibold uppercase rounded-md"
           >
-            {{ categorie.titre }}
+            {{ categorie?.titre }}
           </li>
         </ul>
       </div>
 
       <div>
         <NuxtLink
-          :to="'/blog/' + slug.current + '#' + _id"
+          :to="'/blog/' + slug?.current + '#' + _id"
           class="mb-2 inline-block group-hover:text-primary"
         >
           <h3 class="text-lg font-bold font-heading leading-normal line-clamp-2">
@@ -52,7 +52,7 @@
       <div class="mt-4 flex justify-between items-center">
         <div>
           <NuxtLink
-            :to="'/blog/' + slug.current + '#' + _id"
+            :to="'/blog/' + slug?.current + '#' + _id"
             class="flex justify-start items-center text-semibold text-primary"
           >
             <span>Lire plus</span>
