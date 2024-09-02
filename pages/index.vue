@@ -281,7 +281,7 @@ const query_articles = ref(
 );
 
 const query_evenements = ref(
-  groq`*[_type == "evenements" && visibility == 'visible'] | order(_createdAt desc){_id,status,mode,slug,titre,description,publishedAt,_updatedAt,startedAt,endedAt,lieu,
+  groq`*[_type == "evenements" && visibility == 'visible'] [0...2] | order(_createdAt desc) {_id,status,mode,slug,titre,description,publishedAt,_updatedAt,startedAt,endedAt,lieu,
   "imageUrl":image.asset->,categories_evenements[]->{titre}}`
 );
 

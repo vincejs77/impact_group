@@ -11,7 +11,7 @@
             :alt="titre"
           />
         </div>
-        <div class="flex flex-wrap justify-between items-center -m-2 mt-4">
+        <div class="flex flex-wrap justify-between items-center -m-2 mt-4 relative">
           <div class="w-auto p-2">
             <div class="flex justify-start space-x-3">
               <p
@@ -32,7 +32,7 @@
                 <li
                   :key="categorie"
                   v-for="categorie in categories_evenements"
-                  class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+                  class="font-semibold inline-block mb-3 mr-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
                 >
                   {{ categorie.titre }}
                 </li>
@@ -54,7 +54,8 @@
               >
             </p>
           </div>
-          <div class="w-auto p-2">
+
+          <div class="w-auto absolute -top-9 right-0">
             <div
               class="flex items-center justify-center w-9 h-9 bg-blue_1 group-hover:bg-primary rounded-full"
             >

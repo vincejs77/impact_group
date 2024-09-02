@@ -68,29 +68,28 @@
     </section>
     <section class="i-wrapper">
       <div class="i-container">
-        <div class="flex justify-between flex-col lg:flex-row py-16">
+        <div class="flex justify-between flex-col lg:flex-row py-8 lg:py-16">
           <div class="text-left lg:max-w-md lg:min-h-full flex flex-col justify-between">
             <div>
               <div class="flex justify-start space-x-3">
-                <p
-                  v-if="data_single_evenement[0]?.status == 'a_venir'"
-                  class="bg-green-500 text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
-                >
-                  À venir
-                </p>
-
-                <p
-                  v-else
-                  class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
-                >
-                  Passé
-                </p>
-
                 <ul>
+                  <li
+                    v-if="data_single_evenement[0]?.status == 'a_venir'"
+                    class="mr-3 bg-green-500 text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
+                  >
+                    À venir
+                  </li>
+
+                  <li
+                    v-else
+                    class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
+                  >
+                    Passé
+                  </li>
                   <li
                     :key="categorie"
                     v-for="categorie in data_single_evenement[0]?.categories_evenements"
-                    class="font-semibold inline-block mb-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
+                    class="font-semibold inline-block mb-3 mr-3 px-2.5 py-1 text-xs text-blue_1 bg-blue_1 bg-opacity-10 uppercase rounded-md"
                   >
                     {{ categorie.titre }}
                   </li>
@@ -191,15 +190,11 @@
                     </span>
                   </div>
                   <div class="w-full">
-                    <a
-                      :href="data_single_evenement[0].lien"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <button class="cursor-pointer" @click="openModal()">
                       <span class="i-underline-animation--txt font-semibold text-primary">
                         S'inscrire en ligne
                       </span>
-                    </a>
+                    </button>
                   </div>
                 </li>
               </ul>
@@ -219,7 +214,7 @@
     </section>
 
     <section class="i-wrapper">
-      <div class="i-container py-12 pb-16">
+      <div class="i-container py-8 sm:py-12 pb-16">
         <div class="relative max-w-2xl mx-auto">
           <div class="i-content-formater">
             <div v-html="$portable_txt_to_html(data_single_evenement[0]?.body)"></div>
@@ -305,15 +300,13 @@
           <div class="mt-12 text-sm">
             <div class="-mt-4 flex justify-start flex-wrap">
               <div class="mr-4 mt-4" v-if="data_single_evenement[0]?.status == 'a_venir'">
-                <a
+                <button
                   v-if="data_single_evenement[0]?.status == 'a_venir'"
                   class="i-btn i-btn__primary"
-                  :href="data_single_evenement[0]?.lien"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  @click="openModal()"
                 >
                   <span>S'inscrire</span>
-                </a>
+                </button>
               </div>
               <div class="mt-4">
                 <NuxtLink to="/evenements" class="w-auto i-btn i-btn__blue_1">
@@ -325,14 +318,102 @@
         </div>
       </div>
     </section>
+
+    <TransitionRoot
+      v-if="data_single_evenement[0]?.status == 'a_venir'"
+      appear
+      :show="isOpen"
+      as="template"
+    >
+      <Dialog as="div" @close="closeModal" class="relative z-10">
+        <TransitionChild
+          as="template"
+          enter="duration-300 ease-out"
+          enter-from="opacity-0"
+          enter-to="opacity-100"
+          leave="duration-200 ease-in"
+          leave-from="opacity-100"
+          leave-to="opacity-0"
+        >
+          <div class="fixed inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
+        </TransitionChild>
+
+        <div class="fixed inset-0 overflow-y-auto">
+          <div
+            class="flex min-h-full pt-[100px] lg:pt-[120px] items-center justify-center p-4 text-center"
+          >
+            <TransitionChild
+              as="template"
+              enter="duration-300 ease-out"
+              enter-from="opacity-0 scale-95"
+              enter-to="opacity-100 scale-100"
+              leave="duration-200 ease-in"
+              leave-from="opacity-100 scale-100"
+              leave-to="opacity-0 scale-95"
+            >
+              <DialogPanel
+                class="relative w-full max-w-md transform overflow-hidden rounded-md bg-white p-4 sm:p-6 text-left align-middle shadow-xl transition-all"
+              >
+                <DialogTitle
+                  as="h3"
+                  class="text-lg pt-6 text-center lg:text-xl font-bold leading-6 text-gray-900"
+                >
+                  Inscription :
+                  <span class="text-blue">{{ data_single_evenement[0]?.titre }}</span>
+                </DialogTitle>
+
+                <div
+                  @click="closeModal()"
+                  class="cursor-pointer absolute left-0 top-0 bg-blue_1 p-2 rounded-br-md text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-6 w-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18 18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+                <div class="mt-4">
+                  <FeaturesReservation :event_titre="data_single_evenement[0]?.titre" />
+                </div>
+              </DialogPanel>
+            </TransitionChild>
+          </div>
+        </div>
+      </Dialog>
+    </TransitionRoot>
   </div>
 </template>
 
 <script setup>
+import {
+  TransitionRoot,
+  TransitionChild,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/vue";
 const { $convertDate__index } = useNuxtApp();
 const { $portable_txt_to_html } = useNuxtApp();
 const route = useRoute();
 const sanity = useSanity();
+
+const isOpen = ref(false);
+
+function closeModal() {
+  isOpen.value = false;
+}
+function openModal() {
+  isOpen.value = true;
+}
 
 const query = ref(
   groq`*[_type == "evenements" && slug.current=="${route.params.slug}" && visibility == 'visible']{
