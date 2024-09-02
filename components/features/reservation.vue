@@ -367,8 +367,6 @@ const upTicketCunt = () => {
 
 const selected = ref(tickets[0]);
 
-const selectedPerson = ref(people[0]);
-
 const mail = useMail();
 
 const sendMessage_fx = async () => {
@@ -392,8 +390,8 @@ const sendMessage_fx = async () => {
           subject: `Inscription - ${props.event_titre}`,
           text: `Reservation par ${_nom.value} \n\nAdresse e-mail : ${_adresse_email.value}
             \n\nNuméro de téléphone : ${_telephone.value}
-            \n\nType de ticket : ${selected.name} - ${selected.price}
-            \n\nNombre de tickets : ${ticketCount}
+            \n\nType de ticket : ${selected.value.name} - ${selected.value.price}
+            \n\nNombre de tickets : ${ticketCount.value}
             \n\n ${_message}
             `,
           html: `
@@ -401,8 +399,8 @@ const sendMessage_fx = async () => {
               <br>
               <p>Adresse e-mail : ${_adresse_email.value}</p>
               <p>Numéro de téléphone : ${_telephone.value}</p>
-              <p>Type de ticket : ${selected.name} - ${selected.price}</p>
-              <p>Nombre de tickets : ${ticketCount}</p>
+              <p>Type de ticket : ${selected.value.name} - ${selected.value.price}</p>
+              <p>Nombre de tickets : ${ticketCount.value}</p>
               <p>${_message}</p>
           `,
           replyTo: _adresse_email.value,
