@@ -82,7 +82,7 @@
 
                   <li
                     v-else
-                    class="bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
+                    class="mr-3 bg-opacity-70 bg-blue text-white font-semibold inline-block mb-3 px-2.5 py-1 text-xs uppercase rounded-md"
                   >
                     Passé
                   </li>

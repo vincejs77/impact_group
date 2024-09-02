@@ -83,9 +83,7 @@
         <RadioGroup v-model="selected">
           <RadioGroupLabel class="sr-only">Tiquet</RadioGroupLabel>
           <div class="space-y-2">
-            <label for="message" class="text-sm text-gray-500"
-              >Choisir votre ticket
-            </label>
+            <label for="message" class="text-sm text-gray-500">Type de ticket </label>
             <RadioGroupOption
               as="template"
               v-for="plan in tickets"
