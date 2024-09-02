@@ -387,7 +387,7 @@ const sendMessage_fx = async () => {
         isvalidEmail.value = true;
         await mail.send({
           from: config.public.email_sender,
-          subject: `Inscription - ${props.event_titre}`,
+          subject: `Inscription - ${props.event_titre} - par ${_nom.value}`,
           text: `Reservation par ${_nom.value} \n\nAdresse e-mail : ${_adresse_email.value}
             \n\nNuméro de téléphone : ${_telephone.value}
             \n\nType de ticket : ${selected.value.name} - ${selected.value.price}
