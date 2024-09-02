@@ -244,8 +244,8 @@
           <p class="mt-4 text-gray-600">
             Votre reservation pour
             <span class="text-blue font-medium"
-              >{{ ticketCount }} ticket(s) {{ selected.name }} à
-              {{ selected.price }}</span
+              >{{ ticketCount }} ticket(s) {{ selected.name }} à {{ selected.price }} par
+              ticket</span
             >
             a été envoyée ! Nous vous écrirons à votre adresse e-mail "
             <span class="font-medium text-primary">{{ _adresse_email }}</span> " sous peu.
