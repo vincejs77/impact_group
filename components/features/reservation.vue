@@ -392,7 +392,7 @@ const sendMessage_fx = async () => {
             \n\nNuméro de téléphone : ${_telephone.value}
             \n\nType de ticket : ${selected.value.name} - ${selected.value.price}
             \n\nNombre de tickets : ${ticketCount.value}
-            \n\n ${_message}
+            \n\n ${_message.value}
             `,
           html: `
               <h4>Envoyé par ${_nom.value}</h4>
@@ -401,7 +401,7 @@ const sendMessage_fx = async () => {
               <p>Numéro de téléphone : ${_telephone.value}</p>
               <p>Type de ticket : ${selected.value.name} - ${selected.value.price}</p>
               <p>Nombre de tickets : ${ticketCount.value}</p>
-              <p>${_message}</p>
+              <p>${_message.value}</p>
           `,
           replyTo: _adresse_email.value,
         });
