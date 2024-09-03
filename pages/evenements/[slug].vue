@@ -335,12 +335,12 @@
           leave-from="opacity-100"
           leave-to="opacity-0"
         >
-          <div class="fixed inset-0 bg-gray-900 bg-opacity-40 backdrop-blur-sm" />
+          <div class="fixed inset-0 bg-gray-900 bg-opacity-60 backdrop-blur-sm" />
         </TransitionChild>
 
         <div class="fixed inset-0 overflow-y-auto">
           <div
-            class="flex min-h-full pt-[100px] lg:pt-[120px] items-center justify-center p-4 text-center"
+            class="flex min-h-full pt-[80px] lg:pt-[95px] items-center justify-center p-4 text-center"
           >
             <TransitionChild
               as="template"

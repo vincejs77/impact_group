@@ -95,6 +95,7 @@
               :key="plan.name"
               :value="plan"
               v-slot="{ active, checked }"
+              @click="resetCount()"
             >
               <div
                 :class="[
@@ -143,7 +144,12 @@
         </RadioGroup>
 
         <div class="form-group w-full transition-all duration-500 ease-in-out">
-          <label for="message" class="text-sm text-gray-500">Nombre de tickets </label>
+          <label for="message" class="text-sm text-gray-500"
+            >Nombre de tickets
+            <span class="text-blue" v-if="selected.name == 'Étudiant'"
+              >(limité à un ticket pour toute réservation de ticket Étudiant)</span
+            ></label
+          >
 
           <div class="flex justify-start items-center mt-2 space-x-4">
             <div
@@ -348,8 +354,6 @@ import {
 } from "@headlessui/vue";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/vue/20/solid";
 
-const people = [{ name: "VIP" }, { name: "Standard" }];
-
 const tickets = [
   {
     name: "Étudiant",
@@ -366,14 +370,6 @@ const tickets = [
 ];
 
 const ticketCount = ref(1);
-
-const downTicketCunt = () => {
-  ticketCount.value = ticketCount.value - 1;
-};
-
-const upTicketCunt = () => {
-  ticketCount.value = ticketCount.value + 1;
-};
 
 const selected = ref(tickets[0]);
 
@@ -434,6 +430,26 @@ const sendMessage_fx = async () => {
     useConstactStore().$state.isError = true;
     isvalidEmail.value = true;
     requiredState.value = false;
+  }
+};
+
+const resetCount = () => {
+  ticketCount.value = 1;
+};
+
+const downTicketCunt = () => {
+  if (selected.value.name == "Étudiant") {
+    ticketCount.value = 1;
+  } else {
+    ticketCount.value = ticketCount.value - 1;
+  }
+};
+
+const upTicketCunt = () => {
+  if (selected.value.name == "Étudiant") {
+    ticketCount.value = 1;
+  } else {
+    ticketCount.value = ticketCount.value + 1;
   }
 };
 
