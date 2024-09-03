@@ -83,7 +83,12 @@
         <RadioGroup v-model="selected">
           <RadioGroupLabel class="sr-only">Tiquet</RadioGroupLabel>
           <div class="space-y-2">
-            <label for="message" class="text-sm text-gray-500">Type de ticket </label>
+            <label for="message" class="text-sm text-gray-500"
+              >Type de ticket
+              <span class="text-blue" v-if="selected.name == 'Étudiant'"
+                >(une carte d'étudiant est requise pour tout ticket Étudiant)</span
+              >
+            </label>
             <RadioGroupOption
               as="template"
               v-for="plan in tickets"
@@ -249,6 +254,11 @@
             >
             a été envoyée ! Nous vous écrirons à votre adresse e-mail "
             <span class="font-medium text-primary">{{ _adresse_email }}</span> " sous peu.
+          </p>
+          <p class="p-2 bg-gray-200 font-semibold mt-4 rounded-md">
+            <span class="text-blue" v-if="selected.name == 'Étudiant'"
+              >Une carte d'étudiant est requise pour tout ticket Étudiant</span
+            >
           </p>
           <div class="mt-8 border-t border-t-gray-200 pt-4">
             <h3 class="mt-4 text-xl">En attendant, découvrez :</h3>
