@@ -76,8 +76,11 @@ export default defineNuxtConfig({
 			autoprefixer: {}
 		}
 	},
+	swiper: {},
+
 	modules: [
 		"@nuxtjs/sanity",
+		"nuxt-swiper",
 		[
 			"@pinia/nuxt",
 			{

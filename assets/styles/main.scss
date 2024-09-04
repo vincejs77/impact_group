@@ -210,6 +210,49 @@ ul li a {
     @apply hover:text-primary hover:font-medium;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fd7135 !important;
+}
+
+.swiper-pagination-progressbar {
+    height: 3px !important;
+
+    .swiper-pagination-progressbar-fill {
+        background: #fd7135 !important;
+    }
+}
+
+.swiper-pagination {
+    @apply sm:bottom-8;
+}
+
+.swiper-pagination.swiper-pagination-progressbar {
+    z-index: 99 !important;
+}
+
+.swiper-pagination-bullet {
+    background: #fd7135 !important;
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-slide {
+    min-height: 100% !important;
+}
+
+.swiper-slide.swiper-slide-visible.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.swiper-slide,
+.swiper-slide.swiper-slide-prev {
+    opacity: 0 !important;
+}
+// .swiper-slide-prev {
+//     opacity: 0 !important;
+// }
+
 @import url(/assets/styles/animations.scss);
 
 @import url(/assets/others/loaders.scss);
