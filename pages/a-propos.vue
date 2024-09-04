@@ -354,7 +354,7 @@
             <div class="mx-auto flex items-center justify-center rounded-full p-4">
               <img
                 :src="item.img"
-                class="h-[100px] w-[100px] rounded-full object-cover"
+                class="h-[100px] w-[100px] rounded-full border border-gray-300 object-cover"
                 alt=""
               />
             </div>
@@ -405,7 +405,7 @@ const team = [
   },
   {
     name: "Messah Tarr",
-    img: "/img/IMG_0134.JPG",
+    img: "/img/IMG-20240901-WA0373.jpg",
     titre: "Vice-Présidente du Conseil d'Administration",
     email: "m.tarr@impactgp.net",
   }
